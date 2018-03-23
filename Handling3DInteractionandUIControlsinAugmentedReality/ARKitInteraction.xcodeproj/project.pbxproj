@@ -58,7 +58,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11063F3B1EBE651B0033EE6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		147062631F06FA790003EE03 /* VirtualObjectSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelection.swift; sourceTree = "<group>"; };
 		147D76491EFC36070000FEBF /* ViewController+ObjectSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ObjectSelection.swift"; sourceTree = "<group>"; };
 		1488323E1EFC378A0043E0AB /* ViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Actions.swift"; sourceTree = "<group>"; };
@@ -110,7 +109,6 @@
 		C8C12A701F29277B00B011FE /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		C8C2AC511F3A545C00E86BA3 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
 		C8D719FF1F3B7D3D0086AD64 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
-		E5F1518ECE83631610AC00ED /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		F270D24306DF002E8C47C1BF /* SampleCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,11 +164,9 @@
 		3929C47F1E89EC2C00E00B60 = {
 			isa = PBXGroup;
 			children = (
-				11063F3B1EBE651B0033EE6D /* README.md */,
 				3929C48A1E89EC2C00E00B60 /* ARKitInteraction */,
 				3929C4891E89EC2C00E00B60 /* Products */,
 				CB3BF427464FE5989C5ECFA9 /* Configuration */,
-				CA0ADFFA247BCD89BEF87B81 /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -335,14 +331,6 @@
 				C46356651EF9CB1A0080C8D9 /* VirtualObjectLoader.swift */,
 			);
 			path = "Virtual Objects";
-			sourceTree = "<group>";
-		};
-		CA0ADFFA247BCD89BEF87B81 /* LICENSE */ = {
-			isa = PBXGroup;
-			children = (
-				E5F1518ECE83631610AC00ED /* LICENSE.txt */,
-			);
-			path = LICENSE;
 			sourceTree = "<group>";
 		};
 		CB3BF427464FE5989C5ECFA9 /* Configuration */ = {
