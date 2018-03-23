@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>AR Interaction</string>
+	<string>ARBear</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,12 +26,12 @@
 	<string>The camera is used for augmenting reality</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>The location is used for augmenting reality</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Audiovisual Recording</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save photos of your ARExperience</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Save photos of your AR experience</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Audiovisual Recording</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
