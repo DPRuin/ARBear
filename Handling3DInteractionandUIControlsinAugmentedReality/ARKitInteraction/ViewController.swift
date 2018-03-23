@@ -101,6 +101,9 @@ class ViewController: UIViewController {
         tapGesture.delegate = self
         sceneView.addGestureRecognizer(tapGesture)
         
+        
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        
         // 录制设置
         setupRecorder()
         // 底部选择按钮

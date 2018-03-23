@@ -148,17 +148,22 @@
                                     <action selector="recordVideo:" destination="BV1-FR-VrT" eventType="touchUpInside" id="4Jt-uj-fgd"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GRf-VR-Rrj">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="7a5-ST-8IP" secondAttribute="trailing" constant="10" id="7hY-Lm-Pft"/>
                             <constraint firstItem="7a5-ST-8IP" firstAttribute="top" secondItem="LBE-eh-eVd" secondAttribute="bottom" constant="10" id="HWc-8U-2aO"/>
+                            <constraint firstItem="GRf-VR-Rrj" firstAttribute="centerY" secondItem="RLh-bf-1c3" secondAttribute="centerY" id="Hzr-qh-ORu"/>
                             <constraint firstAttribute="trailing" secondItem="R5W-V8-6lY" secondAttribute="trailing" id="J42-1v-Ihf"/>
                             <constraint firstItem="7a5-ST-8IP" firstAttribute="centerX" secondItem="LBE-eh-eVd" secondAttribute="centerX" id="KOb-aY-J09"/>
                             <constraint firstItem="tnx-rc-95S" firstAttribute="top" secondItem="GBj-4O-Whc" secondAttribute="top" id="Sdx-fT-fqG"/>
                             <constraint firstItem="R5W-V8-6lY" firstAttribute="leading" secondItem="RLh-bf-1c3" secondAttribute="leading" id="Yj0-Fo-B5n"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="boO-ZZ-neH"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" id="brT-qF-Rdk"/>
+                            <constraint firstItem="GRf-VR-Rrj" firstAttribute="centerX" secondItem="RLh-bf-1c3" secondAttribute="centerX" id="buu-3c-k6A"/>
                             <constraint firstItem="tnx-rc-95S" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="cGf-LE-hzb"/>
                             <constraint firstItem="R5W-V8-6lY" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="fDn-zw-Oo2"/>
                             <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="kLb-BI-xJ4"/>
@@ -173,6 +178,7 @@
                         <outlet property="blurView" destination="R5W-V8-6lY" id="oF2-lD-Srf"/>
                         <outlet property="sceneView" destination="E6c-py-dvH" id="Gr4-Uw-Z4A"/>
                         <outlet property="segmentedControl" destination="7a5-ST-8IP" id="VX5-z1-OdP"/>
+                        <outlet property="spinner" destination="GRf-VR-Rrj" id="QRl-4t-59X"/>
                         <outlet property="squishButton" destination="LBE-eh-eVd" id="4Fo-Zm-8cJ"/>
                     </connections>
                 </viewController>
