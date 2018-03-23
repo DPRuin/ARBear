@@ -10,32 +10,6 @@ import SceneKit
 
 extension ViewController: UIGestureRecognizerDelegate {
     
-    enum SegueIdentifier: String {
-        case showObjects
-    }
-    
-    // MARK: - Interface Actions
-    
-    /// Displays the `VirtualObjectSelectionViewController` from the `addObjectButton` or in response to a tap gesture in the `sceneView`.
-    /// 展示选择虚拟物体选择框
-    @IBAction func showVirtualObjectSelectionViewController() {
-        // Ensure adding objects is an available action and we are not loading another object (to avoid concurrent modifications of the scene).
-        guard !addObjectButton.isHidden && !virtualObjectLoader.isLoading else { return }
-        
-        statusViewController.cancelScheduledMessage(for: .contentPlacement)
-        performSegue(withIdentifier: SegueIdentifier.showObjects.rawValue, sender: addObjectButton)
-    }
-    
-    /// Determines if the tap gesture for presenting the `VirtualObjectSelectionViewController` should be used.
-    /// 确保加载的虚拟物体不为空，才弹出选择框
-    func gestureRecognizerShouldBegin(_: UIGestureRecognizer) -> Bool {
-        return virtualObjectLoader.loadedObjects.isEmpty
-    }
-    
-    func gestureRecognizer(_: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith _: UIGestureRecognizer) -> Bool {
-        return true
-    }
-    
     /// - Tag: restartExperience
     /// 重启体验
     func restartExperience() {
@@ -45,8 +19,6 @@ extension ViewController: UIGestureRecognizerDelegate {
         statusViewController.cancelAllScheduledMessages()
 
         virtualObjectLoader.removeAllVirtualObjects()
-        addObjectButton.setImage(#imageLiteral(resourceName: "add"), for: [])
-        addObjectButton.setImage(#imageLiteral(resourceName: "addPressed"), for: [.highlighted])
 
         resetTracking()
 
@@ -55,37 +27,67 @@ extension ViewController: UIGestureRecognizerDelegate {
             self.isRestartAvailable = true
         }
     }
-}
-
-extension ViewController: UIPopoverPresentationControllerDelegate {
     
-    // MARK: - UIPopoverPresentationControllerDelegate
-
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // All menus should be popovers (even on iPhone).
-        if let popoverController = segue.destination.popoverPresentationController, let button = sender as? UIButton {
-            popoverController.delegate = self
-            popoverController.sourceView = button
-            popoverController.sourceRect = button.bounds
+    /**
+     Adds the specified virtual object to the scene, placed using
+     the focus square's estimate of the world-space position
+     currently corresponding to the center of the screen.
+     放置虚拟物体
+     - Tag: PlaceVirtualObject
+     */
+    func placeVirtualObject(_ virtualObject: VirtualObject) {
+        guard let cameraTransform = session.currentFrame?.camera.transform,
+            let focusSquarePosition = focusSquare.lastPosition else {
+                statusViewController.showMessage("CANNOT PLACE OBJECT\nTry moving left or right.")
+                return
         }
         
-        guard let identifier = segue.identifier,
-              let segueIdentifer = SegueIdentifier(rawValue: identifier),
-              segueIdentifer == .showObjects else { return }
+        virtualObjectInteraction.selectedObject = virtualObject
+        virtualObject.setPosition(focusSquarePosition, relativeTo: cameraTransform, smoothMovement: false)
         
-        let objectsViewController = segue.destination as! VirtualObjectSelectionViewController
-        objectsViewController.virtualObjects = VirtualObject.availableObjects
-        objectsViewController.delegate = self
-        
-        // Set all rows of currently placed objects to selected.
-        for object in virtualObjectLoader.loadedObjects {
-            guard let index = VirtualObject.availableObjects.index(of: object) else { continue }
-            objectsViewController.selectedVirtualObjectRows.insert(index)
+        updateQueue.async {
+            self.sceneView.scene.rootNode.addChildNode(virtualObject)
         }
     }
     
+    /// 点击屏幕展示虚拟物体
+    @objc func showVirtualObject() {
+        let virtualObjects = VirtualObject.availableObjects
+        virtualObjectLoader.loadVirtualObject(virtualObjects.first!, loadedHandler: { [unowned self] loadedObject in
+            DispatchQueue.main.async {
+                self.hideObjectLoadingUI()
+                self.placeVirtualObject(loadedObject)
+            }
+        })
+        
+        displayObjectLoadingUI()
+    }
+    
+    // MARK: - UIGestureRecognizerDelegate
+    /// Determines if the tap gesture for presenting the `VirtualObjectSelectionViewController` should be used.
+    /// 确保加载的虚拟物体不为空
+    func gestureRecognizerShouldBegin(_: UIGestureRecognizer) -> Bool {
+        return virtualObjectLoader.loadedObjects.isEmpty
+    }
+    
+    func gestureRecognizer(_: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith _: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    
+    // MARK: Object Loading UI
+    
+    func displayObjectLoadingUI() {
+        // Show progress indicator.
+        spinner.startAnimating()
+        
+        isRestartAvailable = false
+    }
+    
+    func hideObjectLoadingUI() {
+        // Hide progress indicator.
+        spinner.stopAnimating()
+        isRestartAvailable = true
+    }
 }
+

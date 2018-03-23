@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var sceneView: VirtualObjectARView!
     
-    @IBOutlet weak var addObjectButton: UIButton!
+    //@IBOutlet weak var addObjectButton: UIButton!
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
             self.restartExperience()
         }
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showVirtualObjectSelectionViewController))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showVirtualObject))
         // Set the delegate to ensure this gesture is only used when there are no virtual objects in the scene.
         tapGesture.delegate = self
         sceneView.addGestureRecognizer(tapGesture)
@@ -311,7 +311,7 @@ class ViewController: UIViewController {
                 self.focusSquare.state = .initializing
                 self.sceneView.pointOfView?.addChildNode(self.focusSquare)
             }
-            addObjectButton.isHidden = true
+            // addObjectButton.isHidden = true
             return
         }
         
@@ -325,7 +325,7 @@ class ViewController: UIViewController {
                 self.focusSquare.state = .featuresDetected(anchorPosition: worldPosition, camera: camera)
             }
         }
-        addObjectButton.isHidden = false
+        // addObjectButton.isHidden = false
         statusViewController.cancelScheduledMessage(for: .focusSquare)
 	}
     
