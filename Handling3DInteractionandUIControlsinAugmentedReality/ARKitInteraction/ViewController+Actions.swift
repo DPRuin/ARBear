@@ -74,7 +74,6 @@ extension ViewController: UIGestureRecognizerDelegate {
         return true
     }
     
-    
     // MARK: Object Loading UI
     
     func displayObjectLoadingUI() {

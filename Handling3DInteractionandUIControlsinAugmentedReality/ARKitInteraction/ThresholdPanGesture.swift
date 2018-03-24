@@ -30,6 +30,7 @@ class ThresholdPanGesture: UIPanGestureRecognizer {
                 
             default:
                 // Reset threshold check.
+                // 重置阀值检查
                 isThresholdExceeded = false
             }
         }
