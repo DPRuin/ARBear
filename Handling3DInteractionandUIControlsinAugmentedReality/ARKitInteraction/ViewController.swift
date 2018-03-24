@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     /// A serial queue used to coordinate adding or removing nodes from the scene.
     /// 串行队列，用于协调添加或删除场景中的节点。
-    let updateQueue = DispatchQueue(label: "com.example.apple-samplecode.arkitexample.serialSceneKitQueue")
+    let updateQueue = DispatchQueue(label: "com.betasmart.ARBear.serialSceneKitQueue")
     
     var screenCenter: CGPoint {
         let bounds = sceneView.bounds
@@ -180,11 +180,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func switchVirtualObject(_ sender: UIButton) {
-        // gameController.startGame()
-        let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
-            object.modelName == "animation-jump"
-        }
-        show(withVirtualObject: objects.first!)
+        gameController.startGame()
+//        let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
+//            object.modelName == "animation-jump"
+//        }
+//        show(withVirtualObject: objects.first!)
     }
     
     // MARK: - SegmentedControl

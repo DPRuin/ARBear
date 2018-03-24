@@ -47,15 +47,15 @@ class GameController {
     // MARK: Animation Properties
     
     let character: SCNNode
-    let jumpAnimation      = Assets.animation(named: "animation-jump.scn")
+    let jumpAnimation = Assets.animation(named: "animation-jump.scn")
     
     // MARK: Sound Properties
-    let cartJump             = Assets.sound(named: "cart_jump.mp3")
+    let cartJump = Assets.sound(named: "cart_jump.mp3")
     
     // MARK: Initialization
     init() {
-        character = scene.rootNode.childNode(withName: "Bob_root", recursively: true)!
         
+        character = scene.rootNode.childNode(withName: "Bob_root", recursively: true)!
         let idleScene = Assets.scene(named: "animation-idle.scn")
         let characterHierarchy = idleScene.rootNode.childNode(withName: "Bob_root", recursively: true)!
         
