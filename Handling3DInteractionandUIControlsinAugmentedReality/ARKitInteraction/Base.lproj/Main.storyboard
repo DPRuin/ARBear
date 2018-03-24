@@ -151,6 +151,17 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GRf-VR-Rrj">
                                 <rect key="frame" x="177" y="323" width="20" height="20"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-In-7Od">
+                                <rect key="frame" x="10" y="613" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Rtd-20-grj"/>
+                                    <constraint firstAttribute="width" constant="44" id="nMz-zp-ju1"/>
+                                </constraints>
+                                <state key="normal" title="切画"/>
+                                <connections>
+                                    <action selector="switchVirtualObject:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Fsl-qg-qEu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -159,12 +170,14 @@
                             <constraint firstItem="GRf-VR-Rrj" firstAttribute="centerY" secondItem="RLh-bf-1c3" secondAttribute="centerY" id="Hzr-qh-ORu"/>
                             <constraint firstAttribute="trailing" secondItem="R5W-V8-6lY" secondAttribute="trailing" id="J42-1v-Ihf"/>
                             <constraint firstItem="7a5-ST-8IP" firstAttribute="centerX" secondItem="LBE-eh-eVd" secondAttribute="centerX" id="KOb-aY-J09"/>
+                            <constraint firstItem="Mb9-In-7Od" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" constant="10" id="RLK-pp-kg0"/>
                             <constraint firstItem="tnx-rc-95S" firstAttribute="top" secondItem="GBj-4O-Whc" secondAttribute="top" id="Sdx-fT-fqG"/>
                             <constraint firstItem="R5W-V8-6lY" firstAttribute="leading" secondItem="RLh-bf-1c3" secondAttribute="leading" id="Yj0-Fo-B5n"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="boO-ZZ-neH"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" id="brT-qF-Rdk"/>
                             <constraint firstItem="GRf-VR-Rrj" firstAttribute="centerX" secondItem="RLh-bf-1c3" secondAttribute="centerX" id="buu-3c-k6A"/>
                             <constraint firstItem="tnx-rc-95S" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="cGf-LE-hzb"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="Mb9-In-7Od" secondAttribute="bottom" constant="10" id="dUa-De-CqP"/>
                             <constraint firstItem="R5W-V8-6lY" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="fDn-zw-Oo2"/>
                             <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="kLb-BI-xJ4"/>
                             <constraint firstAttribute="bottom" secondItem="R5W-V8-6lY" secondAttribute="bottom" id="poH-DX-LIv"/>

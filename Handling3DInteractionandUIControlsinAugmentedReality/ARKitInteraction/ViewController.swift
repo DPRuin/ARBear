@@ -173,6 +173,11 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func switchVirtualObject(_ sender: UIButton) {
+        
+    }
+    
     // MARK: - SegmentedControl
     
     fileprivate func configureSegmentedControl() {
