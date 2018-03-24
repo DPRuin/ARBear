@@ -65,6 +65,8 @@ class ViewController: UIViewController {
     
     let configuration = ARWorldTrackingConfiguration()
     
+    let gameController = GameController()
+    
     // MARK: - View Controller Life Cycle
     
     override func viewDidLoad() {
@@ -73,6 +75,9 @@ class ViewController: UIViewController {
         sceneView.delegate = self
         sceneView.session.delegate = self
 
+//        let arscene = SCNScene(named: "arsene.scn")
+//        sceneView.scene = arscene!
+        
         // Set up scene content.
         setupCamera()
         sceneView.scene.rootNode.addChildNode(focusSquare)
@@ -175,7 +180,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func switchVirtualObject(_ sender: UIButton) {
-        
+        gameController.startGame()
     }
     
     // MARK: - SegmentedControl

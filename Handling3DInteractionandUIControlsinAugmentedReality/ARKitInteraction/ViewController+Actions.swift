@@ -52,14 +52,18 @@ extension ViewController: UIGestureRecognizerDelegate {
     
     /// 点击屏幕展示虚拟物体
     @objc func showVirtualObject() {
-        let virtualObjects = VirtualObject.availableObjects
-        virtualObjectLoader.loadVirtualObject(virtualObjects.first!, loadedHandler: { [unowned self] loadedObject in
+
+        let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
+            object.modelName == "game-scene"
+        }
+        
+        virtualObjectLoader.loadVirtualObject(objects.first!, loadedHandler: { [unowned self] loadedObject in
             DispatchQueue.main.async {
                 self.hideObjectLoadingUI()
                 self.placeVirtualObject(loadedObject)
             }
         })
-        
+
         displayObjectLoadingUI()
     }
     
