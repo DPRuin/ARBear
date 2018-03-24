@@ -180,7 +180,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func switchVirtualObject(_ sender: UIButton) {
-        gameController.startGame()
+        // gameController.startGame()
+        let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
+            object.modelName == "animation-jump"
+        }
+        show(withVirtualObject: objects.first!)
     }
     
     // MARK: - SegmentedControl

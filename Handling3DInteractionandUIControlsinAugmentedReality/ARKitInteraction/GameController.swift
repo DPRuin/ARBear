@@ -47,7 +47,7 @@ class GameController {
     // MARK: Animation Properties
     
     let character: SCNNode
-    let jumpAnimation      = Assets.animation(named: "bear.scn")
+    let jumpAnimation      = Assets.animation(named: "animation-jump.scn")
     
     // MARK: Sound Properties
     let cartJump             = Assets.sound(named: "cart_jump.mp3")
@@ -56,7 +56,7 @@ class GameController {
     init() {
         character = scene.rootNode.childNode(withName: "Bob_root", recursively: true)!
         
-        let idleScene = Assets.scene(named: "animation-start-idle.scn")
+        let idleScene = Assets.scene(named: "animation-idle.scn")
         let characterHierarchy = idleScene.rootNode.childNode(withName: "Bob_root", recursively: true)!
         
         for node in characterHierarchy.childNodes {
@@ -116,7 +116,7 @@ class GameController {
             self.jump()
         }
         
-        let idleAnimation = Assets.animation(named: "bear.scn")
+        let idleAnimation = Assets.animation(named: "animation-jump.scn")
         character.addAnimation(idleAnimation, forKey: nil)
         // character.removeAnimation(forKey: "start", fadeOutDuration: 0.3)
         character.removeAnimation(forKey: "start", blendOutDuration: 0.3)
