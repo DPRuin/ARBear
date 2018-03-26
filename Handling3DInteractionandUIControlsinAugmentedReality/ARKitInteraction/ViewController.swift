@@ -65,7 +65,53 @@ class ViewController: UIViewController {
     
     let configuration = ARWorldTrackingConfiguration()
     
-    let gameController = GameController()
+    // MARK: Configuration Properties
+    
+    /// Determines if audio should be enabled.
+    let isSoundEnabled = true
+    
+    // MARK: Scene Properties
+    let scene = Assets.scene(named: "game-scene.scn")
+    
+    // MARK: Animation Properties
+    
+    var character: SCNNode!
+    let jumpAnimation = Assets.animation(named: "animation-jump.scn")
+    
+    // MARK: Sound Properties
+    let cartJump = Assets.sound(named: "cart_jump.mp3")
+    
+    // MARK: View Controller Initialization
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    required init?(coder aDecoder: NSCoder) {
+        
+        character = scene.rootNode.childNode(withName: "Bob_root", recursively: true)!
+        let idleScene = Assets.scene(named: "animation-idle.scn")
+        let characterHierarchy = idleScene.rootNode.childNode(withName: "Bob_root", recursively: true)!
+        
+        for node in characterHierarchy.childNodes {
+            character.addChildNode(node)
+        }
+        
+        // Play character idle animation.
+        let idleAnimation = Assets.animation(named: "animation-start-idle.scn")
+        idleAnimation.repeatCount = Float.infinity
+        character.addAnimation(idleAnimation, forKey: "start")
+        
+        // Configure sounds.
+        let sounds = [cartJump]
+        
+        for sound in sounds {
+            sound.isPositional = false
+            sound.load()
+        }
+
+        super.init(coder: aDecoder)
+//        // 初始状态
+//        self.setupGame()
+    }
     
     // MARK: - View Controller Life Cycle
     
@@ -75,19 +121,11 @@ class ViewController: UIViewController {
         sceneView.delegate = self
         sceneView.session.delegate = self
 
-//        let arscene = SCNScene(named: "arsene.scn")
-//        sceneView.scene = arscene!
-        
         // Set up scene content.
         setupCamera()
         sceneView.scene.rootNode.addChildNode(focusSquare)
 
         /*
-         The `sceneView.automaticallyUpdatesLighting` option creates an
-         ambient light source and modulates its intensity. This sample app
-         instead modulates a global lighting environment map for use with
-         physically based materials, so disable automatic lighting.
-         
          `sceneView.automaticallyUpdatesLighting`选项创建一个环境光源并调整其强度。
          这个示例应用程序改为调制全局照明环境地图以用于基于物理的材质，因此禁用自动照明。
          */
@@ -111,6 +149,7 @@ class ViewController: UIViewController {
         setupRecorder()
         // 底部选择按钮
         configureSegmentedControl()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -180,7 +219,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func switchVirtualObject(_ sender: UIButton) {
-        gameController.startGame()
 //        let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
 //            object.modelName == "animation-jump"
 //        }

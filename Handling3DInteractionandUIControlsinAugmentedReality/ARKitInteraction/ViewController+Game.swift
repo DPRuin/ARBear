@@ -1,15 +1,15 @@
 //
-//  GameController.swift
+//  ViewController+Game.swift
 //  ARKitInteraction
 //
 //  Created by mac126 on 2018/3/24.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-import UIKit
 import SceneKit
+import UIKit
 
-class GameController {
+extension ViewController {
     
     // MARK: Types
     
@@ -36,25 +36,8 @@ class GameController {
         }
     }
     
-    // MARK: Configuration Properties
-    
-    /// Determines if audio should be enabled.
-    let isSoundEnabled = true
-    
-    // MARK: Scene Properties
-    let scene = Assets.scene(named: "game-scene.scn")
-    
-    // MARK: Animation Properties
-    
-    var character: SCNNode!
-    let jumpAnimation = Assets.animation(named: "animation-jump.scn")
-    
-    // MARK: Sound Properties
-    let cartJump = Assets.sound(named: "cart_jump.mp3")
-    
-    // MARK: Initialization
-    init() {
-        
+    /// 初始状态
+    func setupGame() {
         character = scene.rootNode.childNode(withName: "Bob_root", recursively: true)!
         let idleScene = Assets.scene(named: "animation-idle.scn")
         let characterHierarchy = idleScene.rootNode.childNode(withName: "Bob_root", recursively: true)!
@@ -103,7 +86,7 @@ class GameController {
     }
     
     func startGame() {
-
+        
         // Stop wind.
         scene.rootNode.removeAllAudioPlayers()
         
@@ -125,7 +108,7 @@ class GameController {
         
         SCNTransaction.begin()
         SCNTransaction.animationDuration = 5.0
-
+        
         SCNTransaction.commit()
     }
 }

@@ -17,9 +17,7 @@ extension ViewController: UIGestureRecognizerDelegate {
         isRestartAvailable = false
 
         statusViewController.cancelAllScheduledMessages()
-
         virtualObjectLoader.removeAllVirtualObjects()
-
         resetTracking()
 
         // Disable restart for a while in order to give the session time to restart.
@@ -29,9 +27,6 @@ extension ViewController: UIGestureRecognizerDelegate {
     }
     
     /**
-     Adds the specified virtual object to the scene, placed using
-     the focus square's estimate of the world-space position
-     currently corresponding to the center of the screen.
      放置虚拟物体
      - Tag: PlaceVirtualObject
      */
@@ -57,8 +52,6 @@ extension ViewController: UIGestureRecognizerDelegate {
             object.modelName == "game-scene"
         }
         show(withVirtualObject: objects.first!)
-        
-        
     }
     
     /// 展示虚拟物体
