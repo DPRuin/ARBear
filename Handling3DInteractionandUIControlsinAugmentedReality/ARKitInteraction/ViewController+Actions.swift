@@ -51,7 +51,11 @@ extension ViewController: UIGestureRecognizerDelegate {
         let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
             object.modelName == "game-scene"
         }
-        show(withVirtualObject: objects.first!)
+        let rootNode = objects.first!
+
+        rootNode.addChildNode(character)
+        
+        show(withVirtualObject: rootNode)
     }
     
     /// 展示虚拟物体

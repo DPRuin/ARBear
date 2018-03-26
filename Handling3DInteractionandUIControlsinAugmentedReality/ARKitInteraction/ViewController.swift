@@ -223,6 +223,8 @@ class ViewController: UIViewController {
 //            object.modelName == "animation-jump"
 //        }
 //        show(withVirtualObject: objects.first!)
+        
+        
     }
     
     // MARK: - SegmentedControl
