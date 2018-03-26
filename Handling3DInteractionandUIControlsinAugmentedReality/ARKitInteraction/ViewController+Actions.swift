@@ -70,6 +70,15 @@ extension ViewController: UIGestureRecognizerDelegate {
         displayObjectLoadingUI()
     }
     
+    @IBAction func switchVirtualObject(_ sender: UIButton) {
+        //        let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
+        //            object.modelName == "animation-jump"
+        //        }
+        //        show(withVirtualObject: objects.first!)
+        startGame()
+        
+    }
+    
     // MARK: - UIGestureRecognizerDelegate
     /// Determines if the tap gesture for presenting the `VirtualObjectSelectionViewController` should be used.
     /// 确保加载的虚拟物体不为空

@@ -109,8 +109,6 @@ class ViewController: UIViewController {
         }
 
         super.init(coder: aDecoder)
-//        // 初始状态
-//        self.setupGame()
     }
     
     // MARK: - View Controller Life Cycle
@@ -218,14 +216,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func switchVirtualObject(_ sender: UIButton) {
-//        let objects = VirtualObject.availableObjects.filter { (object) -> Bool in
-//            object.modelName == "animation-jump"
-//        }
-//        show(withVirtualObject: objects.first!)
-        
-        
-    }
+
     
     // MARK: - SegmentedControl
     
