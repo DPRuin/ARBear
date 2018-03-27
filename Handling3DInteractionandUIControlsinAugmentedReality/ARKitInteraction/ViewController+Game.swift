@@ -86,10 +86,7 @@ extension ViewController {
     }
     
     func startGame() {
-        
-        // Stop wind.
-        scene.rootNode.removeAllAudioPlayers()
-        
+
         // Play some music.
         startMusic()
         
@@ -99,16 +96,16 @@ extension ViewController {
             self.jump()
         }
         
-        let idleAnimation = Assets.animation(named: "animation-jump.scn")
+        let idleAnimation = Assets.animation(named: "animation-start.scn")
         character.addAnimation(idleAnimation, forKey: nil)
         // character.removeAnimation(forKey: "start", fadeOutDuration: 0.3)
         character.removeAnimation(forKey: "start", blendOutDuration: 0.3)
+        
         SCNTransaction.commit()
         
         
         SCNTransaction.begin()
         SCNTransaction.animationDuration = 5.0
-        
         SCNTransaction.commit()
     }
 }

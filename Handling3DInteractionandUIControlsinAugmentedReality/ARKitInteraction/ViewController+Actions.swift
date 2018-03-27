@@ -54,7 +54,6 @@ extension ViewController: UIGestureRecognizerDelegate {
         let rootNode = objects.first!
 
         rootNode.addChildNode(character)
-        
         show(withVirtualObject: rootNode)
     }
     
@@ -75,7 +74,7 @@ extension ViewController: UIGestureRecognizerDelegate {
         //            object.modelName == "animation-jump"
         //        }
         //        show(withVirtualObject: objects.first!)
-        startGame()
+        // startGame()
         
     }
     
