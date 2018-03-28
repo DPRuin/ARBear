@@ -103,6 +103,7 @@ class VirtualObjectARView: ARSCNView {
         /*
          2. Collect more information about the environment by hit testing against
             the feature point cloud, but do not return the result yet.
+         通过hit test特征点云来收集更多环境信息，但不要返回结果
         */
         let featureHitTestResult = hitTestWithFeatures(position, coneOpeningAngleInDegrees: 18, minDistance: 0.2, maxDistance: 2.0).first
         let featurePosition = featureHitTestResult?.position
@@ -110,6 +111,7 @@ class VirtualObjectARView: ARSCNView {
         /*
          3. If desired or necessary (no good feature hit test result): Hit test
             against an infinite, horizontal plane (ignoring the real world).
+         如果没有好的hit test结果，对无限的水平面进行hit test
         */
         if infinitePlane || featurePosition == nil {
             if let objectPosition = objectPosition,
@@ -122,6 +124,7 @@ class VirtualObjectARView: ARSCNView {
          4. If available, return the result of the hit test against high quality
             features if the hit tests against infinite planes were skipped or no
             infinite plane was hit.
+         如果没有hit test到无限平面，就返回高质量的特征点
         */
         if let featurePosition = featurePosition {
             return (featurePosition, nil, false)
@@ -130,6 +133,8 @@ class VirtualObjectARView: ARSCNView {
         /*
          5. As a last resort, perform a second, unfiltered hit test against features.
             If there are no features in the scene, the result returned here will be nil.
+         
+         最后手段，执行第二次，hit test，如果没有特征点返回为nil
         */
         let unfilteredFeatureHitTestResults = hitTestWithFeatures(position)
         if let result = unfilteredFeatureHitTestResults.first {
