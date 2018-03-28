@@ -69,6 +69,7 @@ class VirtualObjectARView: ARSCNView {
     // MARK: Position Testing
     
     /// Hit tests against the `sceneView` to find an object at the provided point.
+    /// 在Hit tests提供的点找到对象
     func virtualObject(at point: CGPoint) -> VirtualObject? {
         let hitTestOptions: [SCNHitTestOption: Any] = [.boundingBoxOnly: true]
         let hitTestResults = hitTest(point, options: hitTestOptions)
@@ -81,11 +82,13 @@ class VirtualObjectARView: ARSCNView {
     /**
      Hit tests from the provided screen position to return the most accuarte result possible.
      Returns the new world position, an anchor if one was hit, and if the hit test is considered to be on a plane.
+     返回最准确的结果
      */
     func worldPosition(fromScreenPosition position: CGPoint, objectPosition: float3?, infinitePlane: Bool = false) -> (position: float3, planeAnchor: ARPlaneAnchor?, isOnPlane: Bool)? {
         /*
          1. Always do a hit test against exisiting plane anchors first. (If any
             such anchors exist & only within their extents.)
+         先对现有的平面和锚点进行hit test
         */
         let planeHitTestResults = hitTest(position, types: .existingPlaneUsingExtent)
         
