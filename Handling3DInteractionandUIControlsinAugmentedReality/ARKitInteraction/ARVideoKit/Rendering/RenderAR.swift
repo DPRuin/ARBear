@@ -1,4 +1,4 @@
- //
+//
 //  RenderAR.swift
 //  ARVideoKit
 //
@@ -30,6 +30,7 @@ internal struct RenderAR {
         }
         return nil
     }
+    
     internal var bufferSize:CGSize? {
         guard let raw = rawBuffer else{return nil};
         var width = CVPixelBufferGetWidth(raw);
