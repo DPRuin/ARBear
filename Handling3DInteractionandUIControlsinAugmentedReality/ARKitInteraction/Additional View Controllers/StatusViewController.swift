@@ -142,15 +142,17 @@ extension ARCamera.TrackingState {
     var presentationString: String {
         switch self {
         case .notAvailable:
-            return "TRACKING UNAVAILABLE"
+            return "追踪不可用"
         case .normal:
-            return "TRACKING NORMAL"
+            return "追踪正常"
         case .limited(.excessiveMotion):
-            return "TRACKING LIMITED\nExcessive motion"
+            return "追踪受限，移动手机过快"
         case .limited(.insufficientFeatures):
-            return "TRACKING LIMITED\nLow detail"
+            return "追踪受限，特征点不足"
         case .limited(.initializing):
-            return "Initializing"
+            return "追踪受限，正在初始化"
+        case .limited(.relocalizing):
+            return "追踪受限，重新定位"
         }
     }
 
