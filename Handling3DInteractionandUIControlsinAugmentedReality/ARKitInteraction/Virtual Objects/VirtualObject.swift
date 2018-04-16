@@ -97,6 +97,7 @@ class VirtualObject: SCNReferenceNode {
         let epsilon: Float = 0.001 // Do not update if the difference is less than 1 mm.
         let distanceToPlane = abs(planePosition.y)
         if distanceToPlane > epsilon && distanceToPlane < verticalAllowance {
+            
             SCNTransaction.begin()
             SCNTransaction.animationDuration = CFTimeInterval(distanceToPlane * 500) // Move 2 mm per second.
             SCNTransaction.animationTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
