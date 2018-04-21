@@ -116,7 +116,7 @@ extension VirtualObject {
 
         let fileEnumerator = FileManager().enumerator(at: modelsURL, includingPropertiesForKeys: [])!
 
-        return fileEnumerator.flatMap { element in
+        return fileEnumerator.compactMap { element in
             let url = element as! URL
 
             guard url.pathExtension == "scn" else { return nil }
@@ -139,17 +139,17 @@ extension VirtualObject {
     }
 }
 
-extension Collection where Iterator.Element == Float, IndexDistance == Int {
+extension Collection where Element == Float, Index == Int {
     /// Return the mean of a list of Floats. Used with `recentVirtualObjectDistances`.
     var average: Float? {
         guard !isEmpty else {
             return nil
         }
-
+        
         let sum = reduce(Float(0)) { current, next -> Float in
             return current + next
         }
-
+        
         return sum / Float(count)
     }
 }

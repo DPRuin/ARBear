@@ -202,6 +202,7 @@ open class SegmentedControl: UIControl {
         contentMode = .redraw
         if let parentViewController = scrollView.parentViewController {
             parentViewController.automaticallyAdjustsScrollViewInsets = false
+            
         }
     }
 
