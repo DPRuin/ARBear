@@ -45,6 +45,16 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 object.adjustOntoPlaneAnchor(planeAnchor, using: node)
             }
         }
+        
+        // 放置模型
+//    virtualObjectLoader.loadVirtualObject(self.virtualObjectLoader.loadedObjects.first!, loadedHandler: { [unowned self] loadedObject in
+//            DispatchQueue.main.async {
+//                self.hideObjectLoadingUI()
+//                self.placeVirtualObject(loadedObject)
+//            }
+//        })
+//
+//        displayObjectLoadingUI()
     }
     
     // 当使用给定锚点的数据更新节点时调用

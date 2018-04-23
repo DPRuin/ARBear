@@ -104,16 +104,7 @@ class StatusViewController: UIViewController {
 		let timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: false, block: { [unowned self] _ in
             self.cancelScheduledMessage(for: .trackingStateEscalation)
 
-            var message = trackingState.presentationString
-            
-//            if let recommendation = trackingState.recommendation {
-//
-//                message.append(": \(recommendation)")
-//            }
-            
-            
-            
-            
+            let message = trackingState.presentationString
             self.showMessage(message, autoHide: false)
 		})
         
@@ -148,30 +139,17 @@ extension ARCamera.TrackingState {
     var presentationString: String {
         switch self {
         case .notAvailable:
-            return "TRACKING UNAVAILABLE"
+            return "无法找到合适水平面请调整手机位置"
         case .normal:
-            return "TRACKING NORMAL"
+            return "正常"
         case .limited(.excessiveMotion):
-            return "TRACKING LIMITED\nExcessive motion"
+            return "慢慢移动你的手机"
         case .limited(.insufficientFeatures):
-            return "TRACKING LIMITED\nLow detail"
+            return "尝试调亮灯光并稍作移动"
         case .limited(.initializing):
-            return "Initializing"
+            return "初始化"
         case .limited(.relocalizing):
-            return "Recovering from interruption"
+            return "需重新启动追踪"
         }
-
-    var recommendation: String? {
-        switch self {
-        case .limited(.excessiveMotion):
-            return "Try slowing down your movement, or reset the session."
-        case .limited(.insufficientFeatures):
-            return "Try pointing at a flat surface, or reset the session."
-        case .limited(.relocalizing):
-            return "Return to the location where you left off or try resetting the session."
-        default:
-            return nil
-        }
-    }
 }
 }

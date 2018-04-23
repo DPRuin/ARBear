@@ -41,13 +41,6 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
         displayObjectLoadingUI()
     }
     
-//    func virtualObjectSelectionViewController(_: VirtualObjectSelectionViewController, didDeselectObject object: VirtualObject) {
-//        guard let objectIndex = virtualObjectLoader.loadedObjects.index(of: object) else {
-//            fatalError("Programmer error: Failed to lookup virtual object in scene.")
-//        }
-//        virtualObjectLoader.removeVirtualObject(at: objectIndex)
-//    }
-
     // MARK: Object Loading UI
 
     func displayObjectLoadingUI() {
