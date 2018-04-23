@@ -78,7 +78,6 @@
 		7E5D1479208A00B8001271B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E5D147B208A00B8001271B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5D1481208A02E6001271B3 /* ARMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARMain.storyboard; sourceTree = "<group>"; };
-		7E5D1484208A043B001271B3 /* VirtualObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelection.swift; sourceTree = "<group>"; };
 		7E5D1485208A043B001271B3 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		7E5D148A208A0460001271B3 /* ARInputViewOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInputViewOptions.swift; sourceTree = "<group>"; };
 		7E5D148B208A0460001271B3 /* ARVideoOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARVideoOptions.swift; sourceTree = "<group>"; };
@@ -199,7 +198,6 @@
 			children = (
 				7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */,
 				7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */,
-				7E5D1484208A043B001271B3 /* VirtualObjectSelection.swift */,
 				7E5D1485208A043B001271B3 /* StatusViewController.swift */,
 				7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */,
 			);
