@@ -65,6 +65,8 @@
 		7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */; };
 		7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */; };
 		7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */; };
+		7E640759208DE1A300258854 /* a.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7E640756208DE1A300258854 /* a.mp4 */; };
+		7E64075A208DE1A300258854 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640758208DE1A300258854 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +132,9 @@
 		7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VirtualObjectCollectionViewCell.xib; sourceTree = "<group>"; };
 		7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = virtualObjectSelectionViewController.swift; sourceTree = "<group>"; };
+		7E640756208DE1A300258854 /* a.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.mp4; sourceTree = "<group>"; };
+		7E640757208DE1A300258854 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		7E640758208DE1A300258854 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +167,7 @@
 		7E5D146C208A00B7001271B3 /* ARBear */ = {
 			isa = PBXGroup;
 			children = (
+				7E640755208DE1A300258854 /* Player */,
 				7E64074C208D913900258854 /* PresentBottomVC */,
 				7E64073F208D912300258854 /* PageView */,
 				7E5D14C5208A0481001271B3 /* SegmentedControl */,
@@ -379,6 +385,16 @@
 			path = PresentBottomVC;
 			sourceTree = "<group>";
 		};
+		7E640755208DE1A300258854 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				7E640756208DE1A300258854 /* a.mp4 */,
+				7E640757208DE1A300258854 /* Player.h */,
+				7E640758208DE1A300258854 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5D14D0208A0481001271B3 /* Info.plist in Resources */,
+				7E640759208DE1A300258854 /* a.mp4 in Resources */,
 				7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */,
 				7E5D1482208A02E6001271B3 /* ARMain.storyboard in Resources */,
 				7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */,
@@ -474,6 +491,7 @@
 				7E5D14BC208A0460001271B3 /* RecordARDelegate.swift in Sources */,
 				7E5D14AB208A0460001271B3 /* CGImage+Resize.swift in Sources */,
 				7E5D14CD208A0481001271B3 /* Constants.swift in Sources */,
+				7E64075A208DE1A300258854 /* Player.swift in Sources */,
 				7E5D14B4208A0460001271B3 /* Generate+LivePhoto.swift in Sources */,
 				7E640746208D912400258854 /* HFPageCollectionLayout.swift in Sources */,
 				7E5D14C0208A046D001271B3 /* FocusSquareSegment.swift in Sources */,
