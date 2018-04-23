@@ -13,7 +13,6 @@ import UIKit
 /// 协议
 protocol VirtualObjectSelectionViewControllerDelegate: class {
     func virtualObjectSelectionViewController(_ selectionViewController: VirtualObjectSelectionViewController, didSelectObject: VirtualObject)
-    func virtualObjectSelectionViewController(_ selectionViewController: VirtualObjectSelectionViewController, didDeselectObject: VirtualObject)
 }
 
 class VirtualObjectSelectionViewController: UIViewController, PresentBottomType {
@@ -31,7 +30,7 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
     
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
     
-    var selectedVirtualObjectRows = IndexSet()
+    // var selectedVirtualObjectRows = IndexSet()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,13 +93,8 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         
         let object = virtualObjects[indexPath.item]
         
-        // Check if the current row is already selected, then deselect it.
-        if selectedVirtualObjectRows.contains(indexPath.item) {
-            delegate?.virtualObjectSelectionViewController(self, didDeselectObject: object)
-        } else {
-            delegate?.virtualObjectSelectionViewController(self, didSelectObject: object)
-        }
-        
+        delegate?.virtualObjectSelectionViewController(self, didSelectObject: object)
+
         dismiss(animated: true, completion: nil)
     }
 }

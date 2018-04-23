@@ -68,10 +68,10 @@ extension ViewController {
         objectsViewController.virtualObjects = VirtualObject.availableObjects
         objectsViewController.delegate = self
         
-        for object in virtualObjectLoader.loadedObjects {
-            guard let index = VirtualObject.availableObjects.index(of: object) else { continue }
-            objectsViewController.selectedVirtualObjectRows.insert(index)
-        }
+//        for object in virtualObjectLoader.loadedObjects {
+//            guard let index = VirtualObject.availableObjects.index(of: object) else { continue }
+//            objectsViewController.selectedVirtualObjectRows.insert(index)
+//        }
     }
     
 }

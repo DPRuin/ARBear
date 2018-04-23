@@ -1,8 +1,6 @@
 /*
 See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-Methods on the main view controller for handling virtual object loading and movement
 处理虚拟对象的加载和移动
 */
 
@@ -10,13 +8,7 @@ import UIKit
 import SceneKit
 
 extension ViewController: VirtualObjectSelectionViewControllerDelegate {
-    /**
-     Adds the specified virtual object to the scene, placed using
-     the focus square's estimate of the world-space position
-     currently corresponding to the center of the screen.
-     
-     - Tag: PlaceVirtualObject
-     */
+    /// 放置虚拟物体
     func placeVirtualObject(_ virtualObject: VirtualObject) {
         guard let cameraTransform = session.currentFrame?.camera.transform,
             let focusSquarePosition = focusSquare.lastPosition else {
@@ -35,6 +27,10 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
     // MARK: - VirtualObjectSelectionViewControllerDelegate
     
     func virtualObjectSelectionViewController(_: VirtualObjectSelectionViewController, didSelectObject object: VirtualObject) {
+        // 删除原来的模型
+        virtualObjectLoader.removeAllVirtualObjects()
+        
+        // 放置选中的模型
         virtualObjectLoader.loadVirtualObject(object, loadedHandler: { [unowned self] loadedObject in
             DispatchQueue.main.async {
                 self.hideObjectLoadingUI()
@@ -45,12 +41,12 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
         displayObjectLoadingUI()
     }
     
-    func virtualObjectSelectionViewController(_: VirtualObjectSelectionViewController, didDeselectObject object: VirtualObject) {
-        guard let objectIndex = virtualObjectLoader.loadedObjects.index(of: object) else {
-            fatalError("Programmer error: Failed to lookup virtual object in scene.")
-        }
-        virtualObjectLoader.removeVirtualObject(at: objectIndex)
-    }
+//    func virtualObjectSelectionViewController(_: VirtualObjectSelectionViewController, didDeselectObject object: VirtualObject) {
+//        guard let objectIndex = virtualObjectLoader.loadedObjects.index(of: object) else {
+//            fatalError("Programmer error: Failed to lookup virtual object in scene.")
+//        }
+//        virtualObjectLoader.removeVirtualObject(at: objectIndex)
+//    }
 
     // MARK: Object Loading UI
 
