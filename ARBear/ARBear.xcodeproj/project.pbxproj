@@ -56,6 +56,16 @@
 		7E5D14E7208A04C0001271B3 /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14E5208A04C0001271B3 /* VirtualObjectInteraction.swift */; };
 		7E5D14E8208A04C0001271B3 /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14E6208A04C0001271B3 /* VirtualObjectARView.swift */; };
 		7E5D14EA208A0AEF001271B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14E9208A0AEE001271B3 /* HomeViewController.swift */; };
+		7E640746208D912400258854 /* HFPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640740208D912300258854 /* HFPageCollectionLayout.swift */; };
+		7E640747208D912400258854 /* HFTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640741208D912300258854 /* HFTitleView.swift */; };
+		7E640748208D912400258854 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640742208D912300258854 /* UIColor-Extension.swift */; };
+		7E640749208D912400258854 /* HFPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640743208D912300258854 /* HFPageCollectionView.swift */; };
+		7E64074A208D912400258854 /* HFContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640744208D912300258854 /* HFContentView.swift */; };
+		7E64074B208D912400258854 /* HFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640745208D912300258854 /* HFPageView.swift */; };
+		7E64074E208D913900258854 /* PresentBottomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E64074D208D913900258854 /* PresentBottomController.swift */; };
+		7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */; };
+		7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */; };
+		7E640754208D91D900258854 /* VirtualObjectSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640753208D91D900258854 /* VirtualObjectSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +121,16 @@
 		7E5D14E5208A04C0001271B3 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
 		7E5D14E6208A04C0001271B3 /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
 		7E5D14E9208A0AEE001271B3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7E640740208D912300258854 /* HFPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFPageCollectionLayout.swift; sourceTree = "<group>"; };
+		7E640741208D912300258854 /* HFTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFTitleView.swift; sourceTree = "<group>"; };
+		7E640742208D912300258854 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		7E640743208D912300258854 /* HFPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFPageCollectionView.swift; sourceTree = "<group>"; };
+		7E640744208D912300258854 /* HFContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFContentView.swift; sourceTree = "<group>"; };
+		7E640745208D912300258854 /* HFPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFPageView.swift; sourceTree = "<group>"; };
+		7E64074D208D913900258854 /* PresentBottomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentBottomController.swift; sourceTree = "<group>"; };
+		7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VirtualObjectCollectionViewCell.xib; sourceTree = "<group>"; };
+		7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E640753208D91D900258854 /* VirtualObjectSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +163,8 @@
 		7E5D146C208A00B7001271B3 /* ARBear */ = {
 			isa = PBXGroup;
 			children = (
+				7E64074C208D913900258854 /* PresentBottomVC */,
+				7E64073F208D912300258854 /* PageView */,
 				7E5D14C5208A0481001271B3 /* SegmentedControl */,
 				7E5D1488208A0460001271B3 /* ARVideoKit */,
 				7E5D1471208A00B7001271B3 /* ViewController.swift */,
@@ -170,8 +192,11 @@
 		7E5D1483208A043B001271B3 /* Additional View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */,
+				7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */,
 				7E5D1484208A043B001271B3 /* VirtualObjectSelection.swift */,
 				7E5D1485208A043B001271B3 /* StatusViewController.swift */,
+				7E640753208D91D900258854 /* VirtualObjectSelectViewController.swift */,
 			);
 			path = "Additional View Controllers";
 			sourceTree = "<group>";
@@ -334,6 +359,27 @@
 			path = "Virtual Objects";
 			sourceTree = "<group>";
 		};
+		7E64073F208D912300258854 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				7E640740208D912300258854 /* HFPageCollectionLayout.swift */,
+				7E640741208D912300258854 /* HFTitleView.swift */,
+				7E640742208D912300258854 /* UIColor-Extension.swift */,
+				7E640743208D912300258854 /* HFPageCollectionView.swift */,
+				7E640744208D912300258854 /* HFContentView.swift */,
+				7E640745208D912300258854 /* HFPageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		7E64074C208D913900258854 /* PresentBottomVC */ = {
+			isa = PBXGroup;
+			children = (
+				7E64074D208D913900258854 /* PresentBottomController.swift */,
+			);
+			path = PresentBottomVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5D14D0208A0481001271B3 /* Info.plist in Resources */,
+				7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */,
 				7E5D1482208A02E6001271B3 /* ARMain.storyboard in Resources */,
 				7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */,
 				7E5D1477208A00B8001271B3 /* Assets.xcassets in Resources */,
@@ -410,10 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E64074A208D912400258854 /* HFContentView.swift in Sources */,
 				7E5D14B8208A0460001271B3 /* RenderAR.swift in Sources */,
+				7E64074E208D913900258854 /* PresentBottomController.swift in Sources */,
 				7E5D14AA208A0460001271B3 /* RecordAR+PhotoRender.swift in Sources */,
 				7E5D14E7208A04C0001271B3 /* VirtualObjectInteraction.swift in Sources */,
 				7E5D14E4208A04AB001271B3 /* VirtualObject.swift in Sources */,
+				7E640749208D912400258854 /* HFPageCollectionView.swift in Sources */,
 				7E5D14CF208A0481001271B3 /* SegmentedControl.swift in Sources */,
 				7E5D14B9208A0460001271B3 /* Generate+GIF.swift in Sources */,
 				7E5D14D5208A048F001271B3 /* ThresholdPanGesture.swift in Sources */,
@@ -426,19 +476,25 @@
 				7E5D14AB208A0460001271B3 /* CGImage+Resize.swift in Sources */,
 				7E5D14CD208A0481001271B3 /* Constants.swift in Sources */,
 				7E5D14B4208A0460001271B3 /* Generate+LivePhoto.swift in Sources */,
+				7E640746208D912400258854 /* HFPageCollectionLayout.swift in Sources */,
 				7E5D14C0208A046D001271B3 /* FocusSquareSegment.swift in Sources */,
 				7E5D14AE208A0460001271B3 /* UIView+isType.swift in Sources */,
 				7E5D14B6208A0460001271B3 /* QuickTimeMov.swift in Sources */,
 				7E5D1487208A043B001271B3 /* StatusViewController.swift in Sources */,
+				7E640748208D912400258854 /* UIColor-Extension.swift in Sources */,
 				7E5D14A8208A0460001271B3 /* ARInputViewOptions.swift in Sources */,
+				7E640747208D912400258854 /* HFTitleView.swift in Sources */,
 				7E5D14DF208A04A2001271B3 /* ViewController+ObjectSelection.swift in Sources */,
 				7E5D14CE208A0481001271B3 /* SCScrollView.swift in Sources */,
 				7E5D1472208A00B7001271B3 /* ViewController.swift in Sources */,
 				7E5D14AD208A0460001271B3 /* UIImage+VideoBuffer.swift in Sources */,
 				7E5D14B5208A0460001271B3 /* JPEG.swift in Sources */,
 				7E5D14D2208A0481001271B3 /* Style.swift in Sources */,
+				7E640754208D91D900258854 /* VirtualObjectSelectViewController.swift in Sources */,
 				7E5D14AF208A0460001271B3 /* RecordAR.swift in Sources */,
+				7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */,
 				7E5D1486208A043B001271B3 /* VirtualObjectSelection.swift in Sources */,
+				7E64074B208D912400258854 /* HFPageView.swift in Sources */,
 				7E5D14D9208A0497001271B3 /* Utilities.swift in Sources */,
 				7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */,
 				7E5D14DD208A04A2001271B3 /* ViewController+Actions.swift in Sources */,
