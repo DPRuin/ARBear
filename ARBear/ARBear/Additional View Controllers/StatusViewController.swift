@@ -41,8 +41,10 @@ class StatusViewController: UIViewController {
 
     // MARK: - Properties
     
-    /// Trigerred when the "Restart Experience" button is tapped.
+    /// 重启体验
     var restartExperienceHandler: () -> Void = {}
+    /// 关闭ar
+    var closeBtnClickHandler: () -> Void = {}
     
     /// Seconds before the timer message should fade out. Adjust if the app needs longer transient messages.
     private let displayDuration: TimeInterval = 6
@@ -117,6 +119,11 @@ class StatusViewController: UIViewController {
     @IBAction private func restartExperience(_ sender: UIButton) {
         restartExperienceHandler()
     }
+    
+    @IBAction private func closeBtnClick(_ sender: UIButton) {
+        closeBtnClickHandler()
+    }
+    
 	
 	// MARK: - Panel Visibility
     

@@ -110,6 +110,10 @@ class ViewController: UIViewController {
         statusViewController.restartExperienceHandler = { [unowned self] in
             self.restartExperience()
         }
+        // 关闭
+        statusViewController.closeBtnClickHandler = {
+            self.dismiss(animated: true, completion: nil)
+        }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showVirtualObjectSelectionViewController))
         // Set the delegate to ensure this gesture is only used when there are no virtual objects in the scene.
