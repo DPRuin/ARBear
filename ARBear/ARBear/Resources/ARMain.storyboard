@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="-242" y="44"/>
         </scene>
-        <!--Virtual Object Select View Controller-->
+        <!--Virtual Object Selection View Controller-->
         <scene sceneID="HX3-EA-meR">
             <objects>
-                <viewController id="yzR-eR-vJu" customClass="VirtualObjectSelectViewController" customModule="ARBear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yzR-eR-vJu" customClass="VirtualObjectSelectionViewController" customModule="ARBear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3CP-zO-nzd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

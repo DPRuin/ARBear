@@ -13,7 +13,6 @@
 		7E5D1477208A00B8001271B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1476208A00B8001271B3 /* Assets.xcassets */; };
 		7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1478208A00B8001271B3 /* LaunchScreen.storyboard */; };
 		7E5D1482208A02E6001271B3 /* ARMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1481208A02E6001271B3 /* ARMain.storyboard */; };
-		7E5D1486208A043B001271B3 /* VirtualObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1484208A043B001271B3 /* VirtualObjectSelection.swift */; };
 		7E5D1487208A043B001271B3 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1485208A043B001271B3 /* StatusViewController.swift */; };
 		7E5D14A8208A0460001271B3 /* ARInputViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D148A208A0460001271B3 /* ARInputViewOptions.swift */; };
 		7E5D14A9208A0460001271B3 /* ARVideoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D148B208A0460001271B3 /* ARVideoOptions.swift */; };
@@ -65,7 +64,7 @@
 		7E64074E208D913900258854 /* PresentBottomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E64074D208D913900258854 /* PresentBottomController.swift */; };
 		7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */; };
 		7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */; };
-		7E640754208D91D900258854 /* VirtualObjectSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640753208D91D900258854 /* VirtualObjectSelectViewController.swift */; };
+		7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,7 +129,7 @@
 		7E64074D208D913900258854 /* PresentBottomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentBottomController.swift; sourceTree = "<group>"; };
 		7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VirtualObjectCollectionViewCell.xib; sourceTree = "<group>"; };
 		7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectCollectionViewCell.swift; sourceTree = "<group>"; };
-		7E640753208D91D900258854 /* VirtualObjectSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelectViewController.swift; sourceTree = "<group>"; };
+		7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = virtualObjectSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +195,7 @@
 				7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */,
 				7E5D1484208A043B001271B3 /* VirtualObjectSelection.swift */,
 				7E5D1485208A043B001271B3 /* StatusViewController.swift */,
-				7E640753208D91D900258854 /* VirtualObjectSelectViewController.swift */,
+				7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */,
 			);
 			path = "Additional View Controllers";
 			sourceTree = "<group>";
@@ -490,10 +489,9 @@
 				7E5D14AD208A0460001271B3 /* UIImage+VideoBuffer.swift in Sources */,
 				7E5D14B5208A0460001271B3 /* JPEG.swift in Sources */,
 				7E5D14D2208A0481001271B3 /* Style.swift in Sources */,
-				7E640754208D91D900258854 /* VirtualObjectSelectViewController.swift in Sources */,
+				7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */,
 				7E5D14AF208A0460001271B3 /* RecordAR.swift in Sources */,
 				7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */,
-				7E5D1486208A043B001271B3 /* VirtualObjectSelection.swift in Sources */,
 				7E64074B208D912400258854 /* HFPageView.swift in Sources */,
 				7E5D14D9208A0497001271B3 /* Utilities.swift in Sources */,
 				7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */,

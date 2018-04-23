@@ -13,16 +13,19 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        // imageView.isUserInteractionEnabled =
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.imageDidClick(_:)))
-//        imageView.addGestureRecognizer(gesture)
+    static let reuseIdentifier = "ObjectCell"
+    
+    var modelName = "" {
+        didSet {
+            label.text = modelName.capitalized
+            imageView.image = UIImage(named: modelName)
+        }
     }
     
-    @objc func imageDidClick(_ gesture: UITapGestureRecognizer) {
-        print("imageDidClick")
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
     }
+    
     
 }

@@ -57,6 +57,25 @@ extension ViewController: UIGestureRecognizerDelegate {
     }
 }
 
+extension ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let identifier = segue.identifier,
+            let segueIdentifer = SegueIdentifier(rawValue: identifier),
+            segueIdentifer == .showObjects else { return }
+        
+        let objectsViewController = segue.destination as! VirtualObjectSelectionViewController
+        objectsViewController.virtualObjects = VirtualObject.availableObjects
+        objectsViewController.delegate = self
+        
+        for object in virtualObjectLoader.loadedObjects {
+            guard let index = VirtualObject.availableObjects.index(of: object) else { continue }
+            objectsViewController.selectedVirtualObjectRows.insert(index)
+        }
+    }
+    
+}
+
 //extension ViewController: UIPopoverPresentationControllerDelegate {
 //
 //    // MARK: - UIPopoverPresentationControllerDelegate

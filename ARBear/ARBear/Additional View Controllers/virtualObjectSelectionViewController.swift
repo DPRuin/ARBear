@@ -8,7 +8,15 @@
 
 import UIKit
 
-class VirtualObjectSelectViewController: UIViewController, PresentBottomType {
+// MARK: - VirtualObjectSelectionViewControllerDelegate
+
+/// 协议
+protocol VirtualObjectSelectionViewControllerDelegate: class {
+    func virtualObjectSelectionViewController(_ selectionViewController: VirtualObjectSelectionViewController, didSelectObject: VirtualObject)
+    func virtualObjectSelectionViewController(_ selectionViewController: VirtualObjectSelectionViewController, didDeselectObject: VirtualObject)
+}
+
+class VirtualObjectSelectionViewController: UIViewController, PresentBottomType {
 
     var contentHeight: CGFloat {
         return 300
@@ -17,6 +25,13 @@ class VirtualObjectSelectViewController: UIViewController, PresentBottomType {
     var canPanDown: Bool {
         return true
     }
+    
+    /// 模型数据
+    var virtualObjects = [VirtualObject]()
+    
+    weak var delegate: VirtualObjectSelectionViewControllerDelegate?
+    
+    var selectedVirtualObjectRows = IndexSet()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +46,7 @@ class VirtualObjectSelectViewController: UIViewController, PresentBottomType {
     }
     
     func setupPageCollection()  {
-        let titles = ["我的", "小熊"]
+        let titles = ["小熊", "小兔"]
         
         var style = HFPageStyle()
         style.isShowBottomLine = true
@@ -53,27 +68,39 @@ class VirtualObjectSelectViewController: UIViewController, PresentBottomType {
 
 }
 
-extension VirtualObjectSelectViewController : HFPageCollectionViewDataSource{
+extension VirtualObjectSelectionViewController : HFPageCollectionViewDataSource{
     
     func numberOfSectionsInPageCollectionView(_ pageCollectionView: HFPageCollectionView) -> Int {
         return 2
     }
     
     func pageCollectionView(_ pageCollectionView: HFPageCollectionView, numberOfItemsIn section: Int) -> Int {
-        return Int(arc4random_uniform(16) + 6)
+        return virtualObjects.count
     }
     
     func pageCollectionView(_ pageCollectionView: HFPageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollection", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollection", for: indexPath) as! VirtualObjectCollectionViewCell
+        cell.modelName = virtualObjects[indexPath.item].modelName
         // cell.backgroundColor = UIColor.randomColor()
         return cell
     }
 }
 
-extension VirtualObjectSelectViewController: HFPageCollectionViewDelegate {
+extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
     func pageCollectionView(_ pageCollectionView: HFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("-----")
         print("index-\(indexPath)")
+        
+        let object = virtualObjects[indexPath.item]
+        
+        // Check if the current row is already selected, then deselect it.
+        if selectedVirtualObjectRows.contains(indexPath.item) {
+            delegate?.virtualObjectSelectionViewController(self, didDeselectObject: object)
+        } else {
+            delegate?.virtualObjectSelectionViewController(self, didSelectObject: object)
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
 }
