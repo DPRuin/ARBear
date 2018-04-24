@@ -28,6 +28,7 @@
 		7E2C532B208EC7CD00D3DB77 /* video.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E2C5315208EC7CD00D3DB77 /* video.scnassets */; };
 		7E2C532C208EC7CD00D3DB77 /* RenderARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */; };
 		7E2C532D208EC7CD00D3DB77 /* RecordARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */; };
+		7E2C5332208F34FA00D3DB77 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E2C5331208F34FA00D3DB77 /* Images.bundle */; };
 		7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D146D208A00B7001271B3 /* AppDelegate.swift */; };
 		7E5D1472208A00B7001271B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1471208A00B7001271B3 /* ViewController.swift */; };
 		7E5D1475208A00B7001271B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1473208A00B7001271B3 /* Main.storyboard */; };
@@ -65,7 +66,7 @@
 		7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */; };
 		7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */; };
 		7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */; };
-		7E640759208DE1A300258854 /* a.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7E640756208DE1A300258854 /* a.mp4 */; };
+		7E640759208DE1A300258854 /* playerneed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7E640756208DE1A300258854 /* playerneed.mp4 */; };
 		7E64075A208DE1A300258854 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640758208DE1A300258854 /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +93,7 @@
 		7E2C5315208EC7CD00D3DB77 /* video.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = video.scnassets; sourceTree = "<group>"; };
 		7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderARDelegate.swift; sourceTree = "<group>"; };
 		7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordARDelegate.swift; sourceTree = "<group>"; };
-		7E2C5330208F2BCE00D3DB77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7E2C5331208F34FA00D3DB77 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		7E5D146A208A00B7001271B3 /* ARBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D146D208A00B7001271B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D1471208A00B7001271B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +133,7 @@
 		7E64074F208D915100258854 /* VirtualObjectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VirtualObjectCollectionViewCell.xib; sourceTree = "<group>"; };
 		7E640750208D915100258854 /* VirtualObjectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = virtualObjectSelectionViewController.swift; sourceTree = "<group>"; };
-		7E640756208DE1A300258854 /* a.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.mp4; sourceTree = "<group>"; };
+		7E640756208DE1A300258854 /* playerneed.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = playerneed.mp4; sourceTree = "<group>"; };
 		7E640757208DE1A300258854 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7E640758208DE1A300258854 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -318,7 +319,7 @@
 		7E5D14C2208A0477001271B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7E2C5330208F2BCE00D3DB77 /* Images.xcassets */,
+				7E2C5331208F34FA00D3DB77 /* Images.bundle */,
 				7E5D14C3208A0477001271B3 /* Models.scnassets */,
 				7E5D1476208A00B8001271B3 /* Assets.xcassets */,
 				7E5D1481208A02E6001271B3 /* ARMain.storyboard */,
@@ -388,7 +389,7 @@
 		7E640755208DE1A300258854 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				7E640756208DE1A300258854 /* a.mp4 */,
+				7E640756208DE1A300258854 /* playerneed.mp4 */,
 				7E640757208DE1A300258854 /* Player.h */,
 				7E640758208DE1A300258854 /* Player.swift */,
 			);
@@ -455,7 +456,8 @@
 			files = (
 				7E5D14D0208A0481001271B3 /* Info.plist in Resources */,
 				7E2C532B208EC7CD00D3DB77 /* video.scnassets in Resources */,
-				7E640759208DE1A300258854 /* a.mp4 in Resources */,
+				7E640759208DE1A300258854 /* playerneed.mp4 in Resources */,
+				7E2C5332208F34FA00D3DB77 /* Images.bundle in Resources */,
 				7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */,
 				7E5D1482208A02E6001271B3 /* ARMain.storyboard in Resources */,
 				7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */,

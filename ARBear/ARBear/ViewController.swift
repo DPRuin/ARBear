@@ -185,7 +185,7 @@ class ViewController: UIViewController {
         self.player.view.addSubview(bgImageView)
         
         let cancelBtn = UIButton(type: .custom)
-        cancelBtn.setImage(UIImage(named: "Images.xcassets/btn_cancel"), for: UIControlState.normal)
+        cancelBtn.setImage(UIImage(named: "Images.bundle/btn_cancel"), for: UIControlState.normal)
         cancelBtn.addTarget(self, action: #selector(self.btnAfreshDidClick(_:)), for: .touchUpInside)
         
         let insert:CGFloat = 50.0
@@ -194,7 +194,7 @@ class ViewController: UIViewController {
         self.player.view.addSubview(cancelBtn)
         
         let confirmBtn = UIButton(type: .custom)
-        confirmBtn.setImage(UIImage(named: "btn_confirm"), for: UIControlState.normal)
+        confirmBtn.setImage(UIImage(named: "Images.bundle/btn_confirm"), for: UIControlState.normal)
         confirmBtn.addTarget(self, action: #selector(self.btnEnsureDidClick(_:)), for: .touchUpInside)
         
         let x = self.view.bounds.width - 44/2 - insert
@@ -208,7 +208,7 @@ class ViewController: UIViewController {
             isVedio = false
             
             nowImage = self.recorder?.photo()
-            self.player.url = Bundle.main.url(forResource: "a", withExtension: "mp4")
+            self.player.url = Bundle.main.url(forResource: "playerneed", withExtension: "mp4")
             self.player.playFromBeginning()
             self.player.pause()
             bgImageView.isHidden = false
