@@ -38,17 +38,20 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
 //            if self.virtualObjectLoader.loadedObjects.isEmpty {
 //                self.statusViewController.scheduleMessage("TAP + TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .contentPlacement)
 //            }
-            
-            // 放置模型
-            self.virtualObjectLoader.loadVirtualObject(VirtualObject.availableObjects.first!, loadedHandler: { [unowned self] loadedObject in
-                DispatchQueue.main.async {
-                    self.hideObjectLoadingUI()
-                    self.placeVirtualObject(loadedObject)
-                }
-            })
-            
-            self.displayObjectLoadingUI()
+            // 用户未放置物体自定放置
+            if self.virtualObjectLoader.loadedObjects.isEmpty {
+                // 放置模型
+                self.virtualObjectLoader.loadVirtualObject(VirtualObject.availableObjects.first!, loadedHandler: { [unowned self] loadedObject in
+                    DispatchQueue.main.async {
+                        self.hideObjectLoadingUI()
+                        self.placeVirtualObject(loadedObject)
+                    }
+                })
+                
+                self.displayObjectLoadingUI()
+            }
         }
+        
         updateQueue.async {
             for object in self.virtualObjectLoader.loadedObjects {
                 object.adjustOntoPlaneAnchor(planeAnchor, using: node)

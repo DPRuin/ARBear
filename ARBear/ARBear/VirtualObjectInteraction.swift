@@ -36,6 +36,8 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     
     /// 双击block
     var doubleTapGestureHandler: () -> Void = {}
+    /// 缩放手势相关
+    private var lastScaleFactor: Float = 1.0
 
     init(sceneView: VirtualObjectARView) {
         self.sceneView = sceneView
@@ -129,7 +131,6 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
         gesture.rotation = 0
     }
     
-    
     /// 点击手势
     @objc
     func didTap(_ gesture: UITapGestureRecognizer) {
@@ -150,6 +151,24 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     // 捏合手势
     @objc func didPinch(_ gesture: UIPinchGestureRecognizer) {
         print("didPinch")
+        let factor = Float(gesture.scale)
+        print("factor", factor)
+        var scale: Float = 1
+        if factor > 1 { // 放大
+            scale = lastScaleFactor + factor - 1
+        } else { // 缩小
+            scale = lastScaleFactor * factor
+        }
+        
+        trackedObject?.scale = SCNVector3Make(scale, scale, scale)
+        
+        if gesture.state == UIGestureRecognizerState.ended {
+            if factor > 1 {
+                lastScaleFactor = lastScaleFactor + factor - 1
+            } else {
+                lastScaleFactor = lastScaleFactor * factor
+            }
+        }
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
