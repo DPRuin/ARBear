@@ -123,6 +123,11 @@ class ViewController: UIViewController {
         setupRecorder()
         // 底部选择按钮
         configureSegmentedControl()
+        
+        // 双击block
+        virtualObjectInteraction.doubleTapGestureHandler = {
+            self.restartExperience()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

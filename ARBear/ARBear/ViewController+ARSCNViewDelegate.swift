@@ -19,7 +19,6 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
             self.updateFocusSquare()
         }
         
-        // If light estimation is enabled, update the intensity of the model's lights and the environment map
         // 如果启用光线估计，请更新模型灯光强度和环境贴图
         let baseIntensity: CGFloat = 40
         let lightingEnvironment = sceneView.scene.lightingEnvironment

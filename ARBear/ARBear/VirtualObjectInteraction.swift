@@ -33,6 +33,9 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     
     /// The tracked screen position used to update the `trackedObject`'s position in `updateObjectToCurrentTrackingPosition()`.
     private var currentTrackingPosition: CGPoint?
+    
+    /// 双击block
+    var doubleTapGestureHandler: () -> Void = {}
 
     init(sceneView: VirtualObjectARView) {
         self.sceneView = sceneView
@@ -45,11 +48,22 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
         rotationGesture.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.didDoubleTap(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        
+        tapGesture.require(toFail: doubleTapGesture)
+        
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.didPinch(_:)))
         
         // Add gestures to the `sceneView`.
         sceneView.addGestureRecognizer(panGesture)
         sceneView.addGestureRecognizer(rotationGesture)
         sceneView.addGestureRecognizer(tapGesture)
+        sceneView.addGestureRecognizer(doubleTapGesture)
+        sceneView.addGestureRecognizer(pinchGesture)
+        
     }
     
     // MARK: - Gesture Actions
@@ -127,6 +141,15 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
             // 将对象传送到用户触摸屏幕的任何地方
             translate(object, basedOn: touchLocation, infinitePlane: false)
         }
+    }
+    
+    /// 双击手势
+    @objc func didDoubleTap(_ gesture: UITapGestureRecognizer)  {
+        doubleTapGestureHandler()
+    }
+    // 捏合手势
+    @objc func didPinch(_ gesture: UIPinchGestureRecognizer) {
+        print("didPinch")
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
