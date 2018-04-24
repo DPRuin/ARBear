@@ -92,6 +92,7 @@
 		7E2C5315208EC7CD00D3DB77 /* video.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = video.scnassets; sourceTree = "<group>"; };
 		7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderARDelegate.swift; sourceTree = "<group>"; };
 		7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordARDelegate.swift; sourceTree = "<group>"; };
+		7E2C5330208F2BCE00D3DB77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7E5D146A208A00B7001271B3 /* ARBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D146D208A00B7001271B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D1471208A00B7001271B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +318,7 @@
 		7E5D14C2208A0477001271B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7E2C5330208F2BCE00D3DB77 /* Images.xcassets */,
 				7E5D14C3208A0477001271B3 /* Models.scnassets */,
 				7E5D1476208A00B8001271B3 /* Assets.xcassets */,
 				7E5D1481208A02E6001271B3 /* ARMain.storyboard */,

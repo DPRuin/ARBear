@@ -175,6 +175,8 @@ class ViewController: UIViewController {
         self.player.didMove(toParentViewController: self)
         
         self.player.playbackLoops = true
+        self.player.playbackResumesWhenEnteringForeground = false
+        self.player.playbackResumesWhenBecameActive = false
         
         let bgImageView = UIImageView(frame: self.view.bounds)
         bgImageView.isHidden = true
@@ -183,7 +185,7 @@ class ViewController: UIViewController {
         self.player.view.addSubview(bgImageView)
         
         let cancelBtn = UIButton(type: .custom)
-        cancelBtn.setImage(UIImage(named: "btn_cancel"), for: UIControlState.normal)
+        cancelBtn.setImage(UIImage(named: "Images.xcassets/btn_cancel"), for: UIControlState.normal)
         cancelBtn.addTarget(self, action: #selector(self.btnAfreshDidClick(_:)), for: .touchUpInside)
         
         let insert:CGFloat = 50.0
@@ -242,6 +244,9 @@ class ViewController: UIViewController {
     }
     
     @objc func btnEnsureDidClick(_ sender: UIButton) {
+        self.player.pause()
+        self.player.view.isHidden = true
+        
         if isVedio {
             recorder?.export(video: nowVedioUrl, { (saved, status) in
                 DispatchQueue.main.sync {
@@ -256,10 +261,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        self.player.pause()
-        self.player.view.isHidden = true
-        
     }
     
     // MARK: - SegmentedControl
