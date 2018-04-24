@@ -15,9 +15,9 @@ struct HFPageStyle {
     var isTitleInTop : Bool = true                                  // 设置标题栏是否在顶部
     
     var titleHeight: CGFloat = 44                                   // 设置标题栏高度
-    var normalColor : UIColor = UIColor(r: 255, g: 255, b: 255)     // 设置标题未选择状态颜色
-    var selectColor: UIColor = UIColor(r: 255, g: 127, b: 0)        // 设置标题选中状态颜色
-    var titleFont : UIFont = UIFont.systemFont(ofSize: 14)          // 设置标题字体
+    var normalColor : UIColor = UIColor(r: 220, g: 220, b: 220)     // 设置标题未选择状态颜色
+    var selectColor: UIColor = UIColor.orange                         // 设置标题选中状态颜色
+    var titleFont : UIFont = UIFont.systemFont(ofSize: 18)          // 设置标题字体
     var isScrollEnable : Bool = false                               // 设置标题栏是否能滑动
     var titleMargin : CGFloat = 20                                  // 设置标题间隔
     var isShowBottomLine : Bool = true                              // 设置是否显示底部滑动条
@@ -31,6 +31,8 @@ struct HFPageStyle {
     var coverViewHeight : CGFloat = 25.0                            // 设置覆盖高度
     var coverViewRadius : CGFloat = 12.0                            // 设置覆盖圆角
     var coverViewMargin : CGFloat = 8                               // 设置覆盖间隔
+    
+    var bgColor: UIColor = UIColor(r: 20, g: 20, b: 20)
 }
 
 // MARK:- Page View
@@ -61,12 +63,12 @@ extension HFPageView
     fileprivate func setupUI() {
         let titleFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
         let titleView = HFTitleView(frame: titleFrame, titles: titles, style: style)
-        titleView.backgroundColor = UIColor.randomColor()
+        titleView.backgroundColor = style.bgColor
         addSubview(titleView)
         
         let contentFrame = CGRect(x: 0, y: titleFrame.maxY, width: bounds.width, height: bounds.height - style.titleHeight)
         let contentView = HFContentView(frame: contentFrame, childVcs: childVCs, parentVc: parentVc)
-        contentView.backgroundColor = UIColor.randomColor()
+        contentView.backgroundColor = style.bgColor
         addSubview(contentView)
         
         titleView.delegate = contentView;

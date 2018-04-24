@@ -24,7 +24,8 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        label.textColor = UIColor(r: 220, g: 220, b: 220)
+        label.font = UIFont.systemFont(ofSize: 14)
     }
     
     

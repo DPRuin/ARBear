@@ -57,7 +57,7 @@ extension HFPageCollectionView {
         let titleY : CGFloat = style.isTitleInTop ? 0 : bounds.height - style.titleHeight
         let titleViewFrame = CGRect(x: 0, y: titleY, width: bounds.width, height: style.titleHeight)
         let titleView : HFTitleView = HFTitleView(frame: titleViewFrame, titles: titles, style: style)
-        titleView.backgroundColor = UIColor.randomColor()
+        titleView.backgroundColor = style.bgColor
         titleView.delegate = self
         addSubview(titleView)
         self.titleView = titleView
@@ -69,7 +69,7 @@ extension HFPageCollectionView {
         let collectionView : UICollectionView = UICollectionView(frame: collFrame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = UIColor.randomColor()
+        collectionView.backgroundColor = style.bgColor
         collectionView.isPagingEnabled = true
         self.collectionView = collectionView
         addSubview(collectionView)
@@ -80,7 +80,7 @@ extension HFPageCollectionView {
         pageControl.center.x = bounds.width * 0.5
         pageControl.bounds = CGRect(x: 0, y: 0, width: bounds.width, height: style.pageControlHeight)
         pageControl.frame.origin.y = collectionView.frame.maxY
-        pageControl.backgroundColor = UIColor.randomColor()
+        pageControl.backgroundColor = style.bgColor
         pageControl.numberOfPages = 3
         addSubview(pageControl)
         self.pageControl = pageControl
