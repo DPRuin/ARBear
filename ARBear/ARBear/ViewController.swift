@@ -49,7 +49,6 @@ class ViewController: UIViewController {
     /// Marks if the AR experience is available for restart.
     var isRestartAvailable = true
     
-    /// A serial queue used to coordinate adding or removing nodes from the scene.
     /// 串行队列，用于协调添加或删除场景中的节点。
     let updateQueue = DispatchQueue(label: "com.example.apple-samplecode.arkitexample.serialSceneKitQueue")
     

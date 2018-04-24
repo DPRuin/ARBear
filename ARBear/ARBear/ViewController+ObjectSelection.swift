@@ -12,7 +12,7 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
     func placeVirtualObject(_ virtualObject: VirtualObject) {
         guard let cameraTransform = session.currentFrame?.camera.transform,
             let focusSquarePosition = focusSquare.lastPosition else {
-            statusViewController.showMessage("CANNOT PLACE OBJECT\nTry moving left or right.")
+            statusViewController.showMessage("不能放置物体请左右移动手机")
             return
         }
         
