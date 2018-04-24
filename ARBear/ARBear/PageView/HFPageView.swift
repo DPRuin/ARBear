@@ -63,12 +63,10 @@ extension HFPageView
     fileprivate func setupUI() {
         let titleFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
         let titleView = HFTitleView(frame: titleFrame, titles: titles, style: style)
-        titleView.backgroundColor = style.bgColor
         addSubview(titleView)
         
         let contentFrame = CGRect(x: 0, y: titleFrame.maxY, width: bounds.width, height: bounds.height - style.titleHeight)
         let contentView = HFContentView(frame: contentFrame, childVcs: childVCs, parentVc: parentVc)
-        contentView.backgroundColor = style.bgColor
         addSubview(contentView)
         
         titleView.delegate = contentView;

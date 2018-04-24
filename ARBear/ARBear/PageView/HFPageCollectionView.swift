@@ -62,9 +62,16 @@ extension HFPageCollectionView {
         addSubview(titleView)
         self.titleView = titleView
         
+        // line
+        let lineY = style.isTitleInTop ? style.titleHeight : 0
+        let lineHeight: CGFloat = 0.5
+        let line = UIView(frame: CGRect(x: 0, y: lineY, width: bounds.width, height: lineHeight))
+        line.backgroundColor = style.normalColor
+        addSubview(line)
+        
         // collectionView
-        let collY = style.isTitleInTop ? style.titleHeight : 0
-        let collH = bounds.height - style.titleHeight - style.pageControlHeight
+        let collY = style.isTitleInTop ? style.titleHeight + lineHeight : 0
+        let collH = bounds.height - style.titleHeight - style.pageControlHeight - lineHeight
         let collFrame = CGRect(x: 0, y: collY, width: bounds.width, height: collH)
         let collectionView : UICollectionView = UICollectionView(frame: collFrame, collectionViewLayout: layout)
         collectionView.dataSource = self
