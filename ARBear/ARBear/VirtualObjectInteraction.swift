@@ -160,9 +160,8 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     }
     // 捏合手势
     @objc func didPinch(_ gesture: UIPinchGestureRecognizer) {
-        print("didPinch")
+        
         let factor = Float(gesture.scale)
-        print("factor", factor)
         var scale: Float = 1
         if factor > 1 { // 放大
             scale = lastScaleFactor + factor - 1
