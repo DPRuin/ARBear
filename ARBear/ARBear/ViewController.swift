@@ -124,9 +124,9 @@ class ViewController: UIViewController {
         // 底部选择按钮
         configureSegmentedControl()
         
-        // 双击block
-        virtualObjectInteraction.doubleTapGestureHandler = {
-            self.restartExperience()
+        // 单击block
+        virtualObjectInteraction.oneTapGestureHandler = {
+            self.showVirtualObjectSelectionViewController()
         }
     }
     

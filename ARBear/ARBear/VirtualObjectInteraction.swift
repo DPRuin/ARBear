@@ -34,8 +34,9 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     /// The tracked screen position used to update the `trackedObject`'s position in `updateObjectToCurrentTrackingPosition()`.
     private var currentTrackingPosition: CGPoint?
     
-    /// 双击block
-    var doubleTapGestureHandler: () -> Void = {}
+    /// 单击block
+    var oneTapGestureHandler: () -> Void = {}
+    
     /// 缩放手势相关
     private var lastScaleFactor: Float = 1.0
 
@@ -134,6 +135,20 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     /// 点击手势
     @objc
     func didTap(_ gesture: UITapGestureRecognizer) {
+        oneTapGestureHandler()
+//        let touchLocation = gesture.location(in: sceneView)
+//
+//        if let tappedObject = sceneView.virtualObject(at: touchLocation) {
+//            selectedObject = tappedObject
+//        } else if let object = selectedObject {
+//            // 将对象传送到用户触摸屏幕的任何地方
+//            translate(object, basedOn: touchLocation, infinitePlane: false)
+//        }
+    }
+    
+    /// 双击手势
+    @objc func didDoubleTap(_ gesture: UITapGestureRecognizer)  {
+        // doubleTapGestureHandler()
         let touchLocation = gesture.location(in: sceneView)
         
         if let tappedObject = sceneView.virtualObject(at: touchLocation) {
@@ -142,11 +157,6 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
             // 将对象传送到用户触摸屏幕的任何地方
             translate(object, basedOn: touchLocation, infinitePlane: false)
         }
-    }
-    
-    /// 双击手势
-    @objc func didDoubleTap(_ gesture: UITapGestureRecognizer)  {
-        doubleTapGestureHandler()
     }
     // 捏合手势
     @objc func didPinch(_ gesture: UIPinchGestureRecognizer) {
