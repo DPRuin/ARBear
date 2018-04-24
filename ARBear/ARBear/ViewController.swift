@@ -372,7 +372,7 @@ class ViewController: UIViewController {
         configuration.planeDetection = .horizontal
 		session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
 
-        statusViewController.scheduleMessage("找到一个平面，请放置物体", inSeconds: 7.5, messageType: .planeEstimation)
+        statusViewController.scheduleMessage("寻找平面去放置物体", inSeconds: 7.5, messageType: .planeEstimation)
 	}
 
     // MARK: - Focus Square

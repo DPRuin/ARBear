@@ -68,43 +68,6 @@ extension ViewController {
         objectsViewController.virtualObjects = VirtualObject.availableObjects
         objectsViewController.delegate = self
         
-//        for object in virtualObjectLoader.loadedObjects {
-//            guard let index = VirtualObject.availableObjects.index(of: object) else { continue }
-//            objectsViewController.selectedVirtualObjectRows.insert(index)
-//        }
     }
     
 }
-
-//extension ViewController: UIPopoverPresentationControllerDelegate {
-//
-//    // MARK: - UIPopoverPresentationControllerDelegate
-//
-//    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-//        return .none
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // All menus should be popovers (even on iPhone).
-//        if let popoverController = segue.destination.popoverPresentationController, let button = sender as? UIButton {
-//            popoverController.delegate = self
-//            popoverController.sourceView = button
-//            popoverController.sourceRect = button.bounds
-//        }
-//
-//        guard let identifier = segue.identifier,
-//              let segueIdentifer = SegueIdentifier(rawValue: identifier),
-//              segueIdentifer == .showObjects else { return }
-//
-//        let objectsViewController = segue.destination as! VirtualObjectSelectionViewController
-//        objectsViewController.virtualObjects = VirtualObject.availableObjects
-//        objectsViewController.delegate = self
-//
-//        // Set all rows of currently placed objects to selected.
-//        for object in virtualObjectLoader.loadedObjects {
-//            guard let index = VirtualObject.availableObjects.index(of: object) else { continue }
-//            objectsViewController.selectedVirtualObjectRows.insert(index)
-//        }
-//    }
-//
-//}

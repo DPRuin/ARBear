@@ -35,10 +35,20 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         DispatchQueue.main.async {
             self.statusViewController.cancelScheduledMessage(for: .planeEstimation)
-            self.statusViewController.showMessage("SURFACE DETECTED") // 表面检测
-            if self.virtualObjectLoader.loadedObjects.isEmpty {
-                self.statusViewController.scheduleMessage("TAP + TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .contentPlacement)
-            }
+            self.statusViewController.showMessage("检测到平面") // 表面检测
+//            if self.virtualObjectLoader.loadedObjects.isEmpty {
+//                self.statusViewController.scheduleMessage("TAP + TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .contentPlacement)
+//            }
+            
+            // 放置模型
+            self.virtualObjectLoader.loadVirtualObject(VirtualObject.availableObjects.first!, loadedHandler: { [unowned self] loadedObject in
+                DispatchQueue.main.async {
+                    self.hideObjectLoadingUI()
+                    self.placeVirtualObject(loadedObject)
+                }
+            })
+            
+            self.displayObjectLoadingUI()
         }
         updateQueue.async {
             for object in self.virtualObjectLoader.loadedObjects {
@@ -46,15 +56,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
             }
         }
         
-        // 放置模型
-//    virtualObjectLoader.loadVirtualObject(self.virtualObjectLoader.loadedObjects.first!, loadedHandler: { [unowned self] loadedObject in
-//            DispatchQueue.main.async {
-//                self.hideObjectLoadingUI()
-//                self.placeVirtualObject(loadedObject)
-//            }
-//        })
-//
-//        displayObjectLoadingUI()
+
     }
     
     // 当使用给定锚点的数据更新节点时调用
