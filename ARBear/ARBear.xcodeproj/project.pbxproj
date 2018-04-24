@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E2C5319208EC7CD00D3DB77 /* ARInputViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C52FB208EC7CD00D3DB77 /* ARInputViewOptions.swift */; };
+		7E2C531A208EC7CD00D3DB77 /* ARVideoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C52FC208EC7CD00D3DB77 /* ARVideoOptions.swift */; };
+		7E2C531B208EC7CD00D3DB77 /* RecordAR+PhotoRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C52FF208EC7CD00D3DB77 /* RecordAR+PhotoRender.swift */; };
+		7E2C531C208EC7CD00D3DB77 /* CGImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5300208EC7CD00D3DB77 /* CGImage+Resize.swift */; };
+		7E2C531D208EC7CD00D3DB77 /* UIViewController+hasType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5301208EC7CD00D3DB77 /* UIViewController+hasType.swift */; };
+		7E2C531E208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5302208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift */; };
+		7E2C531F208EC7CD00D3DB77 /* UIView+isType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5303208EC7CD00D3DB77 /* UIView+isType.swift */; };
+		7E2C5320208EC7CD00D3DB77 /* RecordAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5305208EC7CD00D3DB77 /* RecordAR.swift */; };
+		7E2C5321208EC7CD00D3DB77 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5306208EC7CD00D3DB77 /* ARView.swift */; };
+		7E2C5322208EC7CD00D3DB77 /* ViewAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5307208EC7CD00D3DB77 /* ViewAR.swift */; };
+		7E2C5323208EC7CD00D3DB77 /* LoveLiver_LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7E2C530A208EC7CD00D3DB77 /* LoveLiver_LICENSE */; };
+		7E2C5324208EC7CD00D3DB77 /* PHLivePhotoPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C530B208EC7CD00D3DB77 /* PHLivePhotoPlus.swift */; };
+		7E2C5325208EC7CD00D3DB77 /* Generate+LivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C530C208EC7CD00D3DB77 /* Generate+LivePhoto.swift */; };
+		7E2C5326208EC7CD00D3DB77 /* JPEG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C530D208EC7CD00D3DB77 /* JPEG.swift */; };
+		7E2C5327208EC7CD00D3DB77 /* QuickTimeMov.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C530E208EC7CD00D3DB77 /* QuickTimeMov.swift */; };
+		7E2C5328208EC7CD00D3DB77 /* WritAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5310208EC7CD00D3DB77 /* WritAR.swift */; };
+		7E2C5329208EC7CD00D3DB77 /* RenderAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5311208EC7CD00D3DB77 /* RenderAR.swift */; };
+		7E2C532A208EC7CD00D3DB77 /* Generate+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5313208EC7CD00D3DB77 /* Generate+GIF.swift */; };
+		7E2C532B208EC7CD00D3DB77 /* video.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E2C5315208EC7CD00D3DB77 /* video.scnassets */; };
+		7E2C532C208EC7CD00D3DB77 /* RenderARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */; };
+		7E2C532D208EC7CD00D3DB77 /* RecordARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */; };
 		7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D146D208A00B7001271B3 /* AppDelegate.swift */; };
 		7E5D1472208A00B7001271B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1471208A00B7001271B3 /* ViewController.swift */; };
 		7E5D1475208A00B7001271B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1473208A00B7001271B3 /* Main.storyboard */; };
@@ -14,27 +35,6 @@
 		7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1478208A00B8001271B3 /* LaunchScreen.storyboard */; };
 		7E5D1482208A02E6001271B3 /* ARMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1481208A02E6001271B3 /* ARMain.storyboard */; };
 		7E5D1487208A043B001271B3 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1485208A043B001271B3 /* StatusViewController.swift */; };
-		7E5D14A8208A0460001271B3 /* ARInputViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D148A208A0460001271B3 /* ARInputViewOptions.swift */; };
-		7E5D14A9208A0460001271B3 /* ARVideoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D148B208A0460001271B3 /* ARVideoOptions.swift */; };
-		7E5D14AA208A0460001271B3 /* RecordAR+PhotoRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D148E208A0460001271B3 /* RecordAR+PhotoRender.swift */; };
-		7E5D14AB208A0460001271B3 /* CGImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D148F208A0460001271B3 /* CGImage+Resize.swift */; };
-		7E5D14AC208A0460001271B3 /* UIViewController+hasType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1490208A0460001271B3 /* UIViewController+hasType.swift */; };
-		7E5D14AD208A0460001271B3 /* UIImage+VideoBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1491208A0460001271B3 /* UIImage+VideoBuffer.swift */; };
-		7E5D14AE208A0460001271B3 /* UIView+isType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1492208A0460001271B3 /* UIView+isType.swift */; };
-		7E5D14AF208A0460001271B3 /* RecordAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1494208A0460001271B3 /* RecordAR.swift */; };
-		7E5D14B0208A0460001271B3 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1495208A0460001271B3 /* ARView.swift */; };
-		7E5D14B1208A0460001271B3 /* ViewAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1496208A0460001271B3 /* ViewAR.swift */; };
-		7E5D14B2208A0460001271B3 /* LoveLiver_LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1499208A0460001271B3 /* LoveLiver_LICENSE */; };
-		7E5D14B3208A0460001271B3 /* PHLivePhotoPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D149A208A0460001271B3 /* PHLivePhotoPlus.swift */; };
-		7E5D14B4208A0460001271B3 /* Generate+LivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D149B208A0460001271B3 /* Generate+LivePhoto.swift */; };
-		7E5D14B5208A0460001271B3 /* JPEG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D149C208A0460001271B3 /* JPEG.swift */; };
-		7E5D14B6208A0460001271B3 /* QuickTimeMov.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D149D208A0460001271B3 /* QuickTimeMov.swift */; };
-		7E5D14B7208A0460001271B3 /* WritAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D149F208A0460001271B3 /* WritAR.swift */; };
-		7E5D14B8208A0460001271B3 /* RenderAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14A0208A0460001271B3 /* RenderAR.swift */; };
-		7E5D14B9208A0460001271B3 /* Generate+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14A2208A0460001271B3 /* Generate+GIF.swift */; };
-		7E5D14BA208A0460001271B3 /* video.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D14A4208A0460001271B3 /* video.scnassets */; };
-		7E5D14BB208A0460001271B3 /* RenderARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14A6208A0460001271B3 /* RenderARDelegate.swift */; };
-		7E5D14BC208A0460001271B3 /* RecordARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14A7208A0460001271B3 /* RecordARDelegate.swift */; };
 		7E5D14C0208A046D001271B3 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14BE208A046D001271B3 /* FocusSquareSegment.swift */; };
 		7E5D14C1208A046D001271B3 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14BF208A046D001271B3 /* FocusSquare.swift */; };
 		7E5D14C4208A0478001271B3 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D14C3208A0477001271B3 /* Models.scnassets */; };
@@ -70,6 +70,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E2C52FB208EC7CD00D3DB77 /* ARInputViewOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInputViewOptions.swift; sourceTree = "<group>"; };
+		7E2C52FC208EC7CD00D3DB77 /* ARVideoOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARVideoOptions.swift; sourceTree = "<group>"; };
+		7E2C52FD208EC7CD00D3DB77 /* ARVideoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARVideoKit.h; sourceTree = "<group>"; };
+		7E2C52FF208EC7CD00D3DB77 /* RecordAR+PhotoRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordAR+PhotoRender.swift"; sourceTree = "<group>"; };
+		7E2C5300208EC7CD00D3DB77 /* CGImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Resize.swift"; sourceTree = "<group>"; };
+		7E2C5301208EC7CD00D3DB77 /* UIViewController+hasType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+hasType.swift"; sourceTree = "<group>"; };
+		7E2C5302208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+VideoBuffer.swift"; sourceTree = "<group>"; };
+		7E2C5303208EC7CD00D3DB77 /* UIView+isType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+isType.swift"; sourceTree = "<group>"; };
+		7E2C5305208EC7CD00D3DB77 /* RecordAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAR.swift; sourceTree = "<group>"; };
+		7E2C5306208EC7CD00D3DB77 /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		7E2C5307208EC7CD00D3DB77 /* ViewAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAR.swift; sourceTree = "<group>"; };
+		7E2C530A208EC7CD00D3DB77 /* LoveLiver_LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoveLiver_LICENSE; sourceTree = "<group>"; };
+		7E2C530B208EC7CD00D3DB77 /* PHLivePhotoPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHLivePhotoPlus.swift; sourceTree = "<group>"; };
+		7E2C530C208EC7CD00D3DB77 /* Generate+LivePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generate+LivePhoto.swift"; sourceTree = "<group>"; };
+		7E2C530D208EC7CD00D3DB77 /* JPEG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPEG.swift; sourceTree = "<group>"; };
+		7E2C530E208EC7CD00D3DB77 /* QuickTimeMov.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickTimeMov.swift; sourceTree = "<group>"; };
+		7E2C5310208EC7CD00D3DB77 /* WritAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritAR.swift; sourceTree = "<group>"; };
+		7E2C5311208EC7CD00D3DB77 /* RenderAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderAR.swift; sourceTree = "<group>"; };
+		7E2C5313208EC7CD00D3DB77 /* Generate+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generate+GIF.swift"; sourceTree = "<group>"; };
+		7E2C5315208EC7CD00D3DB77 /* video.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = video.scnassets; sourceTree = "<group>"; };
+		7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderARDelegate.swift; sourceTree = "<group>"; };
+		7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordARDelegate.swift; sourceTree = "<group>"; };
 		7E5D146A208A00B7001271B3 /* ARBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D146D208A00B7001271B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D1471208A00B7001271B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,28 +101,6 @@
 		7E5D147B208A00B8001271B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5D1481208A02E6001271B3 /* ARMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARMain.storyboard; sourceTree = "<group>"; };
 		7E5D1485208A043B001271B3 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		7E5D148A208A0460001271B3 /* ARInputViewOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInputViewOptions.swift; sourceTree = "<group>"; };
-		7E5D148B208A0460001271B3 /* ARVideoOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARVideoOptions.swift; sourceTree = "<group>"; };
-		7E5D148C208A0460001271B3 /* ARVideoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARVideoKit.h; sourceTree = "<group>"; };
-		7E5D148E208A0460001271B3 /* RecordAR+PhotoRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordAR+PhotoRender.swift"; sourceTree = "<group>"; };
-		7E5D148F208A0460001271B3 /* CGImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Resize.swift"; sourceTree = "<group>"; };
-		7E5D1490208A0460001271B3 /* UIViewController+hasType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+hasType.swift"; sourceTree = "<group>"; };
-		7E5D1491208A0460001271B3 /* UIImage+VideoBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+VideoBuffer.swift"; sourceTree = "<group>"; };
-		7E5D1492208A0460001271B3 /* UIView+isType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+isType.swift"; sourceTree = "<group>"; };
-		7E5D1494208A0460001271B3 /* RecordAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAR.swift; sourceTree = "<group>"; };
-		7E5D1495208A0460001271B3 /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
-		7E5D1496208A0460001271B3 /* ViewAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAR.swift; sourceTree = "<group>"; };
-		7E5D1499208A0460001271B3 /* LoveLiver_LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoveLiver_LICENSE; sourceTree = "<group>"; };
-		7E5D149A208A0460001271B3 /* PHLivePhotoPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHLivePhotoPlus.swift; sourceTree = "<group>"; };
-		7E5D149B208A0460001271B3 /* Generate+LivePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generate+LivePhoto.swift"; sourceTree = "<group>"; };
-		7E5D149C208A0460001271B3 /* JPEG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPEG.swift; sourceTree = "<group>"; };
-		7E5D149D208A0460001271B3 /* QuickTimeMov.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickTimeMov.swift; sourceTree = "<group>"; };
-		7E5D149F208A0460001271B3 /* WritAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritAR.swift; sourceTree = "<group>"; };
-		7E5D14A0208A0460001271B3 /* RenderAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderAR.swift; sourceTree = "<group>"; };
-		7E5D14A2208A0460001271B3 /* Generate+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generate+GIF.swift"; sourceTree = "<group>"; };
-		7E5D14A4208A0460001271B3 /* video.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = video.scnassets; sourceTree = "<group>"; };
-		7E5D14A6208A0460001271B3 /* RenderARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderARDelegate.swift; sourceTree = "<group>"; };
-		7E5D14A7208A0460001271B3 /* RecordARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordARDelegate.swift; sourceTree = "<group>"; };
 		7E5D14BE208A046D001271B3 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
 		7E5D14BF208A046D001271B3 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		7E5D14C3208A0477001271B3 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
@@ -147,6 +147,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E2C52F9208EC7CD00D3DB77 /* ARVideoKit */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C52FA208EC7CD00D3DB77 /* Enumerations */,
+				7E2C52FD208EC7CD00D3DB77 /* ARVideoKit.h */,
+				7E2C52FE208EC7CD00D3DB77 /* Extensions */,
+				7E2C5304208EC7CD00D3DB77 /* Sources */,
+				7E2C5308208EC7CD00D3DB77 /* Rendering */,
+				7E2C5314208EC7CD00D3DB77 /* Assets */,
+				7E2C5316208EC7CD00D3DB77 /* Protocols */,
+			);
+			path = ARVideoKit;
+			sourceTree = "<group>";
+		};
+		7E2C52FA208EC7CD00D3DB77 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C52FB208EC7CD00D3DB77 /* ARInputViewOptions.swift */,
+				7E2C52FC208EC7CD00D3DB77 /* ARVideoOptions.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		7E2C52FE208EC7CD00D3DB77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C52FF208EC7CD00D3DB77 /* RecordAR+PhotoRender.swift */,
+				7E2C5300208EC7CD00D3DB77 /* CGImage+Resize.swift */,
+				7E2C5301208EC7CD00D3DB77 /* UIViewController+hasType.swift */,
+				7E2C5302208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift */,
+				7E2C5303208EC7CD00D3DB77 /* UIView+isType.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E2C5304208EC7CD00D3DB77 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C5305208EC7CD00D3DB77 /* RecordAR.swift */,
+				7E2C5306208EC7CD00D3DB77 /* ARView.swift */,
+				7E2C5307208EC7CD00D3DB77 /* ViewAR.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7E2C5308208EC7CD00D3DB77 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C5309208EC7CD00D3DB77 /* Live Photo */,
+				7E2C530F208EC7CD00D3DB77 /* Writer */,
+				7E2C5311208EC7CD00D3DB77 /* RenderAR.swift */,
+				7E2C5312208EC7CD00D3DB77 /* GIF */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		7E2C5309208EC7CD00D3DB77 /* Live Photo */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C530A208EC7CD00D3DB77 /* LoveLiver_LICENSE */,
+				7E2C530B208EC7CD00D3DB77 /* PHLivePhotoPlus.swift */,
+				7E2C530C208EC7CD00D3DB77 /* Generate+LivePhoto.swift */,
+				7E2C530D208EC7CD00D3DB77 /* JPEG.swift */,
+				7E2C530E208EC7CD00D3DB77 /* QuickTimeMov.swift */,
+			);
+			path = "Live Photo";
+			sourceTree = "<group>";
+		};
+		7E2C530F208EC7CD00D3DB77 /* Writer */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C5310208EC7CD00D3DB77 /* WritAR.swift */,
+			);
+			path = Writer;
+			sourceTree = "<group>";
+		};
+		7E2C5312208EC7CD00D3DB77 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C5313208EC7CD00D3DB77 /* Generate+GIF.swift */,
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
+		7E2C5314208EC7CD00D3DB77 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C5315208EC7CD00D3DB77 /* video.scnassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7E2C5316208EC7CD00D3DB77 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */,
+				7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7E5D1461208A00B7001271B3 = {
 			isa = PBXGroup;
 			children = (
@@ -166,12 +267,12 @@
 		7E5D146C208A00B7001271B3 /* ARBear */ = {
 			isa = PBXGroup;
 			children = (
+				7E2C52F9208EC7CD00D3DB77 /* ARVideoKit */,
 				7E640755208DE1A300258854 /* Player */,
 				7E64074C208D913900258854 /* PresentBottomVC */,
 				7E64073F208D912300258854 /* PageView */,
 				7E5D14C5208A0481001271B3 /* SegmentedControl */,
 				7E5D14D4208A048F001271B3 /* SquishButton.swift */,
-				7E5D1488208A0460001271B3 /* ARVideoKit */,
 				7E5D1471208A00B7001271B3 /* ViewController.swift */,
 				7E5D14DA208A04A1001271B3 /* ViewController+Actions.swift */,
 				7E5D14DB208A04A2001271B3 /* ViewController+ARSCNViewDelegate.swift */,
@@ -202,107 +303,6 @@
 				7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */,
 			);
 			path = "Additional View Controllers";
-			sourceTree = "<group>";
-		};
-		7E5D1488208A0460001271B3 /* ARVideoKit */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D1489208A0460001271B3 /* Enumerations */,
-				7E5D148C208A0460001271B3 /* ARVideoKit.h */,
-				7E5D148D208A0460001271B3 /* Extensions */,
-				7E5D1493208A0460001271B3 /* Sources */,
-				7E5D1497208A0460001271B3 /* Rendering */,
-				7E5D14A3208A0460001271B3 /* Assets */,
-				7E5D14A5208A0460001271B3 /* Protocols */,
-			);
-			path = ARVideoKit;
-			sourceTree = "<group>";
-		};
-		7E5D1489208A0460001271B3 /* Enumerations */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D148A208A0460001271B3 /* ARInputViewOptions.swift */,
-				7E5D148B208A0460001271B3 /* ARVideoOptions.swift */,
-			);
-			path = Enumerations;
-			sourceTree = "<group>";
-		};
-		7E5D148D208A0460001271B3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D148E208A0460001271B3 /* RecordAR+PhotoRender.swift */,
-				7E5D148F208A0460001271B3 /* CGImage+Resize.swift */,
-				7E5D1490208A0460001271B3 /* UIViewController+hasType.swift */,
-				7E5D1491208A0460001271B3 /* UIImage+VideoBuffer.swift */,
-				7E5D1492208A0460001271B3 /* UIView+isType.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		7E5D1493208A0460001271B3 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D1494208A0460001271B3 /* RecordAR.swift */,
-				7E5D1495208A0460001271B3 /* ARView.swift */,
-				7E5D1496208A0460001271B3 /* ViewAR.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		7E5D1497208A0460001271B3 /* Rendering */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D1498208A0460001271B3 /* Live Photo */,
-				7E5D149E208A0460001271B3 /* Writer */,
-				7E5D14A0208A0460001271B3 /* RenderAR.swift */,
-				7E5D14A1208A0460001271B3 /* GIF */,
-			);
-			path = Rendering;
-			sourceTree = "<group>";
-		};
-		7E5D1498208A0460001271B3 /* Live Photo */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D1499208A0460001271B3 /* LoveLiver_LICENSE */,
-				7E5D149A208A0460001271B3 /* PHLivePhotoPlus.swift */,
-				7E5D149B208A0460001271B3 /* Generate+LivePhoto.swift */,
-				7E5D149C208A0460001271B3 /* JPEG.swift */,
-				7E5D149D208A0460001271B3 /* QuickTimeMov.swift */,
-			);
-			path = "Live Photo";
-			sourceTree = "<group>";
-		};
-		7E5D149E208A0460001271B3 /* Writer */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D149F208A0460001271B3 /* WritAR.swift */,
-			);
-			path = Writer;
-			sourceTree = "<group>";
-		};
-		7E5D14A1208A0460001271B3 /* GIF */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D14A2208A0460001271B3 /* Generate+GIF.swift */,
-			);
-			path = GIF;
-			sourceTree = "<group>";
-		};
-		7E5D14A3208A0460001271B3 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D14A4208A0460001271B3 /* video.scnassets */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		7E5D14A5208A0460001271B3 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D14A6208A0460001271B3 /* RenderARDelegate.swift */,
-				7E5D14A7208A0460001271B3 /* RecordARDelegate.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		7E5D14BD208A046D001271B3 /* Focus Square */ = {
@@ -452,14 +452,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5D14D0208A0481001271B3 /* Info.plist in Resources */,
+				7E2C532B208EC7CD00D3DB77 /* video.scnassets in Resources */,
 				7E640759208DE1A300258854 /* a.mp4 in Resources */,
 				7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */,
 				7E5D1482208A02E6001271B3 /* ARMain.storyboard in Resources */,
 				7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */,
 				7E5D1477208A00B8001271B3 /* Assets.xcassets in Resources */,
-				7E5D14B2208A0460001271B3 /* LoveLiver_LICENSE in Resources */,
 				7E5D1475208A00B7001271B3 /* Main.storyboard in Resources */,
-				7E5D14BA208A0460001271B3 /* video.scnassets in Resources */,
+				7E2C5323208EC7CD00D3DB77 /* LoveLiver_LICENSE in Resources */,
 				7E5D14C4208A0478001271B3 /* Models.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,55 +472,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E64074A208D912400258854 /* HFContentView.swift in Sources */,
-				7E5D14B8208A0460001271B3 /* RenderAR.swift in Sources */,
 				7E64074E208D913900258854 /* PresentBottomController.swift in Sources */,
-				7E5D14AA208A0460001271B3 /* RecordAR+PhotoRender.swift in Sources */,
 				7E5D14E7208A04C0001271B3 /* VirtualObjectInteraction.swift in Sources */,
 				7E5D14E4208A04AB001271B3 /* VirtualObject.swift in Sources */,
 				7E640749208D912400258854 /* HFPageCollectionView.swift in Sources */,
+				7E2C5321208EC7CD00D3DB77 /* ARView.swift in Sources */,
 				7E5D14CF208A0481001271B3 /* SegmentedControl.swift in Sources */,
-				7E5D14B9208A0460001271B3 /* Generate+GIF.swift in Sources */,
 				7E5D14D5208A048F001271B3 /* ThresholdPanGesture.swift in Sources */,
+				7E2C5328208EC7CD00D3DB77 /* WritAR.swift in Sources */,
+				7E2C5325208EC7CD00D3DB77 /* Generate+LivePhoto.swift in Sources */,
 				7E5D14E3208A04AB001271B3 /* VirtualObjectLoader.swift in Sources */,
-				7E5D14B0208A0460001271B3 /* ARView.swift in Sources */,
+				7E2C531B208EC7CD00D3DB77 /* RecordAR+PhotoRender.swift in Sources */,
+				7E2C531C208EC7CD00D3DB77 /* CGImage+Resize.swift in Sources */,
+				7E2C531A208EC7CD00D3DB77 /* ARVideoOptions.swift in Sources */,
 				7E5D14D6208A048F001271B3 /* SquishButton.swift in Sources */,
 				7E5D14C1208A046D001271B3 /* FocusSquare.swift in Sources */,
 				7E5D14DE208A04A2001271B3 /* ViewController+ARSCNViewDelegate.swift in Sources */,
-				7E5D14BC208A0460001271B3 /* RecordARDelegate.swift in Sources */,
-				7E5D14AB208A0460001271B3 /* CGImage+Resize.swift in Sources */,
+				7E2C531F208EC7CD00D3DB77 /* UIView+isType.swift in Sources */,
 				7E5D14CD208A0481001271B3 /* Constants.swift in Sources */,
+				7E2C5320208EC7CD00D3DB77 /* RecordAR.swift in Sources */,
 				7E64075A208DE1A300258854 /* Player.swift in Sources */,
-				7E5D14B4208A0460001271B3 /* Generate+LivePhoto.swift in Sources */,
 				7E640746208D912400258854 /* HFPageCollectionLayout.swift in Sources */,
 				7E5D14C0208A046D001271B3 /* FocusSquareSegment.swift in Sources */,
-				7E5D14AE208A0460001271B3 /* UIView+isType.swift in Sources */,
-				7E5D14B6208A0460001271B3 /* QuickTimeMov.swift in Sources */,
 				7E5D1487208A043B001271B3 /* StatusViewController.swift in Sources */,
 				7E640748208D912400258854 /* UIColor-Extension.swift in Sources */,
-				7E5D14A8208A0460001271B3 /* ARInputViewOptions.swift in Sources */,
 				7E640747208D912400258854 /* HFTitleView.swift in Sources */,
 				7E5D14DF208A04A2001271B3 /* ViewController+ObjectSelection.swift in Sources */,
 				7E5D14CE208A0481001271B3 /* SCScrollView.swift in Sources */,
 				7E5D1472208A00B7001271B3 /* ViewController.swift in Sources */,
-				7E5D14AD208A0460001271B3 /* UIImage+VideoBuffer.swift in Sources */,
-				7E5D14B5208A0460001271B3 /* JPEG.swift in Sources */,
 				7E5D14D2208A0481001271B3 /* Style.swift in Sources */,
 				7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */,
-				7E5D14AF208A0460001271B3 /* RecordAR.swift in Sources */,
 				7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */,
+				7E2C531E208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift in Sources */,
+				7E2C5322208EC7CD00D3DB77 /* ViewAR.swift in Sources */,
 				7E64074B208D912400258854 /* HFPageView.swift in Sources */,
 				7E5D14D9208A0497001271B3 /* Utilities.swift in Sources */,
+				7E2C5326208EC7CD00D3DB77 /* JPEG.swift in Sources */,
 				7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */,
 				7E5D14DD208A04A2001271B3 /* ViewController+Actions.swift in Sources */,
 				7E5D14E8208A04C0001271B3 /* VirtualObjectARView.swift in Sources */,
-				7E5D14B1208A0460001271B3 /* ViewAR.swift in Sources */,
-				7E5D14A9208A0460001271B3 /* ARVideoOptions.swift in Sources */,
+				7E2C5319208EC7CD00D3DB77 /* ARInputViewOptions.swift in Sources */,
+				7E2C532A208EC7CD00D3DB77 /* Generate+GIF.swift in Sources */,
+				7E2C5329208EC7CD00D3DB77 /* RenderAR.swift in Sources */,
+				7E2C532C208EC7CD00D3DB77 /* RenderARDelegate.swift in Sources */,
+				7E2C532D208EC7CD00D3DB77 /* RecordARDelegate.swift in Sources */,
 				7E5D14D1208A0481001271B3 /* Protocols.swift in Sources */,
+				7E2C5327208EC7CD00D3DB77 /* QuickTimeMov.swift in Sources */,
 				7E5D14EA208A0AEF001271B3 /* HomeViewController.swift in Sources */,
-				7E5D14B3208A0460001271B3 /* PHLivePhotoPlus.swift in Sources */,
-				7E5D14BB208A0460001271B3 /* RenderARDelegate.swift in Sources */,
-				7E5D14AC208A0460001271B3 /* UIViewController+hasType.swift in Sources */,
-				7E5D14B7208A0460001271B3 /* WritAR.swift in Sources */,
+				7E2C5324208EC7CD00D3DB77 /* PHLivePhotoPlus.swift in Sources */,
+				7E2C531D208EC7CD00D3DB77 /* UIViewController+hasType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
