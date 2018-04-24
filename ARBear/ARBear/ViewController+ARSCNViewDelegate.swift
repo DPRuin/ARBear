@@ -104,21 +104,15 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
     /// 会话中断时调用。 在中断结束之前不会传送额外的帧更新
     func sessionWasInterrupted(_ session: ARSession) {
         blurView.isHidden = false
-        statusViewController.showMessage("""
-        SESSION INTERRUPTED
-        The session will be reset after the interruption has ended.
-        """, autoHide: false)
+        statusViewController.showMessage("追踪中断", autoHide: false)
     }
     
     /*
      会话中断结束时被调用
-     一旦中断结束，会话将从最后一次已知状态继续运行。
-     如果设备已移动，锚点将错位。
-     为避免这种情况，一些应用程序可能需要重置跟踪（请参阅ARSessionRunOptions）。
      */
     func sessionInterruptionEnded(_ session: ARSession) {
         blurView.isHidden = true
-        statusViewController.showMessage("RESETTING SESSION")
+        statusViewController.showMessage("重新启动追踪")
         
         restartExperience()
     }
