@@ -17,12 +17,12 @@ struct HFPageStyle {
     var titleHeight: CGFloat = 44                                   // 设置标题栏高度
     var normalColor : UIColor = UIColor(r: 220, g: 220, b: 220)     // 设置标题未选择状态颜色
     var selectColor: UIColor = UIColor.orange                         // 设置标题选中状态颜色
-    var titleFont : UIFont = UIFont.systemFont(ofSize: 18)          // 设置标题字体
+    var titleFont : UIFont = UIFont.systemFont(ofSize: 16)          // 设置标题字体
     var isScrollEnable : Bool = false                               // 设置标题栏是否能滑动
     var titleMargin : CGFloat = 20                                  // 设置标题间隔
     var isShowBottomLine : Bool = true                              // 设置是否显示底部滑动条
     var bottomLineColor : UIColor = UIColor.orange                  // 设置底部滑动条颜色
-    var bottomLineHeight : CGFloat = 3                              // 设置底部滑动条高度
+    var bottomLineHeight : CGFloat = 2                              // 设置底部滑动条高度
     var isNeedScale : Bool = false                                  // 设置标签条是否缩放
     var maxScaleRange : CGFloat = 1.2                               // 设置标签缩放最大比例
     var coverViewColor : UIColor = UIColor.black                    // 设置覆盖颜色

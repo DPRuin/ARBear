@@ -18,7 +18,7 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
     var modelName = "" {
         didSet {
             label.text = modelName.capitalized
-            imageView.image = UIImage(named: modelName)
+            imageView.image = UIImage(named: "Images.bundle/\(modelName)")
         }
     }
     

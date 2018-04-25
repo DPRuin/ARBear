@@ -64,7 +64,7 @@ extension HFPageCollectionView {
         
         // line
         let lineY = style.isTitleInTop ? style.titleHeight : 0
-        let lineHeight: CGFloat = 0.5
+        let lineHeight: CGFloat = 0.3
         let line = UIView(frame: CGRect(x: 0, y: lineY, width: bounds.width, height: lineHeight))
         line.backgroundColor = style.normalColor
         addSubview(line)
