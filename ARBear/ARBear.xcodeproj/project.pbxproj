@@ -291,6 +291,7 @@
 				7E5D14E9208A0AEE001271B3 /* HomeViewController.swift */,
 				7E5D1473208A00B7001271B3 /* Main.storyboard */,
 				7E5D1478208A00B8001271B3 /* LaunchScreen.storyboard */,
+				7E5D1476208A00B8001271B3 /* Assets.xcassets */,
 				7E5D147B208A00B8001271B3 /* Info.plist */,
 			);
 			path = ARBear;
@@ -321,7 +322,6 @@
 			children = (
 				7E2C5331208F34FA00D3DB77 /* Images.bundle */,
 				7E5D14C3208A0477001271B3 /* Models.scnassets */,
-				7E5D1476208A00B8001271B3 /* Assets.xcassets */,
 				7E5D1481208A02E6001271B3 /* ARMain.storyboard */,
 			);
 			path = Resources;
