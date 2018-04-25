@@ -10,7 +10,7 @@ import SceneKit
 import UIKit
 import Photos
 
-class ViewController: UIViewController {
+class ARViewController: UIViewController {
     
     // MARK: IBOutlets
     
@@ -443,7 +443,7 @@ class ViewController: UIViewController {
 }
 
 //MARK: - ARVideoKit Delegate Methods
-extension ViewController: RecordARDelegate, RenderARDelegate {
+extension ARViewController: RecordARDelegate, RenderARDelegate {
     func frame(didRender buffer: CVPixelBuffer, with time: CMTime, using rawBuffer: CVPixelBuffer) {
         // Do some image/video processing.
     }
@@ -466,7 +466,7 @@ extension ViewController: RecordARDelegate, RenderARDelegate {
     }
 }
 
-extension ViewController: SegmentedControlDelegate {
+extension ARViewController: SegmentedControlDelegate {
     func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) {
         print("Did select index \(selectedIndex)")
         switch segmentedControl.style {

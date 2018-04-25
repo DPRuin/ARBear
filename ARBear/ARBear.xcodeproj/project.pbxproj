@@ -30,7 +30,7 @@
 		7E2C532D208EC7CD00D3DB77 /* RecordARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */; };
 		7E2C5332208F34FA00D3DB77 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E2C5331208F34FA00D3DB77 /* Images.bundle */; };
 		7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D146D208A00B7001271B3 /* AppDelegate.swift */; };
-		7E5D1472208A00B7001271B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1471208A00B7001271B3 /* ViewController.swift */; };
+		7E5D1472208A00B7001271B3 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1471208A00B7001271B3 /* ARViewController.swift */; };
 		7E5D1475208A00B7001271B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1473208A00B7001271B3 /* Main.storyboard */; };
 		7E5D1477208A00B8001271B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1476208A00B8001271B3 /* Assets.xcassets */; };
 		7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1478208A00B8001271B3 /* LaunchScreen.storyboard */; };
@@ -48,9 +48,9 @@
 		7E5D14D5208A048F001271B3 /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14D3208A048F001271B3 /* ThresholdPanGesture.swift */; };
 		7E5D14D6208A048F001271B3 /* SquishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14D4208A048F001271B3 /* SquishButton.swift */; };
 		7E5D14D9208A0497001271B3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14D8208A0497001271B3 /* Utilities.swift */; };
-		7E5D14DD208A04A2001271B3 /* ViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14DA208A04A1001271B3 /* ViewController+Actions.swift */; };
-		7E5D14DE208A04A2001271B3 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14DB208A04A2001271B3 /* ViewController+ARSCNViewDelegate.swift */; };
-		7E5D14DF208A04A2001271B3 /* ViewController+ObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14DC208A04A2001271B3 /* ViewController+ObjectSelection.swift */; };
+		7E5D14DD208A04A2001271B3 /* ARViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14DA208A04A1001271B3 /* ARViewController+Actions.swift */; };
+		7E5D14DE208A04A2001271B3 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14DB208A04A2001271B3 /* ARViewController+ARSCNViewDelegate.swift */; };
+		7E5D14DF208A04A2001271B3 /* ARViewController+ObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14DC208A04A2001271B3 /* ARViewController+ObjectSelection.swift */; };
 		7E5D14E3208A04AB001271B3 /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14E1208A04AB001271B3 /* VirtualObjectLoader.swift */; };
 		7E5D14E4208A04AB001271B3 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14E2208A04AB001271B3 /* VirtualObject.swift */; };
 		7E5D14E7208A04C0001271B3 /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14E5208A04C0001271B3 /* VirtualObjectInteraction.swift */; };
@@ -96,7 +96,7 @@
 		7E2C5331208F34FA00D3DB77 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		7E5D146A208A00B7001271B3 /* ARBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D146D208A00B7001271B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E5D1471208A00B7001271B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E5D1471208A00B7001271B3 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		7E5D1474208A00B7001271B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E5D1476208A00B8001271B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E5D1479208A00B8001271B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,9 +115,9 @@
 		7E5D14D3208A048F001271B3 /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
 		7E5D14D4208A048F001271B3 /* SquishButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquishButton.swift; sourceTree = "<group>"; };
 		7E5D14D8208A0497001271B3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		7E5D14DA208A04A1001271B3 /* ViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Actions.swift"; sourceTree = "<group>"; };
-		7E5D14DB208A04A2001271B3 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
-		7E5D14DC208A04A2001271B3 /* ViewController+ObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ObjectSelection.swift"; sourceTree = "<group>"; };
+		7E5D14DA208A04A1001271B3 /* ARViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+Actions.swift"; sourceTree = "<group>"; };
+		7E5D14DB208A04A2001271B3 /* ARViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		7E5D14DC208A04A2001271B3 /* ARViewController+ObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARViewController+ObjectSelection.swift"; sourceTree = "<group>"; };
 		7E5D14E1208A04AB001271B3 /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
 		7E5D14E2208A04AB001271B3 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
 		7E5D14E5208A04C0001271B3 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
@@ -275,10 +275,10 @@
 				7E64073F208D912300258854 /* PageView */,
 				7E5D14C5208A0481001271B3 /* SegmentedControl */,
 				7E5D14D4208A048F001271B3 /* SquishButton.swift */,
-				7E5D1471208A00B7001271B3 /* ViewController.swift */,
-				7E5D14DA208A04A1001271B3 /* ViewController+Actions.swift */,
-				7E5D14DB208A04A2001271B3 /* ViewController+ARSCNViewDelegate.swift */,
-				7E5D14DC208A04A2001271B3 /* ViewController+ObjectSelection.swift */,
+				7E5D1471208A00B7001271B3 /* ARViewController.swift */,
+				7E5D14DA208A04A1001271B3 /* ARViewController+Actions.swift */,
+				7E5D14DB208A04A2001271B3 /* ARViewController+ARSCNViewDelegate.swift */,
+				7E5D14DC208A04A2001271B3 /* ARViewController+ObjectSelection.swift */,
 				7E5D14D3208A048F001271B3 /* ThresholdPanGesture.swift */,
 				7E5D14E6208A04C0001271B3 /* VirtualObjectARView.swift */,
 				7E5D14E5208A04C0001271B3 /* VirtualObjectInteraction.swift */,
@@ -491,7 +491,7 @@
 				7E2C531A208EC7CD00D3DB77 /* ARVideoOptions.swift in Sources */,
 				7E5D14D6208A048F001271B3 /* SquishButton.swift in Sources */,
 				7E5D14C1208A046D001271B3 /* FocusSquare.swift in Sources */,
-				7E5D14DE208A04A2001271B3 /* ViewController+ARSCNViewDelegate.swift in Sources */,
+				7E5D14DE208A04A2001271B3 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				7E2C531F208EC7CD00D3DB77 /* UIView+isType.swift in Sources */,
 				7E5D14CD208A0481001271B3 /* Constants.swift in Sources */,
 				7E2C5320208EC7CD00D3DB77 /* RecordAR.swift in Sources */,
@@ -501,9 +501,9 @@
 				7E5D1487208A043B001271B3 /* StatusViewController.swift in Sources */,
 				7E640748208D912400258854 /* UIColor-Extension.swift in Sources */,
 				7E640747208D912400258854 /* HFTitleView.swift in Sources */,
-				7E5D14DF208A04A2001271B3 /* ViewController+ObjectSelection.swift in Sources */,
+				7E5D14DF208A04A2001271B3 /* ARViewController+ObjectSelection.swift in Sources */,
 				7E5D14CE208A0481001271B3 /* SCScrollView.swift in Sources */,
-				7E5D1472208A00B7001271B3 /* ViewController.swift in Sources */,
+				7E5D1472208A00B7001271B3 /* ARViewController.swift in Sources */,
 				7E5D14D2208A0481001271B3 /* Style.swift in Sources */,
 				7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */,
 				7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */,
@@ -513,7 +513,7 @@
 				7E5D14D9208A0497001271B3 /* Utilities.swift in Sources */,
 				7E2C5326208EC7CD00D3DB77 /* JPEG.swift in Sources */,
 				7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */,
-				7E5D14DD208A04A2001271B3 /* ViewController+Actions.swift in Sources */,
+				7E5D14DD208A04A2001271B3 /* ARViewController+Actions.swift in Sources */,
 				7E5D14E8208A04C0001271B3 /* VirtualObjectARView.swift in Sources */,
 				7E2C5319208EC7CD00D3DB77 /* ARInputViewOptions.swift in Sources */,
 				7E2C532A208EC7CD00D3DB77 /* Generate+GIF.swift in Sources */,

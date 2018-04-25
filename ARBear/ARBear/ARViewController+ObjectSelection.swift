@@ -7,7 +7,7 @@ See LICENSE folder for this sample’s licensing information.
 import UIKit
 import SceneKit
 
-extension ViewController: VirtualObjectSelectionViewControllerDelegate {
+extension ARViewController: VirtualObjectSelectionViewControllerDelegate {
     /// 放置虚拟物体
     func placeVirtualObject(_ virtualObject: VirtualObject) {
         guard let cameraTransform = session.currentFrame?.camera.transform,

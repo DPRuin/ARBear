@@ -8,7 +8,7 @@ UI Actions for the main view controller.
 import UIKit
 import SceneKit
 
-extension ViewController: UIGestureRecognizerDelegate {
+extension ARViewController: UIGestureRecognizerDelegate {
     
     enum SegueIdentifier: String {
         case showObjects
@@ -56,7 +56,7 @@ extension ViewController: UIGestureRecognizerDelegate {
     }
 }
 
-extension ViewController {
+extension ARViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let identifier = segue.identifier,
