@@ -54,6 +54,12 @@ class StatusViewController: UIViewController {
     
     private var timers: [MessageType: Timer] = [:]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        restartExperienceButton.setImage(UIImage(named: "Images.bundle/restart"), for: [])
+        restartExperienceButton.setImage(UIImage(named: "Images.bundle/restartPressed"), for: [.selected])
+    }
+    
     // MARK: - Message Handling
 	
 	func showMessage(_ text: String, autoHide: Bool = true) {

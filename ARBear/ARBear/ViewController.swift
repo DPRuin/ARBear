@@ -128,6 +128,9 @@ class ViewController: UIViewController {
         virtualObjectInteraction.oneTapGestureHandler = {
             self.showVirtualObjectSelectionViewController()
         }
+        
+        addObjectButton.setImage(UIImage(named: "Images.bundle/add"), for: [])
+        addObjectButton.setImage(UIImage(named: "Images.bundle/addPressed"), for: [.highlighted])
     }
     
     override func viewWillAppear(_ animated: Bool) {

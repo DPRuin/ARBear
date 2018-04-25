@@ -47,7 +47,8 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
         // Show progress indicator.
         spinner.startAnimating()
         
-        addObjectButton.setImage(#imageLiteral(resourceName: "buttonring"), for: [])
+        // addObjectButton.setImage(#imageLiteral(resourceName: "buttonring"), for: [])
+        addObjectButton.setImage(UIImage(named: "Images.bundle/ring"), for: [])
 
         addObjectButton.isEnabled = false
         isRestartAvailable = false
@@ -57,8 +58,10 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
         // Hide progress indicator.
         spinner.stopAnimating()
 
-        addObjectButton.setImage(#imageLiteral(resourceName: "add"), for: [])
-        addObjectButton.setImage(#imageLiteral(resourceName: "addPressed"), for: [.highlighted])
+//        addObjectButton.setImage(#imageLiteral(resourceName: "add"), for: [])
+//        addObjectButton.setImage(#imageLiteral(resourceName: "addPressed"), for: [.highlighted])
+        addObjectButton.setImage(UIImage(named: "Images.bundle/add"), for: [])
+        addObjectButton.setImage(UIImage(named: "Images.bundle/addPressed"), for: [.highlighted])
 
         addObjectButton.isEnabled = true
         isRestartAvailable = true

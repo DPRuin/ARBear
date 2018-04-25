@@ -42,9 +42,11 @@ extension ViewController: UIGestureRecognizerDelegate {
         statusViewController.cancelAllScheduledMessages()
 
         virtualObjectLoader.removeAllVirtualObjects()
-        addObjectButton.setImage(#imageLiteral(resourceName: "add"), for: [])
-        addObjectButton.setImage(#imageLiteral(resourceName: "addPressed"), for: [.highlighted])
-
+//        addObjectButton.setImage(#imageLiteral(resourceName: "add"), for: [])
+//        addObjectButton.setImage(#imageLiteral(resourceName: "addPressed"), for: [.highlighted])
+        addObjectButton.setImage(UIImage(named: "Images.bundle/add"), for: [])
+        addObjectButton.setImage(UIImage(named: "Images.bundle/addPressed"), for: [.highlighted])
+        
         resetTracking()
 
         // Disable restart for a while in order to give the session time to restart.
