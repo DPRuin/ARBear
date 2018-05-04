@@ -30,6 +30,7 @@
 		7E2C532D208EC7CD00D3DB77 /* RecordARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */; };
 		7E2C5332208F34FA00D3DB77 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E2C5331208F34FA00D3DB77 /* Images.bundle */; };
 		7E33D025209BF7F700D606B3 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E33D024209BF7F700D606B3 /* data.plist */; };
+		7E33D028209BFEBE00D606B3 /* ArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33D027209BFEBE00D606B3 /* ArtModel.swift */; };
 		7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D146D208A00B7001271B3 /* AppDelegate.swift */; };
 		7E5D1472208A00B7001271B3 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1471208A00B7001271B3 /* ARViewController.swift */; };
 		7E5D1475208A00B7001271B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1473208A00B7001271B3 /* Main.storyboard */; };
@@ -96,6 +97,7 @@
 		7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordARDelegate.swift; sourceTree = "<group>"; };
 		7E2C5331208F34FA00D3DB77 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		7E33D024209BF7F700D606B3 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		7E33D027209BFEBE00D606B3 /* ArtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtModel.swift; sourceTree = "<group>"; };
 		7E5D146A208A00B7001271B3 /* ARBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D146D208A00B7001271B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D1471208A00B7001271B3 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		7E33D026209BFD9100D606B3 /* Additional Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E33D027209BFEBE00D606B3 /* ArtModel.swift */,
+			);
+			name = "Additional Models";
+			path = "ARBear/Additional Models";
+			sourceTree = SOURCE_ROOT;
+		};
 		7E5D1461208A00B7001271B3 = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +299,7 @@
 				7E5D14D7208A0497001271B3 /* Utilities */,
 				7E5D14BD208A046D001271B3 /* Focus Square */,
 				7E5D1483208A043B001271B3 /* Additional View Controllers */,
+				7E33D026209BFD9100D606B3 /* Additional Models */,
 				7E5D14C2208A0477001271B3 /* Resources */,
 				7E5D146D208A00B7001271B3 /* AppDelegate.swift */,
 				7E5D14E9208A0AEE001271B3 /* HomeViewController.swift */,
@@ -514,6 +526,7 @@
 				7E2C531E208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift in Sources */,
 				7E2C5322208EC7CD00D3DB77 /* ViewAR.swift in Sources */,
 				7E64074B208D912400258854 /* HFPageView.swift in Sources */,
+				7E33D028209BFEBE00D606B3 /* ArtModel.swift in Sources */,
 				7E5D14D9208A0497001271B3 /* Utilities.swift in Sources */,
 				7E2C5326208EC7CD00D3DB77 /* JPEG.swift in Sources */,
 				7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */,
