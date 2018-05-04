@@ -29,6 +29,7 @@
 		7E2C532C208EC7CD00D3DB77 /* RenderARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */; };
 		7E2C532D208EC7CD00D3DB77 /* RecordARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */; };
 		7E2C5332208F34FA00D3DB77 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E2C5331208F34FA00D3DB77 /* Images.bundle */; };
+		7E33D025209BF7F700D606B3 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E33D024209BF7F700D606B3 /* data.plist */; };
 		7E5D146E208A00B7001271B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D146D208A00B7001271B3 /* AppDelegate.swift */; };
 		7E5D1472208A00B7001271B3 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D1471208A00B7001271B3 /* ARViewController.swift */; };
 		7E5D1475208A00B7001271B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D1473208A00B7001271B3 /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 		7E2C5317208EC7CD00D3DB77 /* RenderARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderARDelegate.swift; sourceTree = "<group>"; };
 		7E2C5318208EC7CD00D3DB77 /* RecordARDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordARDelegate.swift; sourceTree = "<group>"; };
 		7E2C5331208F34FA00D3DB77 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
+		7E33D024209BF7F700D606B3 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		7E5D146A208A00B7001271B3 /* ARBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5D146D208A00B7001271B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5D1471208A00B7001271B3 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		7E5D14C2208A0477001271B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7E33D024209BF7F700D606B3 /* data.plist */,
 				7E2C5331208F34FA00D3DB77 /* Images.bundle */,
 				7E5D14C3208A0477001271B3 /* Models.scnassets */,
 				7E5D1481208A02E6001271B3 /* ARMain.storyboard */,
@@ -460,6 +463,7 @@
 				7E2C5332208F34FA00D3DB77 /* Images.bundle in Resources */,
 				7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */,
 				7E5D1482208A02E6001271B3 /* ARMain.storyboard in Resources */,
+				7E33D025209BF7F700D606B3 /* data.plist in Resources */,
 				7E5D147A208A00B8001271B3 /* LaunchScreen.storyboard in Resources */,
 				7E5D1477208A00B8001271B3 /* Assets.xcassets in Resources */,
 				7E5D1475208A00B7001271B3 /* Main.storyboard in Resources */,

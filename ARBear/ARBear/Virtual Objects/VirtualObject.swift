@@ -99,6 +99,10 @@ extension VirtualObject {
     
     /// Loads all the model objects within `Models.scnassets`.
     static let availableObjects: [VirtualObject] = {
+        // 从沙盒中获取模型
+        // TODO: hhhhhh
+        // 沙盒中存放多个.scnassets文件
+        
         let modelsURL = Bundle.main.url(forResource: "Models.scnassets", withExtension: nil)!
 
         let fileEnumerator = FileManager().enumerator(at: modelsURL, includingPropertiesForKeys: [])!

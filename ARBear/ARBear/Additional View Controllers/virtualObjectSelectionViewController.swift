@@ -96,5 +96,7 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         delegate?.virtualObjectSelectionViewController(self, didSelectObject: object)
 
         self.dismiss(animated: true, completion: nil)
+        // TODO: 下载选中的模型
+        // 先判断是否已下载，如果已下载从沙盒获取，若未下载，从网络下载存入沙盒
     }
 }
