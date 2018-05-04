@@ -27,6 +27,11 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
     
     /// 3d模型数据
     var virtualObjects = [VirtualObject]()
+    /// 模型titles
+    var titleArray = [String]()
+    /// 每页的模型数组
+    // var artModels = [ArtModel]()
+    var artDict = [String : Array<[String : String]>]()
     
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
     
@@ -36,6 +41,7 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
         super.viewDidLoad()
 
         self.automaticallyAdjustsScrollViewInsets = false
+        loadArtModels()
         setupPageCollection()
     }
 
@@ -44,8 +50,27 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
         // Dispose of any resources that can be recreated.
     }
     
-    func setupPageCollection()  {
-        let titles = ["小熊", "小兔"]
+    // MARK: - Initial method
+    private func loadArtModels() {
+        // plist
+        let path = Bundle.main.path(forResource: "datadic", ofType: "plist")
+        let url  = URL(fileURLWithPath: path!)
+        let data = try! Data(contentsOf: url)
+        let plist = try! PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil)
+        
+        
+//        let dictArray = plist as! [[String : Any]]
+//        for dict in dictArray {
+//            titleArray.append(dict["artName"] as! String)
+//        }
+        
+        let dict = plist as! [String : Array<[String : String]>]
+        artDict = dict
+        titleArray = Array(dict.keys)
+        
+    }
+    private func setupPageCollection()  {
+        // let titles = ["小熊", "小兔"]
         
         var style = HFPageStyle()
         style.isShowBottomLine = true
@@ -57,7 +82,7 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
         layout.rowMargin = 8
         
         let frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 300)
-        let pageCollection = HFPageCollectionView(frame: frame, titles: titles, isTop: true, style: style, layout: layout)
+        let pageCollection = HFPageCollectionView(frame: frame, titles: titleArray, isTop: true, style: style, layout: layout)
         pageCollection.dataSource = self
         pageCollection.delegate = self
         
@@ -70,18 +95,25 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
 extension VirtualObjectSelectionViewController : HFPageCollectionViewDataSource{
     
     func numberOfSectionsInPageCollectionView(_ pageCollectionView: HFPageCollectionView) -> Int {
-        return 2
+        return titleArray.count
     }
     
     func pageCollectionView(_ pageCollectionView: HFPageCollectionView, numberOfItemsIn section: Int) -> Int {
-        return virtualObjects.count
+        let key = titleArray[section]
+        let array = artDict[key]!
+        return array.count
     }
     
     func pageCollectionView(_ pageCollectionView: HFPageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollection", for: indexPath) as! VirtualObjectCollectionViewCell
-        cell.modelName = virtualObjects[indexPath.item].modelName
+        // cell.modelName = virtualObjects[indexPath.item].modelName
         // cell.backgroundColor = UIColor.randomColor()
+        
+        let key = titleArray[indexPath.section]
+        let array = artDict[key]!
+        let artModels = ArtModel.artModels(array: array)
+        cell.artMondel = artModels[indexPath.item]
         return cell
     }
 }

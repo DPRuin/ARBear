@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bear</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>candle</string>
+			<key>imageURL</key>
+			<string>http://192.168.1.149/bear/candle.png</string>
+			<key>downloadURL</key>
+			<string>http://192.168.1.149/bear/candle.zip</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>jump</string>
+			<key>imageURL</key>
+			<string>http://192.168.1.149/bear/jump.png</string>
+			<key>downloadURL</key>
+			<string>http://192.168.1.149/bear/jump.zip</string>
+		</dict>
+	</array>
+	<key>rabbit</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>chair</string>
+			<key>imageURL</key>
+			<string>http://192.168.1.149/bear/chair.png</string>
+			<key>downloadURL</key>
+			<string>http://192.168.1.149/bear/chair.zip</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>flower</string>
+			<key>imageURL</key>
+			<string>http://192.168.1.149/bear/flower.png</string>
+			<key>downloadURL</key>
+			<string>http://192.168.1.149/bear/flower.zip</string>
+		</dict>
+	</array>
+</dict>
+</plist>

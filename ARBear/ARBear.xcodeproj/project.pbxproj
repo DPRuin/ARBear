@@ -71,6 +71,7 @@
 		7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640753208D91D900258854 /* virtualObjectSelectionViewController.swift */; };
 		7E640759208DE1A300258854 /* playerneed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7E640756208DE1A300258854 /* playerneed.mp4 */; };
 		7E64075A208DE1A300258854 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640758208DE1A300258854 /* Player.swift */; };
+		7E671C48209C4F1500F6749D /* datadic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E671C47209C4F1400F6749D /* datadic.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 		7E640756208DE1A300258854 /* playerneed.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = playerneed.mp4; sourceTree = "<group>"; };
 		7E640757208DE1A300258854 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7E640758208DE1A300258854 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7E671C47209C4F1400F6749D /* datadic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = datadic.plist; sourceTree = "<group>"; };
 		9F65B20AD84042B3094996DC /* Pods_ARBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08105415B3D678F87F5BF04 /* Pods-ARBear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARBear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARBear/Pods-ARBear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -341,6 +343,7 @@
 		7E5D14C2208A0477001271B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7E671C47209C4F1400F6749D /* datadic.plist */,
 				7E33D024209BF7F700D606B3 /* data.plist */,
 				7E2C5331208F34FA00D3DB77 /* Images.bundle */,
 				7E5D14C3208A0477001271B3 /* Models.scnassets */,
@@ -498,6 +501,7 @@
 			files = (
 				7E5D14D0208A0481001271B3 /* Info.plist in Resources */,
 				7E2C532B208EC7CD00D3DB77 /* video.scnassets in Resources */,
+				7E671C48209C4F1500F6749D /* datadic.plist in Resources */,
 				7E640759208DE1A300258854 /* playerneed.mp4 in Resources */,
 				7E2C5332208F34FA00D3DB77 /* Images.bundle in Resources */,
 				7E640751208D915100258854 /* VirtualObjectCollectionViewCell.xib in Resources */,
@@ -770,7 +774,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NV32R76SX;
 				INFOPLIST_FILE = ARBear/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.betasmart.ARBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -786,7 +793,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NV32R76SX;
 				INFOPLIST_FILE = ARBear/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.betasmart.ARBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
