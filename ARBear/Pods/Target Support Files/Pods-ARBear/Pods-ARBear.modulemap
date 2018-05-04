@@ -1,0 +1,6 @@
+framework module Pods_ARBear {
+  umbrella header "Pods-ARBear-umbrella.h"
+
+  export *
+  module * { export * }
+}

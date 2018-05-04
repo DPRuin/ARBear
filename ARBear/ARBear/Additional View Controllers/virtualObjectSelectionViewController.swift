@@ -25,7 +25,7 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
         return true
     }
     
-    /// 模型数据
+    /// 3d模型数据
     var virtualObjects = [VirtualObject]()
     
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
