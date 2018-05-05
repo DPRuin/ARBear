@@ -7,4 +7,6 @@ target 'ARBear' do
 
   # Pods for ARBear
 	pod 'SDWebImage', '~> 4.0'
+    pod 'AFNetworking', '~> 3.0'
+    pod 'SSZipArchive'
 end

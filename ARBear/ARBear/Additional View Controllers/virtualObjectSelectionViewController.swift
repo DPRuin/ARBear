@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AFNetworking
+import SSZipArchive
 
 // MARK: - VirtualObjectSelectionViewControllerDelegate
 
@@ -131,7 +133,7 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
             showVirtualObject(name: selectedArtModel.name)
         } else {
             // 开始下载模型
-            
+            downloadVirtualObject(downloadURL: selectedArtModel.downloadURL)
             
         }
         
@@ -144,6 +146,38 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         let object = VirtualObject(url: destinationURL)
         delegate?.virtualObjectSelectionViewController(self, didSelectObject: object!)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func downloadVirtualObject(downloadURL: String) {
+        let configuration = URLSessionConfiguration.default
+        let manager = AFURLSessionManager(sessionConfiguration: configuration)
+        let url = URL(string: downloadURL)!
+        let urlRequest = URLRequest(url: url)
+        let downloadTask = manager.downloadTask(with: urlRequest, progress: { (progress) in
+            
+        }, destination: { (targetPath, response) -> URL in
+            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            return documentDirectory.appendingPathComponent(response.suggestedFilename!)
+        }) { (response, filePath, error) in
+            print("-filepath-\(filePath)-\(filePath?.absoluteString)")
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let component = "/\(url.lastPathComponent)"
+            let inputPath = documentDirectory.appendingFormat(component)
+            print("-inputPath-\(inputPath)")
+            self.unZipVirtualObject(atPath: inputPath, toDestination: documentDirectory)
+        }
+        // 开始下载
+        downloadTask.resume()
+        
+    }
+    
+    private func unZipVirtualObject(atPath path: String, toDestination destination:String) {
+        // 下载完成，对文件解压
+        SSZipArchive.unzipFile(atPath: path, toDestination: destination, overwrite: true, password: nil, progressHandler: { (entry, zipInfo, entryNumber, total) in
+            print("-progressHandler-\(entry)--\(entryNumber)--\(total)")
+        }, completionHandler: { (path, succeeded, error) in
+            print("-completionHandler-\(path)--\(succeeded)--\(error)")
+        })
     }
     
     
