@@ -31,7 +31,7 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
     var titleArray = [String]()
     /// 每页的模型数组
     // var artModels = [ArtModel]()
-    var artDict = [String : Array<[String : String]>]()
+    var artDict = [String : Array<[String : AnyObject]>]()
     
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
     
@@ -64,10 +64,9 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
 //            titleArray.append(dict["artName"] as! String)
 //        }
         
-        let dict = plist as! [String : Array<[String : String]>]
+        let dict = plist as! [String : Array<[String : AnyObject]>]
         artDict = dict
         titleArray = Array(dict.keys)
-        
     }
     private func setupPageCollection()  {
         // let titles = ["小熊", "小兔"]

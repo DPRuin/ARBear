@@ -17,7 +17,7 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
     var artMondel: ArtModel! {
         didSet {
             label.text = artMondel.name
-            let placeholderImage = UIImage(named: "Images.bundle/chair")
+            let placeholderImage = UIImage(named: "Images.bundle/panda")
             let imageURL = URL(string: artMondel.imageURL)
             imageView.sd_setImage(with: imageURL, placeholderImage: placeholderImage, options: .allowInvalidSSLCertificates, completed: nil)
         }

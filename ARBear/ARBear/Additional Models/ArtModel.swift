@@ -10,33 +10,36 @@ import UIKit
 
 class ArtModel: NSObject {
 
-    var name = ""
-    var imageURL = ""
-    var downloadURL = ""
-    // static let properties = ["name", "imageURL", "downloadURL"]
+    @objc var name: String = ""
+    @objc var imageURL: String = ""
+    @objc var downloadURL: String = ""
+    static let properties = ["name", "imageURL", "downloadURL"]
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        return;
+        print("UndefinedKey-\(key)-\(value)")
     }
-    init(dict: [String : String]) {
+    
+    override func setValue(_ value: Any?, forKey key: String) {
+        super.setValue(value, forKey: key)
+    }
+    
+    override var description: String {
+        let dict = dictionaryWithValues(forKeys: ArtModel.properties)
+        return ("\(dict)")
+    }
+    
+    init(dict: [String : AnyObject]) {
         super.init()
-//        for key in ArtModel.properties {
-//            if dict[key] != nil {
-//                //setValue(dict[key], forKey: key)
-//                set
-//            }
-//        }
         setValuesForKeys(dict)
-        // super.init()
     }
     
     /// 模型数组
-    class func artModels(array: Array<[String : String]>) -> [ArtModel] {
-        
+    class func artModels(array: [[String : AnyObject]]) -> [ArtModel] {
+
         var artModelsArray = [ArtModel]()
         for dict in array {
             artModelsArray.append(ArtModel(dict: dict))
-            
+
         }
         return artModelsArray
     }
