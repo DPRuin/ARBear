@@ -13,6 +13,8 @@ class ArtModel: NSObject {
     @objc var name: String = ""
     @objc var imageURL: String = ""
     @objc var downloadURL: String = ""
+    var isDownloaded: Bool = false
+    
     static let properties = ["name", "imageURL", "downloadURL"]
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {

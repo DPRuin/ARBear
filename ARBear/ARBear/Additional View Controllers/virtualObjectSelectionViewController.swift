@@ -119,15 +119,25 @@ extension VirtualObjectSelectionViewController : HFPageCollectionViewDataSource{
 
 extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
     func pageCollectionView(_ pageCollectionView: HFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("-----")
-        print("index-\(indexPath)")
         
-        let object = virtualObjects[indexPath.item]
+        // 先判断是否已下载，如果已下载从沙盒获取，加载模型到现实，
+        // 若未下载，从网络开始下载模型存入沙盒
+        let key = titleArray[indexPath.section]
+        let array = artDict[key]!
+        let artModels = ArtModel.artModels(array: array)
+        let selectedArtModel = artModels[indexPath.item]
+        if selectedArtModel.isDownloaded { // 已下载
+            // TODO: 需要修改
+            let object = virtualObjects[indexPath.item]
+            delegate?.virtualObjectSelectionViewController(self, didSelectObject: object)
+            self.dismiss(animated: true, completion: nil)
+            
+        } else {
+            // 开始下载模型
+            
+        }
         
-        delegate?.virtualObjectSelectionViewController(self, didSelectObject: object)
-
-        self.dismiss(animated: true, completion: nil)
-        // TODO: 下载选中的模型
-        // 先判断是否已下载，如果已下载从沙盒获取，若未下载，从网络下载存入沙盒
     }
+    
+    
 }

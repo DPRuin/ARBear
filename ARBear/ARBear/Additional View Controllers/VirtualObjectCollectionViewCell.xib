@@ -30,9 +30,17 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c28-nl-Vwn">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXc-TQ-T88">
+                        <rect key="frame" x="80" y="80" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="q6M-74-ICg"/>
+                            <constraint firstAttribute="height" constant="20" id="qQ7-oj-2HA"/>
+                        </constraints>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="CXc-TQ-T88" secondAttribute="trailing" id="5tn-pe-XAg"/>
                 <constraint firstAttribute="trailing" secondItem="c28-nl-Vwn" secondAttribute="trailing" id="FrO-cQ-hpC"/>
                 <constraint firstItem="tK1-NC-lvT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GFZ-YD-r9q"/>
                 <constraint firstItem="c28-nl-Vwn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NN2-WL-R2J"/>
@@ -40,10 +48,12 @@
                 <constraint firstItem="tK1-NC-lvT" firstAttribute="top" secondItem="c28-nl-Vwn" secondAttribute="bottom" id="kXb-Gg-XFI"/>
                 <constraint firstAttribute="trailing" secondItem="tK1-NC-lvT" secondAttribute="trailing" id="tND-m6-UfQ"/>
                 <constraint firstItem="c28-nl-Vwn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v2I-Px-RCC"/>
+                <constraint firstItem="tK1-NC-lvT" firstAttribute="top" secondItem="CXc-TQ-T88" secondAttribute="bottom" id="y59-f0-rLs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="192" height="112"/>
             <connections>
+                <outlet property="downloadBtn" destination="CXc-TQ-T88" id="2sQ-lC-2PF"/>
                 <outlet property="imageView" destination="c28-nl-Vwn" id="o4C-8N-aFo"/>
                 <outlet property="label" destination="tK1-NC-lvT" id="EBA-J8-JBY"/>
             </connections>

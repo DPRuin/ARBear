@@ -13,6 +13,7 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var downloadBtn: UIButton!
     
     var artMondel: ArtModel! {
         didSet {
@@ -20,6 +21,7 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
             let placeholderImage = UIImage(named: "Images.bundle/panda")
             let imageURL = URL(string: artMondel.imageURL)
             imageView.sd_setImage(with: imageURL, placeholderImage: placeholderImage, options: .allowInvalidSSLCertificates, completed: nil)
+            downloadBtn.isHidden = artMondel.isDownloaded
         }
     }
     
@@ -36,6 +38,9 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         label.textColor = UIColor(r: 220, g: 220, b: 220)
         label.font = UIFont.systemFont(ofSize: 14)
+        downloadBtn.isHidden = false
+        downloadBtn.setBackgroundImage(UIImage(named: "Images.bundle/downloadbg"), for: .normal)
+        downloadBtn.setImage(UIImage(named: "Images.bundle/download"), for: .normal)
     }
     
     
