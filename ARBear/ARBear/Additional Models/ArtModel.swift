@@ -13,7 +13,7 @@ class ArtModel: NSObject {
     @objc var name: String = ""
     @objc var imageURL: String = ""
     @objc var downloadURL: String = ""
-    var isDownloaded: Bool = false
+    var isDownloaded: Bool = true
     
     static let properties = ["name", "imageURL", "downloadURL"]
     

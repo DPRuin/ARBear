@@ -127,16 +127,23 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         let artModels = ArtModel.artModels(array: array)
         let selectedArtModel = artModels[indexPath.item]
         if selectedArtModel.isDownloaded { // 已下载
-            // TODO: 需要修改
-            let object = virtualObjects[indexPath.item]
-            delegate?.virtualObjectSelectionViewController(self, didSelectObject: object)
-            self.dismiss(animated: true, completion: nil)
-            
+            // let object = virtualObjects[indexPath.item]
+            showVirtualObject(name: selectedArtModel.name)
         } else {
             // 开始下载模型
             
+            
         }
         
+    }
+    
+    private func showVirtualObject(name: String) {
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let component = "\(name).scnassets/\(name).scn"
+        let destinationURL = documentDirectory.appendingPathComponent(component)
+        let object = VirtualObject(url: destinationURL)
+        delegate?.virtualObjectSelectionViewController(self, didSelectObject: object!)
+        self.dismiss(animated: true, completion: nil)
     }
     
     
