@@ -34,7 +34,7 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
     /// 每页的模型数组
     // var artModels = [ArtModel]()
     var artDict = [String : Array<[String : AnyObject]>]()
-    
+    weak var pageCollection: HFPageCollectionView!
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
     
     // var selectedVirtualObjectRows = IndexSet()
@@ -86,6 +86,7 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
         let pageCollection = HFPageCollectionView(frame: frame, titles: titleArray, isTop: true, style: style, layout: layout)
         pageCollection.dataSource = self
         pageCollection.delegate = self
+        self.pageCollection = pageCollection
         
         pageCollection.registerNib(UINib(nibName: "VirtualObjectCollectionViewCell", bundle: nil), reusableIdentify: "cellCollection")
         view.addSubview(pageCollection)
@@ -133,9 +134,10 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
             showVirtualObject(name: selectedArtModel.name)
         } else {
             // 开始下载模型
-            downloadVirtualObject(downloadURL: selectedArtModel.downloadURL)
+            downloadVirtualObject(downloadURL: selectedArtModel.downloadURL, indexPath: indexPath)
             
         }
+        
         
     }
     
@@ -148,7 +150,7 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    private func downloadVirtualObject(downloadURL: String) {
+    private func downloadVirtualObject(downloadURL: String, indexPath: IndexPath) {
         let configuration = URLSessionConfiguration.default
         let manager = AFURLSessionManager(sessionConfiguration: configuration)
         let url = URL(string: downloadURL)!
@@ -164,20 +166,20 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
             let component = "/\(url.lastPathComponent)"
             let inputPath = cachesDirectory.appendingFormat(component)
             print("-inputPath-\(inputPath)")
-            self.unZipVirtualObject(atPath: inputPath, toDestination: cachesDirectory)
+            self.unZipVirtualObject(atPath: inputPath, toDestination: cachesDirectory, indexPath: indexPath)
         })
         // 开始下载
         downloadTask.resume()
         
     }
     
-    private func unZipVirtualObject(atPath path: String, toDestination destination:String) {
-        print("-meng--\(path)")
+    private func unZipVirtualObject(atPath path: String, toDestination destination:String, indexPath: IndexPath) {
         // 下载完成，对文件解压
         SSZipArchive.unzipFile(atPath: path, toDestination: destination, overwrite: true, password: nil, progressHandler: { (entry, zipInfo, entryNumber, total) in
             print("-progressHandler-\(entry)--\(entryNumber)--\(total)")
         }, completionHandler: { (path, succeeded, error) in
             print("-completionHandler-\(path)--\(succeeded)--\(error)")
+            self.pageCollection.reloadItems(at: [indexPath])
         })
     }
     

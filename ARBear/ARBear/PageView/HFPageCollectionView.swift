@@ -47,6 +47,9 @@ class HFPageCollectionView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
    
+    open func reloadItems(at items: [IndexPath]) {
+        collectionView.reloadItems(at: items)
+    }
 
 }
 
@@ -116,6 +119,7 @@ extension HFPageCollectionView : UICollectionViewDataSource {
         return cell
         
     }
+    
 }
 
 // MARK:- collectionView delegate
