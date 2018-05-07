@@ -39,6 +39,9 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
     
     // var selectedVirtualObjectRows = IndexSet()
     
+    // 下载block
+    var downloadCompleteHandler: () -> Void = {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -135,9 +138,13 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         } else {
             // 开始下载模型
             // 发出通知开始动画
-            let notificationName = Notification.Name("StartDownloadNotification")
-            NotificationCenter.default.post(name: notificationName, object: nil)
-            downloadVirtualObject(downloadURL: selectedArtModel.downloadURL, indexPath: indexPath)
+            let cell = collectionView.cellForItem(at: indexPath) as! VirtualObjectCollectionViewCell
+            cell.startAnimating()
+            
+            downloadVirtualObject(downloadURL: selectedArtModel.downloadURL, downloadCompleteHandler: {
+                cell.stopAnimating()
+                self.pageCollection.reloadItems(at: [indexPath])
+            })
             
         }
         
@@ -153,7 +160,7 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    private func downloadVirtualObject(downloadURL: String, indexPath: IndexPath) {
+    private func downloadVirtualObject(downloadURL: String, downloadCompleteHandler:@escaping ()->Void) {
         let configuration = URLSessionConfiguration.default
         let manager = AFURLSessionManager(sessionConfiguration: configuration)
         let url = URL(string: downloadURL)!
@@ -169,25 +176,25 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
             let component = "/\(url.lastPathComponent)"
             let inputPath = cachesDirectory.appendingFormat(component)
             print("-inputPath-\(inputPath)")
-            self.unZipVirtualObject(atPath: inputPath, toDestination: cachesDirectory, indexPath: indexPath)
+            self.unZipVirtualObject(atPath: inputPath, toDestination: cachesDirectory, completeHandler: downloadCompleteHandler )
         })
         // 开始下载
         downloadTask.resume()
         
     }
     
-    private func unZipVirtualObject(atPath path: String, toDestination destination:String, indexPath: IndexPath) {
+    private func unZipVirtualObject(atPath path: String, toDestination destination:String, completeHandler:@escaping ()->Void) {
         // 下载完成，对文件解压
         SSZipArchive.unzipFile(atPath: path, toDestination: destination, overwrite: true, password: nil, progressHandler: { (entry, zipInfo, entryNumber, total) in
             print("-progressHandler-\(entry)--\(entryNumber)--\(total)")
         }, completionHandler: { (path, succeeded, error) in
             print("-completionHandler-\(path)--\(succeeded)--\(error)")
-            self.pageCollection.reloadItems(at: [indexPath])
-            
-            // 发出结束动画通知
-            // 发出通知开始动画
-            let notificationName = Notification.Name("CompleteDownloadNotification")
-            NotificationCenter.default.post(name: notificationName, object: nil)
+            if succeeded && error == nil {
+                completeHandler()
+            } else {
+                // 解压失败
+            }
+
         })
     }
     
