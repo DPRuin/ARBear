@@ -37,14 +37,23 @@
                             <constraint firstAttribute="height" constant="20" id="qQ7-oj-2HA"/>
                         </constraints>
                     </button>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7th-Q5-Sah">
+                        <rect key="frame" x="30" y="30" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="88I-S4-0Lm"/>
+                            <constraint firstAttribute="height" constant="40" id="yMk-wu-6tW"/>
+                        </constraints>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="CXc-TQ-T88" secondAttribute="trailing" id="5tn-pe-XAg"/>
                 <constraint firstAttribute="trailing" secondItem="c28-nl-Vwn" secondAttribute="trailing" id="FrO-cQ-hpC"/>
                 <constraint firstItem="tK1-NC-lvT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GFZ-YD-r9q"/>
+                <constraint firstItem="7th-Q5-Sah" firstAttribute="centerY" secondItem="c28-nl-Vwn" secondAttribute="centerY" id="MyZ-AQ-o81"/>
                 <constraint firstItem="c28-nl-Vwn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NN2-WL-R2J"/>
                 <constraint firstAttribute="bottom" secondItem="tK1-NC-lvT" secondAttribute="bottom" id="U6S-sN-KJ6"/>
+                <constraint firstItem="7th-Q5-Sah" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="eZf-Jf-UDV"/>
                 <constraint firstItem="tK1-NC-lvT" firstAttribute="top" secondItem="c28-nl-Vwn" secondAttribute="bottom" id="kXb-Gg-XFI"/>
                 <constraint firstAttribute="trailing" secondItem="tK1-NC-lvT" secondAttribute="trailing" id="tND-m6-UfQ"/>
                 <constraint firstItem="c28-nl-Vwn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v2I-Px-RCC"/>
@@ -55,9 +64,10 @@
             <connections>
                 <outlet property="downloadBtn" destination="CXc-TQ-T88" id="2sQ-lC-2PF"/>
                 <outlet property="imageView" destination="c28-nl-Vwn" id="o4C-8N-aFo"/>
+                <outlet property="indicator" destination="7th-Q5-Sah" id="2qj-rN-qna"/>
                 <outlet property="label" destination="tK1-NC-lvT" id="EBA-J8-JBY"/>
             </connections>
-            <point key="canvasLocation" x="128" y="91"/>
+            <point key="canvasLocation" x="-34" y="110"/>
         </collectionViewCell>
     </objects>
 </document>

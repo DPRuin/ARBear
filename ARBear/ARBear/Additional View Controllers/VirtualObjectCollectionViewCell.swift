@@ -15,6 +15,8 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var downloadBtn: UIButton!
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     var artMondel: ArtModel! {
         didSet {
             label.text = artMondel.name
@@ -41,7 +43,21 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
         downloadBtn.isHidden = false
         // downloadBtn.setBackgroundImage(UIImage(named: "Images.bundle/downloadbg"), for: .normal)
         downloadBtn.setImage(UIImage(named: "Images.bundle/download"), for: .normal)
+        
+        // 监听通知
+        NotificationCenter.default.addObserver(self, selector: #selector(self.startAnimating), name:Notification.Name("StartDownloadNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.stopAnimating), name:Notification.Name("CompleteDownloadNotification"), object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func stopAnimating() {
+        indicator.stopAnimating()
+    }
+    @objc func startAnimating() {
+        indicator.startAnimating()
+    }
     
 }

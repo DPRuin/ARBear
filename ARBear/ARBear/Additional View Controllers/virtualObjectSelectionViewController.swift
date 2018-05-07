@@ -134,6 +134,9 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
             showVirtualObject(name: selectedArtModel.name)
         } else {
             // 开始下载模型
+            // 发出通知开始动画
+            let notificationName = Notification.Name("StartDownloadNotification")
+            NotificationCenter.default.post(name: notificationName, object: nil)
             downloadVirtualObject(downloadURL: selectedArtModel.downloadURL, indexPath: indexPath)
             
         }
@@ -180,6 +183,11 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         }, completionHandler: { (path, succeeded, error) in
             print("-completionHandler-\(path)--\(succeeded)--\(error)")
             self.pageCollection.reloadItems(at: [indexPath])
+            
+            // 发出结束动画通知
+            // 发出通知开始动画
+            let notificationName = Notification.Name("CompleteDownloadNotification")
+            NotificationCenter.default.post(name: notificationName, object: nil)
         })
     }
     

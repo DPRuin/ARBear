@@ -49,7 +49,7 @@ class ARViewController: UIViewController {
     /// Marks if the AR experience is available for restart.
     var isRestartAvailable = true
     
-    /// 串行队列，用于协调添加或删除场景中的节点。
+    /// 队列，用于协调添加或删除场景中的节点。
     let updateQueue = DispatchQueue(label: "com.example.apple-samplecode.arkitexample.serialSceneKitQueue")
     
     var screenCenter: CGPoint {
