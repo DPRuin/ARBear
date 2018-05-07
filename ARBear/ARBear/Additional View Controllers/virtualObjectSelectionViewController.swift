@@ -140,9 +140,9 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
     }
     
     private func showVirtualObject(name: String) {
-        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         let component = "\(name).scnassets/\(name).scn"
-        let destinationURL = documentDirectory.appendingPathComponent(component)
+        let destinationURL = cachesDirectory.appendingPathComponent(component)
         let object = VirtualObject(url: destinationURL)
         delegate?.virtualObjectSelectionViewController(self, didSelectObject: object!)
         self.dismiss(animated: true, completion: nil)
@@ -153,20 +153,19 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         let manager = AFURLSessionManager(sessionConfiguration: configuration)
         let url = URL(string: downloadURL)!
         let urlRequest = URLRequest(url: url)
+        
         let downloadTask = manager.downloadTask(with: urlRequest, progress: { (progress) in
-            
+             print("download-progress-\(progress)")
         }, destination: { (targetPath, response) -> URL in
-            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            return documentDirectory.appendingPathComponent(response.suggestedFilename!)
-        }) { (response, filePath, error) in
-            // print("-filepath-\(filePath)-\(filePath?.absoluteString)")
-            print("-pathhh-\(filePath?.path)")
-            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+            return cachesDirectory.appendingPathComponent(response.suggestedFilename!)
+        }, completionHandler: { (response, filePath, error) in
+            let cachesDirectory = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
             let component = "/\(url.lastPathComponent)"
-            let inputPath = documentDirectory.appendingFormat(component)
+            let inputPath = cachesDirectory.appendingFormat(component)
             print("-inputPath-\(inputPath)")
-            self.unZipVirtualObject(atPath: inputPath, toDestination: documentDirectory)
-        }
+            self.unZipVirtualObject(atPath: inputPath, toDestination: cachesDirectory)
+        })
         // 开始下载
         downloadTask.resume()
         

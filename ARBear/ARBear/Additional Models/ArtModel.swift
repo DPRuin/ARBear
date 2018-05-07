@@ -15,9 +15,9 @@ class ArtModel: NSObject {
     @objc var downloadURL: String = ""
     var isDownloaded: Bool {
         get {
-            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let cachesDirectory = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
             let component = "/\(name).scnassets/\(name).scn"
-            let path = documentDirectory.appendingFormat(component)
+            let path = cachesDirectory.appendingFormat(component)
             
             return FileManager.default.fileExists(atPath: path)
         }
