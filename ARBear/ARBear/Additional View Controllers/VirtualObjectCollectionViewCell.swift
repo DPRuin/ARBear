@@ -40,7 +40,7 @@ class VirtualObjectCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 14)
         downloadBtn.isHidden = false
         // downloadBtn.setBackgroundImage(UIImage(named: "Images.bundle/downloadbg"), for: .normal)
-        // downloadBtn.setImage(UIImage(named: "Images.bundle/download"), for: .normal)
+        downloadBtn.setImage(UIImage(named: "Images.bundle/download"), for: .normal)
     }
     
     
