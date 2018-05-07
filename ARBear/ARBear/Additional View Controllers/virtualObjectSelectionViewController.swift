@@ -159,7 +159,8 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
             let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             return documentDirectory.appendingPathComponent(response.suggestedFilename!)
         }) { (response, filePath, error) in
-            print("-filepath-\(filePath)-\(filePath?.absoluteString)")
+            // print("-filepath-\(filePath)-\(filePath?.absoluteString)")
+            print("-pathhh-\(filePath?.path)")
             let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
             let component = "/\(url.lastPathComponent)"
             let inputPath = documentDirectory.appendingFormat(component)
@@ -172,6 +173,7 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
     }
     
     private func unZipVirtualObject(atPath path: String, toDestination destination:String) {
+        print("-meng--\(path)")
         // 下载完成，对文件解压
         SSZipArchive.unzipFile(atPath: path, toDestination: destination, overwrite: true, password: nil, progressHandler: { (entry, zipInfo, entryNumber, total) in
             print("-progressHandler-\(entry)--\(entryNumber)--\(total)")

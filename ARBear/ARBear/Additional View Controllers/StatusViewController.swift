@@ -154,7 +154,7 @@ extension ARCamera.TrackingState {
         case .notAvailable:
             return "无法找到合适水平面请调整手机位置"
         case .normal:
-            return "追踪正常"
+            return "找个平面平移手机，平面识别中"
         case .limited(.excessiveMotion):
             return "慢慢移动你的手机"
         case .limited(.insufficientFeatures):
