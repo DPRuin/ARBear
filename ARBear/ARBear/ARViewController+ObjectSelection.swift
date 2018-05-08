@@ -27,6 +27,10 @@ extension ARViewController: VirtualObjectSelectionViewControllerDelegate {
     // MARK: - VirtualObjectSelectionViewControllerDelegate
     
     func virtualObjectSelectionViewController(_: VirtualObjectSelectionViewController, didSelectObject object: VirtualObject) {
+        showVirtualObject(withObject: object)
+    }
+    
+    func showVirtualObject(withObject object: VirtualObject) {
         // 删除原来的模型
         virtualObjectLoader.removeAllVirtualObjects()
         
@@ -37,7 +41,7 @@ extension ARViewController: VirtualObjectSelectionViewControllerDelegate {
                 self.placeVirtualObject(loadedObject)
             }
         })
-
+        
         displayObjectLoadingUI()
     }
     

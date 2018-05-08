@@ -97,6 +97,8 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
 
 }
 
+// MARK: - HFPageCollectionViewDataSource
+
 extension VirtualObjectSelectionViewController : HFPageCollectionViewDataSource{
     
     func numberOfSectionsInPageCollectionView(_ pageCollectionView: HFPageCollectionView) -> Int {
@@ -122,6 +124,8 @@ extension VirtualObjectSelectionViewController : HFPageCollectionViewDataSource{
         return cell
     }
 }
+
+// MAKR: - HFPageCollectionViewDelegate
 
 extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
     func pageCollectionView(_ pageCollectionView: HFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -151,6 +155,7 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         
     }
     
+    /// 展示模型
     private func showVirtualObject(name: String) {
         let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         let component = "\(name).scnassets/\(name).scn"
@@ -160,6 +165,7 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    /// 下载模型
     private func downloadVirtualObject(downloadURL: String, downloadCompleteHandler:@escaping ()->Void) {
         let configuration = URLSessionConfiguration.default
         let manager = AFURLSessionManager(sessionConfiguration: configuration)

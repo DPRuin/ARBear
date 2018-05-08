@@ -126,7 +126,8 @@ class ARViewController: UIViewController {
         
         // 单击block
         virtualObjectInteraction.oneTapGestureHandler = {
-            self.showVirtualObjectSelectionViewController()
+            // self.showVirtualObjectSelectionViewController()
+            self.tapToShowVirtualObject()
         }
         
         addObjectButton.setImage(UIImage(named: "Images.bundle/add"), for: [])
@@ -170,8 +171,60 @@ class ARViewController: UIViewController {
         recorder?.rest()
 	}
     
+    /// 单击切换已下载的动画
+    func tapToShowVirtualObject() {
+        guard let beforeObject = self.virtualObjectLoader.loadedObjects.first  else {
+            return
+        }
+        
+        // 从沙盒中获取模型
+        // 沙盒中存放多个.scnassets文件
+        let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        let fileEnumerator = FileManager().enumerator(at: cachesDirectory, includingPropertiesForKeys: [])!
+
+        let cachesObjects = fileEnumerator.compactMap { element -> VirtualObject? in
+            let url = element as! URL
+            
+            guard url.pathExtension == "scnassets" else { return nil }
+            let name = url.lastPathComponent.replacingOccurrences(of: ".scnassets", with: "")
+            let component = "\(name).scnassets/\(name).scn"
+            let destinationURL = cachesDirectory.appendingPathComponent(component)
+            
+            return VirtualObject(url: destinationURL)!
+        }
+        
+        if cachesObjects.count <= 0 {return}
+        // 获取下一个
+        let cachesObject = cachesObjects.filter({ (object) -> Bool in
+            print("--\(object.modelName)--\(beforeObject.modelName)")
+            return object.modelName == beforeObject.modelName
+        }).first!
+        
+        let index = cachesObjects.index(of: cachesObject)
+        print("--index\(index)")
+        var nowIndex = 0
+        if index == cachesObjects.count - 1 {
+            nowIndex = 0
+        } else {
+            nowIndex = index! + 1
+        }
+        let showObject = cachesObjects[nowIndex]
+        // 删除原来的模型
+        self.virtualObjectLoader.removeAllVirtualObjects()
+        
+        // 放置选中的模型
+        self.virtualObjectLoader.loadVirtualObject(showObject, loadedHandler: { [unowned self] loadedObject in
+            DispatchQueue.main.async {
+                self.hideObjectLoadingUI()
+                self.placeVirtualObject(loadedObject)
+            }
+        })
+        
+        self.displayObjectLoadingUI()
+    }
+    
     /// 设置播放器
-    func setupPlayer() {
+    private func setupPlayer() {
         self.player.view.frame = self.view.bounds
         self.addChildViewController(self.player)
         self.view.addSubview(self.player.view)
