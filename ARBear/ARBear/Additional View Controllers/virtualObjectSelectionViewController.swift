@@ -73,6 +73,8 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
         artDict = dict
         titleArray = Array(dict.keys)
     }
+    
+    /// 设置选择界面
     private func setupPageCollection()  {
         // let titles = ["小熊", "小兔"]
         
