@@ -176,24 +176,9 @@ class ARViewController: UIViewController {
         guard let beforeObject = self.virtualObjectLoader.loadedObjects.first  else {
             return
         }
-        
-        // 从沙盒中获取模型
-        // 沙盒中存放多个.scnassets文件
-        let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-        let fileEnumerator = FileManager().enumerator(at: cachesDirectory, includingPropertiesForKeys: [])!
-
-        let cachesObjects = fileEnumerator.compactMap { element -> VirtualObject? in
-            let url = element as! URL
-            
-            guard url.pathExtension == "scnassets" else { return nil }
-            let name = url.lastPathComponent.replacingOccurrences(of: ".scnassets", with: "")
-            let component = "\(name).scnassets/\(name).scn"
-            let destinationURL = cachesDirectory.appendingPathComponent(component)
-            
-            return VirtualObject(url: destinationURL)!
-        }
-        
+        let cachesObjects = VirtualObject.availableCachesObjects()
         if cachesObjects.count <= 0 {return}
+        
         // 获取下一个
         let cachesObject = cachesObjects.filter({ (object) -> Bool in
             print("--\(object.modelName)--\(beforeObject.modelName)")

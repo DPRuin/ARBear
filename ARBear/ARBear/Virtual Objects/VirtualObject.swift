@@ -113,24 +113,24 @@ extension VirtualObject {
     }()
     
     /// 沙盒中获取可用的模型
-//    static let availableCachesObjects: [VirtualObject] = {
-//        // 从沙盒中获取模型
-//        // 沙盒中存放多个.scnassets文件
-//        let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-//
-//        let fileEnumerator = FileManager().enumerator(at: cachesDirectory, includingPropertiesForKeys: [])!
-//
-//        return fileEnumerator.compactMap { element in
-//            let url = element as! URL
-//
-//            guard url.pathExtension == "scnassets" else { return nil }
-//            let name = url.lastPathComponent.replacingOccurrences(of: ".scnassets", with: "")
-//            let component = "\(name).scnassets/\(name).scn"
-//            let destinationURL = cachesDirectory.appendingPathComponent(component)
-//
-//            return VirtualObject(url: destinationURL)
-//        }
-//    }()
+    static func availableCachesObjects() -> [VirtualObject] {
+        // 从沙盒中获取模型
+        // 沙盒中存放多个.scnassets文件
+        let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        
+        let fileEnumerator = FileManager().enumerator(at: cachesDirectory, includingPropertiesForKeys: [])!
+        
+        return fileEnumerator.compactMap { element in
+            let url = element as! URL
+            
+            guard url.pathExtension == "scnassets" else { return nil }
+            let name = url.lastPathComponent.replacingOccurrences(of: ".scnassets", with: "")
+            let component = "\(name).scnassets/\(name).scn"
+            let destinationURL = cachesDirectory.appendingPathComponent(component)
+            
+            return VirtualObject(url: destinationURL)
+        }
+    }
     
     /// Returns a `VirtualObject` if one exists as an ancestor to the provided node.
     static func existingObjectContainingNode(_ node: SCNNode) -> VirtualObject? {
