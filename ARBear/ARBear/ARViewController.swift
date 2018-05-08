@@ -15,12 +15,11 @@ class ARViewController: UIViewController {
     // MARK: IBOutlets
     
     @IBOutlet var sceneView: VirtualObjectARView!
-    
     @IBOutlet weak var addObjectButton: UIButton!
-    
     @IBOutlet weak var blurView: UIVisualEffectView!
-    
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var toast: UIVisualEffectView!
+    @IBOutlet weak var imageView: UIImageView!
     
     /// 录制相关
     var recorder:RecordAR?

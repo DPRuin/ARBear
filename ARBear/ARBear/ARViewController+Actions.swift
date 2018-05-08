@@ -70,3 +70,33 @@ extension ARViewController {
     }
     
 }
+
+// MARK: - 展示或隐藏toast
+extension ARViewController {
+    func showToast(withImageName name: String) {
+        let bundlePath = Bundle.main.url(forResource: "Images", withExtension: "bundle")!
+        let dataPath = bundlePath.appendingPathComponent("name")
+        let imageData = try! Data(contentsOf: dataPath)
+            
+        imageView.image = UIImage.sd_image(with: imageData)
+        guard toast.alpha == 0 else {
+            return
+        }
+        
+        toast.layer.masksToBounds = true
+        toast.layer.cornerRadius = 7.5
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.toast.alpha = 1
+            self.toast.frame = self.toast.frame.insetBy(dx: -5, dy: -5)
+        })
+        
+    }
+    
+    func hideToast() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.toast.alpha = 0
+            self.toast.frame = self.toast.frame.insetBy(dx: 5, dy: 5)
+        })
+    }
+}
