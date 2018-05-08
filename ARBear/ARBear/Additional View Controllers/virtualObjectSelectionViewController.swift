@@ -63,12 +63,6 @@ class VirtualObjectSelectionViewController: UIViewController, PresentBottomType 
         let data = try! Data(contentsOf: url)
         let plist = try! PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil)
         
-        
-//        let dictArray = plist as! [[String : Any]]
-//        for dict in dictArray {
-//            titleArray.append(dict["artName"] as! String)
-//        }
-        
         let dict = plist as! [String : Array<[String : AnyObject]>]
         artDict = dict
         titleArray = Array(dict.keys)
