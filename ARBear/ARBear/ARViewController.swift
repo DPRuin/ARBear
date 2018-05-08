@@ -307,9 +307,9 @@ class ARViewController: UIViewController {
     // MARK: - SegmentedControl
     
     fileprivate func configureSegmentedControl() {
-        let titleStrings = ["可拍照", "录视频"]
+        let titleStrings = ["拍摄", "录制"]
         let titles: [NSAttributedString] = {
-            let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 15), .foregroundColor: UIColor.lightGray]
+            let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 13), .foregroundColor: UIColor.lightGray]
             var titles = [NSAttributedString]()
             for titleString in titleStrings {
                 let title = NSAttributedString(string: titleString, attributes: attributes)
@@ -318,7 +318,7 @@ class ARViewController: UIViewController {
             return titles
         }()
         let selectedTitles: [NSAttributedString] = {
-            let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 15), .foregroundColor: UIColor.white]
+            let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 13), .foregroundColor: UIColor.white]
             var selectedTitles = [NSAttributedString]()
             for titleString in titleStrings {
                 let selectedTitle = NSAttributedString(string: titleString, attributes: attributes)
@@ -329,7 +329,7 @@ class ARViewController: UIViewController {
         segmentedControl.setTitles(titles, selectedTitles: selectedTitles)
         segmentedControl.delegate = self
         segmentedControl.selectionBoxStyle = .none
-        segmentedControl.minimumSegmentWidth = 375.0 / 4.0
+        segmentedControl.minimumSegmentWidth = 375.0 / 6
         segmentedControl.selectionBoxColor = UIColor.clear
         segmentedControl.selectionIndicatorStyle = .none
         
