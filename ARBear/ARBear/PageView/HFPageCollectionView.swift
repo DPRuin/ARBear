@@ -128,9 +128,10 @@ extension HFPageCollectionView : UICollectionViewDelegate{
     // 获取起始偏移量
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         let point = CGPoint(x: layout.sectionInset.left + 1 + collectionView.contentOffset.x, y: layout.sectionInset.top + 1)
-        let indexPath = collectionView.indexPathForItem(at: point)!
-        currentSection = indexPath.section
-        print(currentSection)
+        
+        if let indexPath = collectionView.indexPathForItem(at: point) {
+            self.currentSection = indexPath.section
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -145,7 +146,10 @@ extension HFPageCollectionView : UICollectionViewDelegate{
     
     private func scrollViewDidEndScroll() {
         let point = CGPoint(x: layout.sectionInset.left + 1 + collectionView.contentOffset.x, y: layout.sectionInset.top + 1)
-        let indexPath = collectionView.indexPathForItem(at: point)!
+        guard let indexPath = collectionView.indexPathForItem(at: point) else {
+            return
+        }
+        
         let pageInSeciton = indexPath.item / (layout.cols * layout.rows)
         let items = collectionView.numberOfItems(inSection: indexPath.section)
         nextSection = indexPath.section
