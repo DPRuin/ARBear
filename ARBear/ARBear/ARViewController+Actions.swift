@@ -7,6 +7,7 @@ UI Actions for the main view controller.
 
 import UIKit
 import SceneKit
+import ARKit
 
 extension ARViewController: UIGestureRecognizerDelegate {
     
@@ -73,30 +74,49 @@ extension ARViewController {
 
 // MARK: - 展示或隐藏toast
 extension ARViewController {
+    
+    func showToast(withCamera camera: ARCamera) {
+        switch camera.trackingState {
+        case .notAvailable:
+            showToast(withImageName: "trackingNotAvailable.gif")
+        case .limited(.initializing):
+            showToast(withImageName: "trackingInitial.gif")
+        case .limited(.excessiveMotion):
+            showToast(withImageName: "trackingInitial.gif")
+        case .limited(.insufficientFeatures):
+            showToast(withImageName: "trackingFeatures.gif")
+        case .normal:
+            hideToast()
+        default:
+            hideToast()
+        }
+    }
+    
     func showToast(withImageName name: String) {
         let bundlePath = Bundle.main.url(forResource: "Images", withExtension: "bundle")!
-        let dataPath = bundlePath.appendingPathComponent("name")
+        let dataPath = bundlePath.appendingPathComponent(name)
         let imageData = try! Data(contentsOf: dataPath)
             
-        imageView.image = UIImage.sd_image(with: imageData)
-        guard toast.alpha == 0 else {
+        imageView.image = UIImage.sd_animatedGIF(with: imageData)
+        
+        guard imageView.alpha == 0 else {
             return
         }
         
-        toast.layer.masksToBounds = true
-        toast.layer.cornerRadius = 7.5
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 7.5
         
         UIView.animate(withDuration: 0.25, animations: {
-            self.toast.alpha = 1
-            self.toast.frame = self.toast.frame.insetBy(dx: -5, dy: -5)
+            self.imageView.alpha = 1
+            self.imageView.frame = self.imageView.frame.insetBy(dx: -5, dy: -5)
         })
         
     }
     
     func hideToast() {
         UIView.animate(withDuration: 0.25, animations: {
-            self.toast.alpha = 0
-            self.toast.frame = self.toast.frame.insetBy(dx: 5, dy: 5)
+            self.imageView.alpha = 0
+            self.imageView.frame = self.imageView.frame.insetBy(dx: 5, dy: 5)
         })
     }
 }
