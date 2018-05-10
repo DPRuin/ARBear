@@ -140,22 +140,22 @@ class ARViewController: UIViewController {
         recorder?.prepare(configuration)
     }
 
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         guard ARWorldTrackingConfiguration.isSupported else {
             fatalError("设备不支持")
         }
-		
-		// Prevent the screen from being dimmed to avoid interuppting the AR experience.
-		UIApplication.shared.isIdleTimerDisabled = true
+        
+        // Prevent the screen from being dimmed to avoid interuppting the AR experience.
+        UIApplication.shared.isIdleTimerDisabled = true
 
         // Start the `ARSession`.
         resetTracking()
-	}
-	
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
 
         session.pause()
         
@@ -168,7 +168,7 @@ class ARViewController: UIViewController {
         
         // Switch off the orientation lock for UIViewControllers with AR Scenes
         recorder?.rest()
-	}
+    }
     
     /// 单击切换已下载的动画
     func tapToShowVirtualObject() {
@@ -243,6 +243,12 @@ class ARViewController: UIViewController {
         confirmBtn.frame = CGRect(x: x, y: y, width: 44, height: 44)
         self.player.view.addSubview(confirmBtn)
         
+        // 分享按钮
+        let shareButton = UIButton(type: .contactAdd)
+        let shareX = self.view.bounds.width / 2 + 44/2
+        shareButton.frame = CGRect(x: shareX, y: y, width: 44, height: 44)
+        shareButton.addTarget(self, action: #selector(self.btnShareDidClick(_:)), for: .touchUpInside)
+        self.player.view.addSubview(shareButton)
         
     }
     
@@ -305,6 +311,11 @@ class ARViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    /// 分享
+    @objc func btnShareDidClick(_ sender: UIButton) {
+        
     }
     
     // MARK: - SegmentedControl
@@ -417,17 +428,17 @@ class ARViewController: UIViewController {
     // MARK: - Session management
     
     /// Creates a new AR configuration to run on the `session`.
-	func resetTracking() {
+    func resetTracking() {
         
         configuration.planeDetection = .horizontal
-		session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
 
         statusViewController.scheduleMessage("寻找平面去放置物体", inSeconds: 7.5, messageType: .planeEstimation)
-	}
+    }
 
     // MARK: - Focus Square
 
-	func updateFocusSquare() {
+    func updateFocusSquare() {
         let isObjectVisible = virtualObjectLoader.loadedObjects.contains { object in
             return sceneView.isNode(object, insideFrustumOf: sceneView.pointOfView!)
         }
@@ -462,9 +473,9 @@ class ARViewController: UIViewController {
         }
         addObjectButton.isHidden = false
         statusViewController.cancelScheduledMessage(for: .focusSquare)
-	}
+    }
     
-	// MARK: - Error handling
+    // MARK: - Error handling
     
     func displayErrorMessage(title: String, message: String) {
         // Blur the background.
