@@ -224,6 +224,7 @@ class ARViewController: UIViewController {
         
         self.player.view.addSubview(bgImageView)
         
+        // 取消按钮
         let cancelBtn = UIButton(type: .custom)
         cancelBtn.setImage(UIImage(named: "Images.bundle/btn_cancel"), for: UIControlState.normal)
         cancelBtn.addTarget(self, action: #selector(self.btnAfreshDidClick(_:)), for: .touchUpInside)
@@ -233,6 +234,7 @@ class ARViewController: UIViewController {
         cancelBtn.frame = CGRect(x: insert, y: y, width: 44, height: 44)
         self.player.view.addSubview(cancelBtn)
         
+        // 确认按钮
         let confirmBtn = UIButton(type: .custom)
         confirmBtn.setImage(UIImage(named: "Images.bundle/btn_confirm"), for: UIControlState.normal)
         confirmBtn.addTarget(self, action: #selector(self.btnEnsureDidClick(_:)), for: .touchUpInside)
@@ -240,6 +242,8 @@ class ARViewController: UIViewController {
         let x = self.view.bounds.width - 44/2 - insert
         confirmBtn.frame = CGRect(x: x, y: y, width: 44, height: 44)
         self.player.view.addSubview(confirmBtn)
+        
+        
     }
     
     // MARK: - 录制按钮点击
