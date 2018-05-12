@@ -18,7 +18,6 @@ extension ARViewController: WBMediaTransferProtocol {
     /// 分享微博视频
     func shareWeiboMessage() {
         
-        let myDelegate = UIApplication.shared.delegate
         let authRequest = WBAuthorizeRequest.request() as! WBAuthorizeRequest
         authRequest.redirectURI = "https://www.sina.com"
         authRequest.scope = "all"
