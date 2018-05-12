@@ -227,7 +227,7 @@ class ARViewController: UIViewController {
         
         let insert:CGFloat = 50.0
         let y = self.view.bounds.height - 44/2 - insert
-        cancelBtn.frame = CGRect(x: insert, y: y, width: 44, height: 44)
+        cancelBtn.frame = CGRect(x: insert - 44/2, y: y, width: 44, height: 44)
         self.player.view.addSubview(cancelBtn)
         
         // 确认按钮
@@ -240,11 +240,14 @@ class ARViewController: UIViewController {
         self.player.view.addSubview(confirmBtn)
         
         // 分享按钮
-        let shareButton = UIButton(type: .contactAdd)
-        let shareX = self.view.bounds.width / 2 + 44/2
+        let shareButton = UIButton(type: .custom)
+        let shareX = self.view.bounds.width / 2 - 44/2
         shareButton.frame = CGRect(x: shareX, y: y, width: 44, height: 44)
+        shareButton.setImage(UIImage(named: "Images.bundle/btn_share"), for: UIControlState.normal)
         shareButton.addTarget(self, action: #selector(self.btnShareDidClick(_:)), for: .touchUpInside)
         self.player.view.addSubview(shareButton)
+        
+        
         
     }
     

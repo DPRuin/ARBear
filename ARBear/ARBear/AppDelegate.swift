@@ -37,4 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return weiboHandleOpen(url)
     }
     
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return weiboHandleOpen(url)
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        return weiboHandleOpen(url)
+    }
+    
 }
