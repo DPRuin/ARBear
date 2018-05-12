@@ -26,7 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 determine whether to show UI for launching AR experiences.
             """) // For details, see https://developer.apple.com/documentation/arkit
         }
+        
+        // 微博
+        weiboRegister()
 
         return true
     }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return weiboHandleOpen(url)
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        return weiboHandleOpen(url)
+    }
+    
 }

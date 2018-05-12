@@ -67,8 +67,13 @@ class ARViewController: UIViewController {
     private var nowVedioUrl: URL!
     private var isVedio: Bool!
     
+    /// 播放器
     fileprivate var player = Player()
     private weak var bgImageView: UIImageView!
+    
+    /// 微博消息体
+    var messageObject: WBMessageObject!
+    
     
     deinit {
         self.player.willMove(toParentViewController: self)
@@ -90,15 +95,6 @@ class ARViewController: UIViewController {
         setupCamera()
         sceneView.scene.rootNode.addChildNode(focusSquare)
 
-        /*
-         The `sceneView.automaticallyUpdatesLighting` option creates an
-         ambient light source and modulates its intensity. This sample app
-         instead modulates a global lighting environment map for use with
-         physically based materials, so disable automatic lighting.
-         
-         `sceneView.automaticallyUpdatesLighting`选项创建一个环境光源并调整其强度。
-         这个示例应用程序改为调制全局照明环境地图以用于基于物理的材质，因此禁用自动照明。
-         */
         sceneView.automaticallyUpdatesLighting = false
         if let environmentMap = UIImage(named: "Models.scnassets/sharedImages/environment_blur.exr") {
             sceneView.scene.lightingEnvironment.contents = environmentMap
@@ -136,7 +132,7 @@ class ARViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Prepare the recorder with sessions configuration 录制
+        // 录制
         recorder?.prepare(configuration)
     }
 
@@ -315,6 +311,13 @@ class ARViewController: UIViewController {
     
     /// 分享
     @objc func btnShareDidClick(_ sender: UIButton) {
+        if isVedio {
+            messageObject = weiboVideoMessage(videoUrl: nowVedioUrl)
+        } else {
+            messageObject = weiboImageMessage(images: [nowImage])
+        }
+        
+        // UIActivityIndicatorView 设置指示器
         
     }
     

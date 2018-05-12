@@ -72,6 +72,8 @@
 		7E640759208DE1A300258854 /* playerneed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7E640756208DE1A300258854 /* playerneed.mp4 */; };
 		7E64075A208DE1A300258854 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640758208DE1A300258854 /* Player.swift */; };
 		7E671C48209C4F1500F6749D /* datadic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E671C47209C4F1400F6749D /* datadic.plist */; };
+		7EA5205E20A4252C0038E2D7 /* ARViewController+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5205D20A4252C0038E2D7 /* ARViewController+Share.swift */; };
+		7EA5206020A43D9D0038E2D7 /* AppDelegate+Weibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5205F20A43D9D0038E2D7 /* AppDelegate+Weibo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +146,9 @@
 		7E640757208DE1A300258854 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7E640758208DE1A300258854 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		7E671C47209C4F1400F6749D /* datadic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = datadic.plist; sourceTree = "<group>"; };
+		7EA5205D20A4252C0038E2D7 /* ARViewController+Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Share.swift"; sourceTree = "<group>"; };
+		7EA5205F20A43D9D0038E2D7 /* AppDelegate+Weibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Weibo.swift"; sourceTree = "<group>"; };
+		7EA5206120A443340038E2D7 /* ARBear-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARBear-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F65B20AD84042B3094996DC /* Pods_ARBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08105415B3D678F87F5BF04 /* Pods-ARBear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARBear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARBear/Pods-ARBear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,10 +302,13 @@
 				7E64073F208D912300258854 /* PageView */,
 				7E5D14C5208A0481001271B3 /* SegmentedControl */,
 				7E5D14D4208A048F001271B3 /* SquishButton.swift */,
+				7EA5206120A443340038E2D7 /* ARBear-Bridging-Header.h */,
+				7EA5205F20A43D9D0038E2D7 /* AppDelegate+Weibo.swift */,
 				7E5D1471208A00B7001271B3 /* ARViewController.swift */,
 				7E5D14DA208A04A1001271B3 /* ARViewController+Actions.swift */,
 				7E5D14DB208A04A2001271B3 /* ARViewController+ARSCNViewDelegate.swift */,
 				7E5D14DC208A04A2001271B3 /* ARViewController+ObjectSelection.swift */,
+				7EA5205D20A4252C0038E2D7 /* ARViewController+Share.swift */,
 				7E5D14D3208A048F001271B3 /* ThresholdPanGesture.swift */,
 				7E5D14E6208A04C0001271B3 /* VirtualObjectARView.swift */,
 				7E5D14E5208A04C0001271B3 /* VirtualObjectInteraction.swift */,
@@ -473,6 +481,7 @@
 				TargetAttributes = {
 					7E5D1469208A00B7001271B3 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -589,7 +598,9 @@
 				7E5D14E4208A04AB001271B3 /* VirtualObject.swift in Sources */,
 				7E640749208D912400258854 /* HFPageCollectionView.swift in Sources */,
 				7E2C5321208EC7CD00D3DB77 /* ARView.swift in Sources */,
+				7EA5206020A43D9D0038E2D7 /* AppDelegate+Weibo.swift in Sources */,
 				7E5D14CF208A0481001271B3 /* SegmentedControl.swift in Sources */,
+				7EA5205E20A4252C0038E2D7 /* ARViewController+Share.swift in Sources */,
 				7E5D14D5208A048F001271B3 /* ThresholdPanGesture.swift in Sources */,
 				7E2C5328208EC7CD00D3DB77 /* WritAR.swift in Sources */,
 				7E2C5325208EC7CD00D3DB77 /* Generate+LivePhoto.swift in Sources */,
@@ -778,12 +789,18 @@
 			baseConfigurationReference = A08105415B3D678F87F5BF04 /* Pods-ARBear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NV32R76SX;
 				INFOPLIST_FILE = ARBear/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.betasmart.ARBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARBear/ARBear-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -794,12 +811,17 @@
 			baseConfigurationReference = 273F10983FDFCC993AEFDCCD /* Pods-ARBear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NV32R76SX;
 				INFOPLIST_FILE = ARBear/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.betasmart.ARBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARBear/ARBear-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
