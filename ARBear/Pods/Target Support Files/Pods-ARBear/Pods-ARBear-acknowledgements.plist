@@ -103,6 +103,39 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>UMCCommon</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>UMCSecurityPlugins</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>UMCShare</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string></string>
 			<key>License</key>
 			<string>MIT</string>

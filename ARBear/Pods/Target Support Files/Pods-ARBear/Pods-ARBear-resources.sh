@@ -84,9 +84,13 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/UMCShare/UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle"
+  install_resource "${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle"
   install_resource "${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/UMCShare/UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle"
+  install_resource "${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle"
   install_resource "${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle"
 fi
 

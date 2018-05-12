@@ -10,4 +10,12 @@ target 'ARBear' do
     pod 'AFNetworking', '~> 3.0'
     pod 'SSZipArchive'
     pod 'Weibo_SDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
+    
+    # 友盟
+    pod 'UMCCommon'
+    pod 'UMCSecurityPlugins'
+    pod 'UMCShare/UI'
+    pod 'UMCShare/Social/ReducedWeChat'
+#    pod 'UMCShare/Social/ReducedSina'
+
 end

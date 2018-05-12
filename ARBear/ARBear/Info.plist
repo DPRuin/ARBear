@@ -28,16 +28,28 @@
 				<string>wb2045436852</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wxdc1e388c3822c80b</string>
+			</array>
+		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>sinaweibohd</string>
 		<string>sinaweibo</string>
 		<string>weibosdk</string>
 		<string>weibosdk2.5</string>
+		<string>wechat</string>
+		<string>weixin</string>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
