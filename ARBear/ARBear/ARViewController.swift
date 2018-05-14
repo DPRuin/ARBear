@@ -73,7 +73,7 @@ class ARViewController: UIViewController {
     
     /// 微博消息体
     var messageObject: WBMessageObject!
-    
+    var ummessageObject: AnyObject!
     
     deinit {
         self.player.willMove(toParentViewController: self)
@@ -127,6 +127,9 @@ class ARViewController: UIViewController {
         
         addObjectButton.setImage(UIImage(named: "Images.bundle/add"), for: [])
         addObjectButton.setImage(UIImage(named: "Images.bundle/addPressed"), for: [.highlighted])
+        
+        // 分享面板设置
+        setPreDefinePlatforms()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -314,13 +317,21 @@ class ARViewController: UIViewController {
     
     /// 分享
     @objc func btnShareDidClick(_ sender: UIButton) {
-        if isVedio {
-            messageObject = weiboVideoMessage(videoUrl: nowVedioUrl)
-        } else {
-            messageObject = weiboImageMessage(images: [nowImage])
-        }
+//        if isVedio {
+//            messageObject = weiboVideoMessage(videoUrl: nowVedioUrl)
+//        } else {
+//            messageObject = weiboImageMessage(images: [nowImage])
+//        }
         
         // UIActivityIndicatorView 设置指示器
+        
+        if isVedio {
+            ummessageObject = nowVedioUrl as AnyObject
+        } else {
+            ummessageObject = nowImage
+        }
+        // 展示友盟分享面板
+        showUM()
         
     }
     

@@ -43,5 +43,16 @@ extension AppDelegate: WeiboSDKDelegate {
         }
     }
     
+    // MARK: 友盟分享
+    /// 设置友盟分享
+    func umConfigure() {
+        UMSocialManager.default().umSocialAppkey = "59892ebcaed179694b000104"
+        // 微信
+        UMSocialManager.default().setPlaform(UMSocialPlatformType.wechatSession, appKey: "wxdc1e388c3822c80b", appSecret: "3baf1193c85774b3fd9d18447d76cab0", redirectURL: nil)
+        UMSocialManager.default().setPlaform(UMSocialPlatformType.wechatTimeLine, appKey: "wxdc1e388c3822c80b", appSecret: "3baf1193c85774b3fd9d18447d76cab0", redirectURL: nil)
+    }
+    
+    
+    
     
 }

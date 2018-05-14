@@ -29,20 +29,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 微博
         weiboRegister()
+        
+        // 友盟
+        umConfigure()
 
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return weiboHandleOpen(url)
+        let result = UMSocialManager.default().handleOpen(url, options: options)
+        if !result {
+            return weiboHandleOpen(url)
+        }
+        return result
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return weiboHandleOpen(url)
+        let result = UMSocialManager.default().handleOpen(url, sourceApplication: sourceApplication, annotation: annotation)
+        if !result {
+            return weiboHandleOpen(url)
+        }
+        return result
     }
     
     func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        return weiboHandleOpen(url)
+        let result = UMSocialManager.default().handleOpen(url)
+        
+        if !result {
+            return weiboHandleOpen(url)
+        }
+        return result
     }
     
 }

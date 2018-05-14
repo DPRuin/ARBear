@@ -68,3 +68,107 @@ extension ARViewController: WBMediaTransferProtocol {
     
 }
 
+extension ARViewController: UMSocialShareMenuViewDelegate {
+    // MARK: - 友盟分享
+    func showUM() {
+        // UMSocialUIManager.addCustomPlatformWithoutFilted(UMSocialPlatformType.userDefine_Begin, withPlatformIcon: UIImage(named: "icon_circle"), withPlatformName: "演示icon")
+        UMSocialShareUIConfig.shareInstance().sharePageGroupViewConfig.sharePageGroupViewPostionType = UMSocialSharePageGroupViewPositionType.bottom
+        UMSocialShareUIConfig.shareInstance().sharePageScrollViewConfig.shareScrollViewPageItemStyleType = UMSocialPlatformItemViewBackgroudType.none
+        
+        UMSocialUIManager.showShareMenuViewInWindow { (platformType, userInfo) in
+            if platformType.rawValue == UMSocialPlatformType.userDefine_Begin.rawValue + 2 {
+                DispatchQueue.main.async {
+                    print("-alert-show-")
+                }
+            } else {
+                // 分享图片或视频链接
+                print("-share-")
+                
+                self.shareUMMessage(platformType: platformType)
+            }
+        }
+    }
+    
+    private func shareUMMessage(platformType: UMSocialPlatformType) {
+        if ummessageObject is URL {
+            
+        } else if ummessageObject is UIImage {
+            
+        }
+        
+        switch platformType {
+        case .wechatSession, .wechatTimeLine:
+            if ummessageObject is URL {
+                print("-video-")
+                
+            } else if ummessageObject is UIImage {
+                let image = ummessageObject as! UIImage
+                shareImage(toPlatformType: platformType, withThumb: nil, image: image)
+            }
+            
+        case .sina:
+            
+            if ummessageObject is URL {
+                let url = ummessageObject as! URL
+                messageObject = weiboVideoMessage(videoUrl: url)
+            } else if ummessageObject is UIImage {
+                let image = ummessageObject as! UIImage
+                messageObject = weiboImageMessage(images: [image])
+            }
+            
+            break
+            
+        default:
+            break
+        }
+    }
+    
+    func shareImage(toPlatformType platformType: UMSocialPlatformType, withThumb thumb: UIImage?, image: UIImage) {
+        
+        //创建分享消息对象
+        let messageObject = UMSocialMessageObject()
+        
+        //创建图片内容对象
+        let shareObject = UMShareImageObject()
+        //如果有缩略图，则设置缩略图本地
+        if let thumb = thumb {
+            shareObject.thumbImage = thumb
+        }
+        shareObject.shareImage = image
+        
+        //分享消息对象设置分享内容对象
+        messageObject.shareObject = shareObject
+        //调用分享接口
+        UMSocialManager.default().share(to: platformType, messageObject: messageObject, currentViewController: self) { (shareResponse, error) in
+            if let error = error {
+                print("Share fail with error--\(error)")
+            } else {
+                print("response--\(shareResponse)")
+                
+                
+            }
+            // 提示是否成功
+            
+        }
+        
+    }
+    
+    func setPreDefinePlatforms() {
+        
+        UMSocialUIManager.setPreDefinePlatforms([NSNumber(integerLiteral: UMSocialPlatformType.wechatTimeLine.rawValue)
+            , NSNumber(integerLiteral: UMSocialPlatformType.wechatSession.rawValue)
+            ])
+        UMSocialUIManager.setShareMenuViewDelegate(self)
+        
+    }
+    
+    // MARK: - UMSocialShareMenuViewDelegate
+    func umSocialShareMenuViewDidAppear() {
+        print("--umSocialShareMenuViewDidAppear")
+    }
+    func umSocialShareMenuViewDidDisappear() {
+        print("--umSocialShareMenuViewDidDisappear")
+    }
+    
+}
+
