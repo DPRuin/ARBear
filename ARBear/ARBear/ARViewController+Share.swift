@@ -89,15 +89,11 @@ extension ARViewController: UMSocialShareMenuViewDelegate {
         }
     }
     
+    /// 分享友盟消息
     private func shareUMMessage(platformType: UMSocialPlatformType) {
-        if ummessageObject is URL {
-            
-        } else if ummessageObject is UIImage {
-            
-        }
         
         switch platformType {
-        case .wechatSession, .wechatTimeLine:
+        case .wechatSession, .wechatTimeLine, .wechatFavorite:
             if ummessageObject is URL {
                 print("-video-")
                 
@@ -155,8 +151,11 @@ extension ARViewController: UMSocialShareMenuViewDelegate {
     
     func setPreDefinePlatforms() {
         
-        UMSocialUIManager.setPreDefinePlatforms([NSNumber(integerLiteral: UMSocialPlatformType.wechatTimeLine.rawValue)
-            , NSNumber(integerLiteral: UMSocialPlatformType.wechatSession.rawValue)
+        UMSocialUIManager.setPreDefinePlatforms([
+            NSNumber(integerLiteral: UMSocialPlatformType.wechatTimeLine.rawValue),
+            NSNumber(integerLiteral: UMSocialPlatformType.wechatSession.rawValue),
+            NSNumber(integerLiteral: UMSocialPlatformType.wechatFavorite.rawValue),
+            NSNumber(integerLiteral: UMSocialPlatformType.sina.rawValue)
             ])
         UMSocialUIManager.setShareMenuViewDelegate(self)
         

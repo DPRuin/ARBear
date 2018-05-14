@@ -22,6 +22,9 @@ PODS:
   - UMCSecurityPlugins (1.0.6)
   - UMCShare/Core (6.8.2):
     - UMCCommon
+  - UMCShare/Social/ReducedSina (6.8.2):
+    - UMCCommon
+    - UMCShare/Core
   - UMCShare/Social/ReducedWeChat (6.8.2):
     - UMCCommon
     - UMCShare/Core
@@ -36,6 +39,7 @@ DEPENDENCIES:
   - SSZipArchive
   - UMCCommon
   - UMCSecurityPlugins
+  - UMCShare/Social/ReducedSina
   - UMCShare/Social/ReducedWeChat
   - UMCShare/UI
   - Weibo_SDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
@@ -58,6 +62,6 @@ SPEC CHECKSUMS:
   UMCShare: ab74e3c818cd305846609b15b0daf36872213c28
   Weibo_SDK: 652ca78c2f7147a5de5e75e7cbea89838a81772a
 
-PODFILE CHECKSUM: 308ab15803007f82cabe2595cc0d3c4befa48a54
+PODFILE CHECKSUM: 875745cf2872f7f19cff2ed44a62d5ac10402a20
 
 COCOAPODS: 1.4.0

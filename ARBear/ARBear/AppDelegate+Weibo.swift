@@ -8,7 +8,7 @@
 
 import UIKit
 
-let WeiboKey = "2045436852"
+let WeiboKey = "466233728"
 var wbtoken = ""
 var wbRefreshToken = ""
 var wbCurrentUserID = ""
@@ -50,6 +50,8 @@ extension AppDelegate: WeiboSDKDelegate {
         // 微信
         UMSocialManager.default().setPlaform(UMSocialPlatformType.wechatSession, appKey: "wxdc1e388c3822c80b", appSecret: "3baf1193c85774b3fd9d18447d76cab0", redirectURL: nil)
         UMSocialManager.default().setPlaform(UMSocialPlatformType.wechatTimeLine, appKey: "wxdc1e388c3822c80b", appSecret: "3baf1193c85774b3fd9d18447d76cab0", redirectURL: nil)
+        // 新浪
+        UMSocialManager.default().setPlaform(UMSocialPlatformType.sina, appKey: "466233728", appSecret: "edaea9135e80ffa23c922486a87a4138", redirectURL: "https://www.sina.com")
     }
     
     

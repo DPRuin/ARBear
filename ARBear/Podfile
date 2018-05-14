@@ -16,6 +16,6 @@ target 'ARBear' do
     pod 'UMCSecurityPlugins'
     pod 'UMCShare/UI'
     pod 'UMCShare/Social/ReducedWeChat'
-#    pod 'UMCShare/Social/ReducedSina'
+    pod 'UMCShare/Social/ReducedSina'
 
 end

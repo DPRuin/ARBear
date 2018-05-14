@@ -209,7 +209,6 @@
 		2B7D33F96021FF8F9FA7AFF7FB0F1162 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
 		2D5E789F694671F3BACFD848ECDDACFC /* Pods-ARBear-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARBear-resources.sh"; sourceTree = "<group>"; };
 		2DA317B54D60352591202E6DD43D37C4 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		2E271573AB8681B8BE5CA3D8DBF95FDD /* libUMSocialLog.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libUMSocialLog.a; path = UMShare/UMSocialSDKPlugin/libUMSocialLog.a; sourceTree = "<group>"; };
 		2F02F30D5AA079C31F9F1114AFD3238D /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
 		30AE0200D18A74F67523B37F950063D5 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		3305EDA009703EB375DDC837002B1DC7 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -219,11 +218,11 @@
 		3C52CAA2600ABCE19F571D3D565777BA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		3E695B9B46D33981C35772E56104CA96 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
 		3F47940F6CDF694A46B7C730C0CAA971 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7691FFD63BB3F9F23DB0B5F918EF90 /* libSocialSina.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialSina.a; path = UMShare/SocialLibraries/Sina/libSocialSina.a; sourceTree = "<group>"; };
 		3FE3BE6391B2946745609909108CEAFD /* Pods_ARBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ARBear.framework; path = "Pods-ARBear.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4001399796088CB1F6E24F77741EED2B /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		40A5CC8E90893AA033E0630B4170AA75 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
 		40D6D9A7ABB640B571E6EED23A8B7990 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
-		40EBE1AA9B7F74823A7BBEBF2DB41027 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UShareUI.framework; path = UMShare/UMSocialUI/UShareUI.framework; sourceTree = "<group>"; };
 		41CDAD510D190AB21347F14E51B5C790 /* ioapi_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_mem.h; path = SSZipArchive/minizip/ioapi_mem.h; sourceTree = "<group>"; };
 		448027D54DA8976B54C8002536026FDA /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
 		448D5B5065BE6369A2F09384CACFAF1F /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
@@ -236,11 +235,11 @@
 		5450D42FF37E014B8A1B05CEEE8338A5 /* SDWebImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageGIFCoder.m; path = SDWebImage/SDWebImageGIFCoder.m; sourceTree = "<group>"; };
 		577AC850D3629C3B23D4751EEA8DF9E6 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		5C63323F4C88FD6BED0B9D147502CC3A /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
+		5DA36CB4EB15375C906884B406D6F96B /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UShareUI.framework; path = UMShare/UMSocialUI/UShareUI.framework; sourceTree = "<group>"; };
 		5DFBE4D3C6FDD63CD3D633D856AA3B9E /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
 		5EAADC545E88BF5CFABAED4096ADC410 /* Pods-ARBear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARBear.debug.xcconfig"; sourceTree = "<group>"; };
 		60DA8DE265488CDE8DB9C8CD96665B19 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		64061D4CDE4BA360942244B60A7301E7 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
-		671EA62784C501855919E059F9D9660F /* UMSocialSDKPromptResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKPromptResources.bundle; path = UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle; sourceTree = "<group>"; };
 		6A261DA35806C44DA495FBA79A6DC7A3 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
 		6A4D6F41AA6A39594E8BDD8955D40E28 /* SDWebImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCodersManager.h; path = SDWebImage/SDWebImageCodersManager.h; sourceTree = "<group>"; };
 		6BD1274764E2BDE606336CCB0E2A191F /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
@@ -262,7 +261,6 @@
 		857B1564E51F784A597254B0F0A23906 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
 		85AF629D8922AB41C03EAC360B528A59 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		85F888890C799820DA318DAD4E9CFDFB /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/minizip/aes/aesopt.h; sourceTree = "<group>"; };
-		886B2A217C38D49BE6DEE5E70F92FCCF /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialWechatHandler.h; path = UMShare/SocialLibraries/WeChat/UMSocialWechatHandler.h; sourceTree = "<group>"; };
 		8A3365AA46DC24BECB1728F17C93527D /* SecurityEnvSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityEnvSDK.framework; path = thirdparties/SecurityEnvSDK.framework; sourceTree = "<group>"; };
 		8B6BF3E1A90C6D7817458A94CFBF20E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8BEBA7F02E55241A33F99C929A67406E /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
@@ -276,7 +274,6 @@
 		90E2D41692561D2BA98F2E5870719338 /* WBHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBHttpRequest.h; path = libWeiboSDK/WBHttpRequest.h; sourceTree = "<group>"; };
 		92738CFE57F5EC3CC27198456ABE963B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93ECAB7FAB1DD09A0EDEE9CED970B463 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKResources.bundle; path = UMShare/UMSocialUI/UMSocialSDKResources.bundle; sourceTree = "<group>"; };
 		966C23C3385C8752EE823C055B3F2D91 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		96794F579BFEA410C57AD77E6C52E60F /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		97A7543E894C7EC03B5EACBE7A84A3BB /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -288,17 +285,22 @@
 		9D4CC1F034B0588808F4798A851B8C04 /* SDWebImageImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageImageIOCoder.h; path = SDWebImage/SDWebImageImageIOCoder.h; sourceTree = "<group>"; };
 		9DB3CF9B68BF19748A83FF48001CCE2C /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/minizip/aes/fileenc.h; sourceTree = "<group>"; };
 		A00BC18C9077E6247999E1FC97060129 /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
+		A273C8BC9CFE01693822DA3EE3AC5B57 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialSinaHandler.h; path = UMShare/SocialLibraries/Sina/UMSocialSinaHandler.h; sourceTree = "<group>"; };
 		A27990B07B2BFBE7F17B072418FBEC3D /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
 		A3D8329B6A55CCE3D4EBA38117D6773D /* Pods-ARBear.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARBear.modulemap"; sourceTree = "<group>"; };
 		A5C0D7118DE9BCDF6CE6D7A4119475F6 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		A62654B62FC64DA41CFC2BEEF7097818 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		A835315D15AF4F63EAB6DE068DB3DCDA /* SDWebImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageFrame.m; path = SDWebImage/SDWebImageFrame.m; sourceTree = "<group>"; };
+		A887FA4A6974C7DC446FDF6E6C1D59BB /* libSocialWeChat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialWeChat.a; path = UMShare/SocialLibraries/WeChat/libSocialWeChat.a; sourceTree = "<group>"; };
 		AA3DD89BF604B184788AE646415F980E /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
 		AAC1CB059C282AE8D5D8441AEE6F9BAE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		AAFE0ACD890CC40FDEAE40DB55280573 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		AB16CFEEBD2DD992E950299E07D33E0F /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKResources.bundle; path = UMShare/UMSocialUI/UMSocialSDKResources.bundle; sourceTree = "<group>"; };
 		AC4B0E6B4E42599B8AF9C759A53D517B /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/minizip/aes/sha1.h; sourceTree = "<group>"; };
 		ADAF7168F438024F764000B0F5330E95 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
 		AE8CB1BF2D6AAA9A7A2F5A4EA2B46EED /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
+		B0BAF5139D8BD85D09013E7DB35F8129 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialWechatHandler.h; path = UMShare/SocialLibraries/WeChat/UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		B0FCA9CB1FDDF9874FA1337FF29E4B6F /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMShare.framework; path = UMShare/UMShare.framework; sourceTree = "<group>"; };
 		B145DBE1569F8F7B62E31E505EC33C6C /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AFNetworking.modulemap; sourceTree = "<group>"; };
 		B18A0A2D9A278459391142A33896661E /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
 		B25C95CF86E0AEA87658408864D7BDDB /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -327,10 +329,11 @@
 		DC22772C7CB3E28D963FE7CD7AB04CEE /* SDWebImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageFrame.h; path = SDWebImage/SDWebImageFrame.h; sourceTree = "<group>"; };
 		DCD8CF2E03973B3CC4C36E15D7E48995 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		DCE65D62F992F8319E36B971443D0E83 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
+		DEABE0AA3300ADD72B54C3F318D4BC62 /* UMSocialSDKPromptResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKPromptResources.bundle; path = UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle; sourceTree = "<group>"; };
 		E281B77ECE397406A529EAED6F44DF84 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
 		E3ED9AF03430A953596966AECC7D89BC /* SDWebImageImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageImageIOCoder.m; path = SDWebImage/SDWebImageImageIOCoder.m; sourceTree = "<group>"; };
 		E3F7AEFE9AB5E5A205D9F186215714F0 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
-		E58E44EE57C595D6119DF3CB17079FC3 /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMShare.framework; path = UMShare/UMShare.framework; sourceTree = "<group>"; };
+		E46A88831D65055E04C91A2A63B33091 /* libUMSocialLog.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libUMSocialLog.a; path = UMShare/UMSocialSDKPlugin/libUMSocialLog.a; sourceTree = "<group>"; };
 		E6D67DA91D906E39CB78ACA7A65872BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		EA3628FD06432E841667419AD3B25F07 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
 		EA47F6F83C74972784EB7AD23003BEF4 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTDID.framework; path = thirdparties/UTDID.framework; sourceTree = "<group>"; };
@@ -349,7 +352,6 @@
 		FAF9197D77A8EC5026630BCA97B4A38C /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		FBE2D68E499CD76B593CC814BB4DCE26 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		FC2707C1465F5A1317645FA5544D91C2 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
-		FC5C706CCB4BE467E55D56EE7CE43B88 /* libSocialWeChat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialWeChat.a; path = UMShare/SocialLibraries/WeChat/libSocialWeChat.a; sourceTree = "<group>"; };
 		FDFE36ED15B63AB12444FFDDBD47C0F0 /* Pods-ARBear-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARBear-dummy.m"; sourceTree = "<group>"; };
 		FF7D93E3C6C6260CD592888693161EA4 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -475,10 +477,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1A5278C8E4204790A9E426B0677E41CF /* Frameworks */ = {
+		1ADB342D96BE458FC412231D6A81582D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC5C706CCB4BE467E55D56EE7CE43B88 /* libSocialWeChat.a */,
+				A887FA4A6974C7DC446FDF6E6C1D59BB /* libSocialWeChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		241E05992C6FB0EEFA5540A5B4E5D270 /* ReducedWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				B0BAF5139D8BD85D09013E7DB35F8129 /* UMSocialWechatHandler.h */,
+				1ADB342D96BE458FC412231D6A81582D /* Frameworks */,
+			);
+			name = ReducedWeChat;
+			sourceTree = "<group>";
+		};
+		25A7F4371471C97A3A28EE484D75A7F0 /* ReducedSina */ = {
+			isa = PBXGroup;
+			children = (
+				A273C8BC9CFE01693822DA3EE3AC5B57 /* UMSocialSinaHandler.h */,
+				A5E61C36BD04207F26572071AA368FB7 /* Frameworks */,
+			);
+			name = ReducedSina;
+			sourceTree = "<group>";
+		};
+		29E11FD6D49DD9B536E0B78848ECB544 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E46A88831D65055E04C91A2A63B33091 /* libUMSocialLog.a */,
+				B0FCA9CB1FDDF9874FA1337FF29E4B6F /* UMShare.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -489,14 +518,6 @@
 				D0C966E9994E7A9FA7A2784E61671D62 /* libWeiboSDK.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		35DB04F1A9EC93A104CDDA91B7BBB1EC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				671EA62784C501855919E059F9D9660F /* UMSocialSDKPromptResources.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		3A04E6531B9E9D26D0AE2CE205DFC69A /* Security */ = {
@@ -549,6 +570,23 @@
 				96794F579BFEA410C57AD77E6C52E60F /* AFURLSessionManager.m */,
 			);
 			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		6651A175AFE2B9EB6175C232C7B213F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB16CFEEBD2DD992E950299E07D33E0F /* UMSocialSDKResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		69FFBD22B069AA5DB84AC00D7582C1EB /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				25A7F4371471C97A3A28EE484D75A7F0 /* ReducedSina */,
+				241E05992C6FB0EEFA5540A5B4E5D270 /* ReducedWeChat */,
+			);
+			name = Social;
 			sourceTree = "<group>";
 		};
 		6A0932D54FC5A88C279A6766DC0D9842 /* Core */ = {
@@ -619,6 +657,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		7C8380715CC569B4A64032E6A04A6EB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DA36CB4EB15375C906884B406D6F96B /* UShareUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -628,23 +674,6 @@
 				A18FC223CEF07B8BCCFA20709D6CCA7A /* Products */,
 				E303D8A7A54E864C64917198790C3527 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7E3D8FF3A795B6E0AEEC70749FA356E6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				93ECAB7FAB1DD09A0EDEE9CED970B463 /* UMSocialSDKResources.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7F36D9543C121F56F3B925F4996D4A3C /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				C6AC8190969F57B7FEE9AD764D250737 /* Frameworks */,
-				35DB04F1A9EC93A104CDDA91B7BBB1EC /* Resources */,
-			);
-			name = Core;
 			sourceTree = "<group>";
 		};
 		847241A0B07AF38101161CB9D1003F4C /* UIKit */ = {
@@ -692,14 +721,6 @@
 			isa = PBXGroup;
 			children = (
 				D5829F52F7F96FA20D3CF13BFFAC02F9 /* UMCommon.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8817CA11C564061907BB750EBDEF2F1C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				40EBE1AA9B7F74823A7BBEBF2DB41027 /* UShareUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -767,41 +788,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1EE9E280F290690D8477427D98D0AD3 /* ReducedWeChat */ = {
+		A5E61C36BD04207F26572071AA368FB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				886B2A217C38D49BE6DEE5E70F92FCCF /* UMSocialWechatHandler.h */,
-				1A5278C8E4204790A9E426B0677E41CF /* Frameworks */,
-			);
-			name = ReducedWeChat;
-			sourceTree = "<group>";
-		};
-		A4569C42B1E005A8AAA31664D58576B2 /* UMCShare */ = {
-			isa = PBXGroup;
-			children = (
-				7F36D9543C121F56F3B925F4996D4A3C /* Core */,
-				C7620ADAFF955967FB02C6B132FDC929 /* Social */,
-				EA09A568972494A78CC5BDD6E062CE4A /* UI */,
-			);
-			name = UMCShare;
-			path = UMCShare;
-			sourceTree = "<group>";
-		};
-		C6AC8190969F57B7FEE9AD764D250737 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2E271573AB8681B8BE5CA3D8DBF95FDD /* libUMSocialLog.a */,
-				E58E44EE57C595D6119DF3CB17079FC3 /* UMShare.framework */,
+				3F7691FFD63BB3F9F23DB0B5F918EF90 /* libSocialSina.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C7620ADAFF955967FB02C6B132FDC929 /* Social */ = {
+		A9E78B087852D284D60162B12858DE52 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A1EE9E280F290690D8477427D98D0AD3 /* ReducedWeChat */,
+				7C8380715CC569B4A64032E6A04A6EB6 /* Frameworks */,
+				6651A175AFE2B9EB6175C232C7B213F4 /* Resources */,
 			);
-			name = Social;
+			name = UI;
 			sourceTree = "<group>";
 		};
 		C7E1C86149FBCCF598E82370E4AA7C32 /* Serialization */ = {
@@ -815,6 +816,25 @@
 			name = Serialization;
 			sourceTree = "<group>";
 		};
+		CC4F43D0A600D27A66BF605E25267291 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEABE0AA3300ADD72B54C3F318D4BC62 /* UMSocialSDKPromptResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CDC1C37331FE427302F7575497D41BBD /* UMCShare */ = {
+			isa = PBXGroup;
+			children = (
+				F7DC0DCF5109979441FD5F264E856AC6 /* Core */,
+				69FFBD22B069AA5DB84AC00D7582C1EB /* Social */,
+				A9E78B087852D284D60162B12858DE52 /* UI */,
+			);
+			name = UMCShare;
+			path = UMCShare;
+			sourceTree = "<group>";
+		};
 		CDFF9DF4F64CD43C80F30424CB28DA1E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -823,7 +843,7 @@
 				0EBAAA87680E11D0A75CA36D77DEB769 /* SSZipArchive */,
 				9C8EF1D7BF6F753946CE081E41F70E21 /* UMCCommon */,
 				4D0AA4E507BB8FFBC5D576366D1F7AC1 /* UMCSecurityPlugins */,
-				A4569C42B1E005A8AAA31664D58576B2 /* UMCShare */,
+				CDC1C37331FE427302F7575497D41BBD /* UMCShare */,
 				01B0B97B7A9EC1BE734793C9CB623D16 /* Weibo_SDK */,
 			);
 			name = Pods;
@@ -846,15 +866,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EA09A568972494A78CC5BDD6E062CE4A /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				8817CA11C564061907BB750EBDEF2F1C /* Frameworks */,
-				7E3D8FF3A795B6E0AEEC70749FA356E6 /* Resources */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
 		F4944B525EB055E3639B594739AA8E14 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,6 +878,15 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SDWebImage";
+			sourceTree = "<group>";
+		};
+		F7DC0DCF5109979441FD5F264E856AC6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				29E11FD6D49DD9B536E0B78848ECB544 /* Frameworks */,
+				CC4F43D0A600D27A66BF605E25267291 /* Resources */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
