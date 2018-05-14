@@ -96,6 +96,10 @@ extension ARViewController: UMSocialShareMenuViewDelegate {
         case .wechatSession, .wechatTimeLine, .wechatFavorite:
             if ummessageObject is URL {
                 print("-video-")
+                let url = ummessageObject as! URL
+                // TODO: 暂时的视频url
+                let urlString = "http://video.sina.com.cn/p/sports/cba/v/2013-10-22/144463050817.html"
+                shareVideo(toPlatformType: platformType, withVideoUrl: urlString)
                 
             } else if ummessageObject is UIImage {
                 let image = ummessageObject as! UIImage
@@ -119,7 +123,13 @@ extension ARViewController: UMSocialShareMenuViewDelegate {
         }
     }
     
-    func shareImage(toPlatformType platformType: UMSocialPlatformType, withThumb thumb: UIImage?, image: UIImage) {
+    /// 友盟分享图片
+    ///
+    /// - Parameters:
+    ///   - platformType: 平台
+    ///   - thumb: 缩略图
+    ///   - image: 分享的图片
+    private func shareImage(toPlatformType platformType: UMSocialPlatformType, withThumb thumb: UIImage?, image: UIImage) {
         
         //创建分享消息对象
         let messageObject = UMSocialMessageObject()
@@ -149,6 +159,38 @@ extension ARViewController: UMSocialShareMenuViewDelegate {
         
     }
     
+    /// 友盟分享视频链接
+    ///
+    /// - Parameters:
+    ///   - platformType: 平台
+    ///   - url: 视频链接
+    private func shareVideo(toPlatformType platformType: UMSocialPlatformType, withVideoUrl url: String) {
+        
+        //创建分享消息对象
+        let messageObject = UMSocialMessageObject()
+        
+        //创建video内容对象
+        let thumImageUrl = "https://mobile.umeng.com/images/pic/home/social/img-1.png"
+        let shareObject = UMShareVideoObject.shareObject(withTitle: "ARBear增强现实", descr: "ARBear增强现实哈哈哈哈哈", thumImage: thumImageUrl)
+        shareObject?.videoUrl = url
+        
+        //分享消息对象设置分享内容对象
+        messageObject.shareObject = shareObject
+        //调用分享接口
+        UMSocialManager.default().share(to: platformType, messageObject: messageObject, currentViewController: self) { (shareResponse, error) in
+            if let error = error {
+                print("Share fail with error--\(error)")
+            } else {
+                print("response--\(shareResponse)")
+                
+                
+            }
+            // 提示是否成功
+        }
+        
+    }
+    
+    /// 设置要显示平台
     func setPreDefinePlatforms() {
         
         UMSocialUIManager.setPreDefinePlatforms([
