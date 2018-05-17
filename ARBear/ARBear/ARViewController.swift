@@ -192,8 +192,10 @@ class ARViewController: UIViewController {
             nowIndex = index! + 1
         }
         let showObject = cachesObjects[nowIndex]
+        print("-b-\(self.virtualObjectLoader.loadedObjects.count)")
         // 删除原来的模型
         self.virtualObjectLoader.removeAllVirtualObjects()
+        print("-n-\(self.virtualObjectLoader.loadedObjects.count)")
         
         // 放置选中的模型
         self.virtualObjectLoader.loadVirtualObject(showObject, loadedHandler: { [unowned self] loadedObject in

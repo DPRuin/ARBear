@@ -20,7 +20,16 @@ extension ARViewController: VirtualObjectSelectionViewControllerDelegate {
         virtualObject.setPosition(focusSquarePosition, relativeTo: cameraTransform, smoothMovement: false)
         
         updateQueue.async {
+            let rootNode = self.sceneView.scene.rootNode
+            let vos = rootNode.childNodes.filter({ (node) -> Bool in
+                return node is VirtualObject
+            })
+            for node in vos {
+                node.removeFromParentNode()
+            }
+            
             self.sceneView.scene.rootNode.addChildNode(virtualObject)
+            print("-rootnodecount-\(self.sceneView.scene.rootNode.childNodes.count)")
         }
     }
     
