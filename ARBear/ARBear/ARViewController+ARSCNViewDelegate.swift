@@ -12,14 +12,14 @@ extension ARViewController: ARSCNViewDelegate, ARSessionDelegate {
     
     // MARK: - ARSCNViewDelegate
     
-    /// 实现这个来执行每帧游戏逻辑。 在评估任何动画和动作并模拟任何物理效果之前，每帧调用一次。
+    /// 每帧调用一次。
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         DispatchQueue.main.async {
             self.virtualObjectInteraction.updateObjectToCurrentTrackingPosition()
             self.updateFocusSquare()
         }
         
-        // 如果启用光线估计，请更新模型灯光强度和环境贴图
+        // 启用光线估计
         let baseIntensity: CGFloat = 40
         let lightingEnvironment = sceneView.scene.lightingEnvironment
         if let lightEstimate = session.currentFrame?.lightEstimate {
