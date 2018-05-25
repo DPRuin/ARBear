@@ -80,10 +80,11 @@ extension ARViewController: ARSCNViewDelegate, ARSessionDelegate {
         switch camera.trackingState {
         case .notAvailable, .limited:
             statusViewController.escalateFeedback(for: camera.trackingState, inSeconds: 3.0)
-            showToast(withCamera: camera)
+            // 中间gif图片不显示
+            // showToast(withCamera: camera)
         case .normal:
             statusViewController.cancelScheduledMessage(for: .trackingStateEscalation)
-            hideToast()
+            // hideToast()
         }
         
         
