@@ -20,7 +20,6 @@ class VirtualObjectARView: ARSCNView {
         func intersectionWithHorizontalPlane(atY planeY: Float) -> float3? {
             let normalizedDirection = simd_normalize(direction)
 
-            // Special case handling: Check if the ray is horizontal as well.
             // 特殊情况处理： 检查射线是否是水平的
             if normalizedDirection.y == 0 {
                 if origin.y == planeY {

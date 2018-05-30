@@ -15,6 +15,7 @@ extension ARViewController: ARSCNViewDelegate, ARSessionDelegate {
     /// 每帧调用一次。
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         DispatchQueue.main.async {
+            // 停止更新位置
             self.virtualObjectInteraction.updateObjectToCurrentTrackingPosition()
             self.updateFocusSquare()
         }

@@ -105,9 +105,7 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     }
 
     /**
-     如果正在拖动手势，则通过将屏幕上的2D触摸位置（`currentTrackingPosition`）转换为3D世界空间来更新跟踪对象的位置。
-     这种方法被称为每帧（通过`SCNSceneRendererDelegate`回调），允许拖动手势移动虚拟对象，无论是否拖动手指穿过屏幕或移动设备通过空间。
-     
+     手势移动位置
      - Tag: updateObjectToCurrentTrackingPosition
      */
     @objc
