@@ -25,8 +25,14 @@ class ARViewController: UIViewController {
     var recorder:RecordAR?
     let recordingQueue = DispatchQueue(label: "recordingThread", attributes: .concurrent)
     @IBOutlet weak var squishButton: SquishButton!
-    @IBOutlet weak var segmentedControl: SegmentedControl!
+    @IBOutlet weak var progressView: UIProgressView!
     
+    /// 录制时间
+    var count: Float!
+    /// 定时器
+    var timer: Timer!
+    /// 最大录制时间
+    let maxVideoTime: Float = 10.0
     
     // MARK: - UI Elements
     
@@ -116,9 +122,8 @@ class ARViewController: UIViewController {
         
         // 录制设置
         setupRecorder()
-        // 底部选择按钮
-        configureSegmentedControl()
-        
+        setupRecordUI()
+
         // 单击block
         virtualObjectInteraction.oneTapGestureHandler = {
             // self.showVirtualObjectSelectionViewController()
@@ -257,28 +262,85 @@ class ARViewController: UIViewController {
     }
     
     // MARK: - 录制按钮点击
-    @IBAction func recordVideo(_ sender: SquishButton) {
-        if sender.type == ButtonType.camera {
-            isVedio = false
+    
+    @objc func squishButtonTouchUpInside(sender: UIButton) {
+        print("squishButtonTouchUpInside")
+        // 拍照
+        squishButton.type = ButtonType.camera
+        
+        isVedio = false
+        
+        nowImage = self.recorder?.photo()
+        self.player.url = Bundle.main.url(forResource: "playerneed", withExtension: "mp4")
+        self.player.playFromBeginning()
+        self.player.pause()
+        bgImageView.isHidden = false
+        bgImageView.image = nowImage
+        
+    }
+    
+    @objc func squishButtonLongPress(gesture: UILongPressGestureRecognizer) {
+        
+        if gesture.state == .began { // 开始录制视频
+            print("longpressbegan")
+            squishButton.type = ButtonType.video
             
-            nowImage = self.recorder?.photo()
-            self.player.url = Bundle.main.url(forResource: "playerneed", withExtension: "mp4")
-            self.player.playFromBeginning()
-            self.player.pause()
-            bgImageView.isHidden = false
-            bgImageView.image = nowImage
+            progressView.isHidden = false
+            // 计时
+            count = 0
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.handleTimer(sender:)), userInfo: nil, repeats: true)
+            timer.fire()
             
-        } else if sender.type == ButtonType.video {
             isVedio = true
-            //Record
-            if recorder?.status == .readyToRecord {
-                sender.setTitle("停止", for: .normal)
+            
+            // Record
+            if recorder?.status == .readyToRecord { // 开始录制
                 
                 recordingQueue.async {
                     self.recorder?.record()
                 }
-            }else if recorder?.status == .recording {
-                sender.setTitle("录制", for: .normal)
+            }
+            
+        } else if gesture.state == .ended { // 结束录制视频
+            print("longpressended")
+            squishButton.type = ButtonType.camera
+            
+            timer.invalidate()
+            print("-count-\(count)")
+            progressView.isHidden = true
+            
+            
+            // recorder
+            if recorder?.status == .recording { // 停止录制
+                
+                recorder?.stop({ (url) in
+                    DispatchQueue.main.async {
+                        self.bgImageView.isHidden = true
+                    }
+                    
+                    self.nowVedioUrl = url
+                    self.player.url = url
+                    self.player.playFromBeginning()
+                })
+            }
+        }
+        
+    }
+    
+    @objc func handleTimer(sender: Timer) {
+        count = count + 0.1
+        if maxVideoTime > count { // 继续录制视频
+            progressView.progress = count / maxVideoTime
+            
+        } else { // 停止录制视频
+            print("到时间了")
+            timer.invalidate()
+            print("-count-\(count)")
+            progressView.isHidden = true
+            
+            // recorder
+            if recorder?.status == .recording { // 停止录制
+                
                 recorder?.stop({ (url) in
                     DispatchQueue.main.async {
                         self.bgImageView.isHidden = true
@@ -335,38 +397,6 @@ class ARViewController: UIViewController {
         // 展示友盟分享面板
         showUM()
         
-    }
-    
-    // MARK: - SegmentedControl
-    
-    fileprivate func configureSegmentedControl() {
-        let titleStrings = ["拍摄", "录制"]
-        let titles: [NSAttributedString] = {
-            let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 13), .foregroundColor: UIColor.lightGray]
-            var titles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let title = NSAttributedString(string: titleString, attributes: attributes)
-                titles.append(title)
-            }
-            return titles
-        }()
-        let selectedTitles: [NSAttributedString] = {
-            let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 13), .foregroundColor: UIColor.white]
-            var selectedTitles = [NSAttributedString]()
-            for titleString in titleStrings {
-                let selectedTitle = NSAttributedString(string: titleString, attributes: attributes)
-                selectedTitles.append(selectedTitle)
-            }
-            return selectedTitles
-        }()
-        segmentedControl.setTitles(titles, selectedTitles: selectedTitles)
-        segmentedControl.delegate = self
-        segmentedControl.selectionBoxStyle = .none
-        segmentedControl.minimumSegmentWidth = 375.0 / 6
-        segmentedControl.selectionBoxColor = UIColor.clear
-        segmentedControl.selectionIndicatorStyle = .none
-        
-        // segmentedControl.selectionIndicatorColor = UIColor(white: 0.3, alpha: 1)
     }
     
     // MARK: - Exported UIAlert present method
@@ -426,7 +456,20 @@ class ARViewController: UIViewController {
         // Configure RecordAR to store media files in local app directory
         recorder?.deleteCacheWhenExported = false
     }
-
+    
+    /// 设置录制UI
+    func setupRecordUI() {
+        progressView.progress = 0
+        progressView.isHidden = true
+        progressView.progressTintColor = UIColor.red
+        
+        squishButton.addTarget(self, action: #selector(self.squishButtonTouchUpInside(sender:)), for: UIControlEvents.touchUpInside)
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(squishButtonLongPress(gesture:)))
+        // 定义长按0.8时间触发
+        longPress.minimumPressDuration = 0.8
+        squishButton.addGestureRecognizer(longPress)
+    }
+    
     // MARK: - Scene content setup
 
     func setupCamera() {
@@ -533,50 +576,6 @@ extension ARViewController: RecordARDelegate, RenderARDelegate {
         // Use this method to pause or stop video recording. Check [applicationWillResignActive(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622950-applicationwillresignactive) for more information.
         if status == .recording {
             recorder?.stopAndExport()
-        }
-    }
-}
-
-extension ARViewController: SegmentedControlDelegate {
-    func segmentedControl(_ segmentedControl: SegmentedControl, didSelectIndex selectedIndex: Int) {
-        print("Did select index \(selectedIndex)")
-        switch segmentedControl.style {
-        case .text:
-            print("The title is “\(segmentedControl.titles[selectedIndex].string)”\n")
-        case .image:
-            print("The image is “\(segmentedControl.images[selectedIndex])”\n")
-        }
-        
-        switch selectedIndex {
-        case 0: //
-            squishButton.type = ButtonType.camera
-        case 1:
-            squishButton.type = ButtonType.video
-            
-        default:
-            print("hhhhh")
-        }
-    }
-    
-    func segmentedControl(_ segmentedControl: SegmentedControl, didLongPressIndex longPressIndex: Int) {
-        print("Did long press index \(longPressIndex)")
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            let viewController = UIViewController()
-            viewController.modalPresentationStyle = .popover
-            viewController.preferredContentSize = CGSize(width: 200, height: 300)
-            if let popoverController = viewController.popoverPresentationController {
-                popoverController.sourceView = view
-                let yOffset: CGFloat = 10
-                popoverController.sourceRect = view.convert(CGRect(origin: CGPoint(x: 70 * CGFloat(longPressIndex), y: yOffset), size: CGSize(width: 70, height: 30)), from: navigationItem.titleView)
-                popoverController.permittedArrowDirections = .any
-                present(viewController, animated: true, completion: nil)
-            }
-        } else {
-            let message = segmentedControl.style == .text ? "Long press title “\(segmentedControl.titles[longPressIndex].string)”" : "Long press image “\(segmentedControl.images[longPressIndex])”"
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(cancelAction)
-            present(alert, animated: true, completion: nil)
         }
     }
 }

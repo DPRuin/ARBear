@@ -42,12 +42,6 @@
 		7E5D14C0208A046D001271B3 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14BE208A046D001271B3 /* FocusSquareSegment.swift */; };
 		7E5D14C1208A046D001271B3 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14BF208A046D001271B3 /* FocusSquare.swift */; };
 		7E5D14C4208A0478001271B3 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D14C3208A0477001271B3 /* Models.scnassets */; };
-		7E5D14CD208A0481001271B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14C6208A0481001271B3 /* Constants.swift */; };
-		7E5D14CE208A0481001271B3 /* SCScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14C7208A0481001271B3 /* SCScrollView.swift */; };
-		7E5D14CF208A0481001271B3 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14C8208A0481001271B3 /* SegmentedControl.swift */; };
-		7E5D14D0208A0481001271B3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E5D14CA208A0481001271B3 /* Info.plist */; };
-		7E5D14D1208A0481001271B3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14CB208A0481001271B3 /* Protocols.swift */; };
-		7E5D14D2208A0481001271B3 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14CC208A0481001271B3 /* Style.swift */; };
 		7E5D14D5208A048F001271B3 /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14D3208A048F001271B3 /* ThresholdPanGesture.swift */; };
 		7E5D14D6208A048F001271B3 /* SquishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14D4208A048F001271B3 /* SquishButton.swift */; };
 		7E5D14D9208A0497001271B3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D14D8208A0497001271B3 /* Utilities.swift */; };
@@ -115,12 +109,6 @@
 		7E5D14BE208A046D001271B3 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
 		7E5D14BF208A046D001271B3 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		7E5D14C3208A0477001271B3 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
-		7E5D14C6208A0481001271B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7E5D14C7208A0481001271B3 /* SCScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCScrollView.swift; sourceTree = "<group>"; };
-		7E5D14C8208A0481001271B3 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
-		7E5D14CA208A0481001271B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E5D14CB208A0481001271B3 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		7E5D14CC208A0481001271B3 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		7E5D14D3208A048F001271B3 /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
 		7E5D14D4208A048F001271B3 /* SquishButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquishButton.swift; sourceTree = "<group>"; };
 		7E5D14D8208A0497001271B3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -300,7 +288,6 @@
 				7E640755208DE1A300258854 /* Player */,
 				7E64074C208D913900258854 /* PresentBottomVC */,
 				7E64073F208D912300258854 /* PageView */,
-				7E5D14C5208A0481001271B3 /* SegmentedControl */,
 				7E5D14D4208A048F001271B3 /* SquishButton.swift */,
 				7EA5206120A443340038E2D7 /* ARBear-Bridging-Header.h */,
 				7EA5205F20A43D9D0038E2D7 /* AppDelegate+Weibo.swift */,
@@ -358,27 +345,6 @@
 				7E5D1481208A02E6001271B3 /* ARMain.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		7E5D14C5208A0481001271B3 /* SegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D14C6208A0481001271B3 /* Constants.swift */,
-				7E5D14C7208A0481001271B3 /* SCScrollView.swift */,
-				7E5D14C8208A0481001271B3 /* SegmentedControl.swift */,
-				7E5D14C9208A0481001271B3 /* Supporting Files */,
-				7E5D14CB208A0481001271B3 /* Protocols.swift */,
-				7E5D14CC208A0481001271B3 /* Style.swift */,
-			);
-			path = SegmentedControl;
-			sourceTree = "<group>";
-		};
-		7E5D14C9208A0481001271B3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7E5D14CA208A0481001271B3 /* Info.plist */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		7E5D14D7208A0497001271B3 /* Utilities */ = {
@@ -508,7 +474,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5D14D0208A0481001271B3 /* Info.plist in Resources */,
 				7E2C532B208EC7CD00D3DB77 /* video.scnassets in Resources */,
 				7E671C48209C4F1500F6749D /* datadic.plist in Resources */,
 				7E640759208DE1A300258854 /* playerneed.mp4 in Resources */,
@@ -603,7 +568,6 @@
 				7E640749208D912400258854 /* HFPageCollectionView.swift in Sources */,
 				7E2C5321208EC7CD00D3DB77 /* ARView.swift in Sources */,
 				7EA5206020A43D9D0038E2D7 /* AppDelegate+Weibo.swift in Sources */,
-				7E5D14CF208A0481001271B3 /* SegmentedControl.swift in Sources */,
 				7EA5205E20A4252C0038E2D7 /* ARViewController+Share.swift in Sources */,
 				7E5D14D5208A048F001271B3 /* ThresholdPanGesture.swift in Sources */,
 				7E2C5328208EC7CD00D3DB77 /* WritAR.swift in Sources */,
@@ -616,7 +580,6 @@
 				7E5D14C1208A046D001271B3 /* FocusSquare.swift in Sources */,
 				7E5D14DE208A04A2001271B3 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				7E2C531F208EC7CD00D3DB77 /* UIView+isType.swift in Sources */,
-				7E5D14CD208A0481001271B3 /* Constants.swift in Sources */,
 				7E2C5320208EC7CD00D3DB77 /* RecordAR.swift in Sources */,
 				7E64075A208DE1A300258854 /* Player.swift in Sources */,
 				7E640746208D912400258854 /* HFPageCollectionLayout.swift in Sources */,
@@ -625,9 +588,7 @@
 				7E640748208D912400258854 /* UIColor-Extension.swift in Sources */,
 				7E640747208D912400258854 /* HFTitleView.swift in Sources */,
 				7E5D14DF208A04A2001271B3 /* ARViewController+ObjectSelection.swift in Sources */,
-				7E5D14CE208A0481001271B3 /* SCScrollView.swift in Sources */,
 				7E5D1472208A00B7001271B3 /* ARViewController.swift in Sources */,
-				7E5D14D2208A0481001271B3 /* Style.swift in Sources */,
 				7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */,
 				7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */,
 				7E2C531E208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift in Sources */,
@@ -644,7 +605,6 @@
 				7E2C5329208EC7CD00D3DB77 /* RenderAR.swift in Sources */,
 				7E2C532C208EC7CD00D3DB77 /* RenderARDelegate.swift in Sources */,
 				7E2C532D208EC7CD00D3DB77 /* RecordARDelegate.swift in Sources */,
-				7E5D14D1208A0481001271B3 /* Protocols.swift in Sources */,
 				7E2C5327208EC7CD00D3DB77 /* QuickTimeMov.swift in Sources */,
 				7E5D14EA208A0AEF001271B3 /* HomeViewController.swift in Sources */,
 				7E2C5324208EC7CD00D3DB77 /* PHLivePhotoPlus.swift in Sources */,
