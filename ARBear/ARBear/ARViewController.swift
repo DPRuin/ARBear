@@ -309,7 +309,6 @@ class ARViewController: UIViewController {
             print("-count-\(count)")
             progressView.isHidden = true
             
-            
             // recorder
             if recorder?.status == .recording { // 停止录制
                 
@@ -333,24 +332,12 @@ class ARViewController: UIViewController {
             progressView.progress = count / maxVideoTime
             
         } else { // 停止录制视频
-            print("到时间了")
-            timer.invalidate()
-            print("-count-\(count)")
-            progressView.isHidden = true
+            let gesture = squishButton.gestureRecognizers?.filter({ (gesture) -> Bool in
+                return gesture is UILongPressGestureRecognizer
+            }).first as! UILongPressGestureRecognizer
             
-            // recorder
-            if recorder?.status == .recording { // 停止录制
-                
-                recorder?.stop({ (url) in
-                    DispatchQueue.main.async {
-                        self.bgImageView.isHidden = true
-                    }
-                    
-                    self.nowVedioUrl = url
-                    self.player.url = url
-                    self.player.playFromBeginning()
-                })
-            }
+            gesture.state = .ended
+            print("到时间了")
         }
     }
     
@@ -468,6 +455,7 @@ class ARViewController: UIViewController {
         // 定义长按0.8时间触发
         longPress.minimumPressDuration = 0.8
         squishButton.addGestureRecognizer(longPress)
+        
     }
     
     // MARK: - Scene content setup

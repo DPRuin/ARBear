@@ -27,13 +27,13 @@ open class SquishButton: UIButton {
     /// The color of the inner rectangle.
     open var color = UIColor.white
     
-    open var outerRingWidth = CGFloat(6) {
+    open var outerRingWidth = CGFloat(4) {
         didSet {
             layer.borderWidth = outerRingWidth
         }
     }
     /// The inset between the outer border and inner rectangle.
-    open var innerInset = CGFloat(10) {
+    open var innerInset = CGFloat(8) {
         didSet {
             innerShape.path = UIBezierPath(roundedRect: bounds.insetBy(dx: innerInset, dy: innerInset), cornerRadius: bounds.height / 2).cgPath
         }
