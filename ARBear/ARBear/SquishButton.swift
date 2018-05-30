@@ -92,6 +92,7 @@ open class SquishButton: UIButton {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUp()
+        
     }
 
     func setUp() {
