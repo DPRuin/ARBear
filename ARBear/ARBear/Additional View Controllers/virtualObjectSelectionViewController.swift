@@ -153,9 +153,9 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
     
     /// 展示模型
     private func showVirtualObject(name: String) {
-        let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let component = "\(name).scnassets/\(name).scn"
-        let destinationURL = cachesDirectory.appendingPathComponent(component)
+        let destinationURL = documentDirectory.appendingPathComponent(component)
         let object = VirtualObject(url: destinationURL)
         delegate?.virtualObjectSelectionViewController(self, didSelectObject: object!)
         self.dismiss(animated: true, completion: nil)
@@ -171,14 +171,14 @@ extension VirtualObjectSelectionViewController: HFPageCollectionViewDelegate {
         let downloadTask = manager.downloadTask(with: urlRequest, progress: { (progress) in
              print("download-progress-\(progress)")
         }, destination: { (targetPath, response) -> URL in
-            let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-            return cachesDirectory.appendingPathComponent(response.suggestedFilename!)
+            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            return documentDirectory.appendingPathComponent(response.suggestedFilename!)
         }, completionHandler: { (response, filePath, error) in
-            let cachesDirectory = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
             let component = "/\(url.lastPathComponent)"
-            let inputPath = cachesDirectory.appendingFormat(component)
+            let inputPath = documentDirectory.appendingFormat(component)
             print("-inputPath-\(inputPath)")
-            self.unZipVirtualObject(atPath: inputPath, toDestination: cachesDirectory, completeHandler: downloadCompleteHandler )
+            self.unZipVirtualObject(atPath: inputPath, toDestination: documentDirectory, completeHandler: downloadCompleteHandler )
         })
         // 开始下载
         downloadTask.resume()

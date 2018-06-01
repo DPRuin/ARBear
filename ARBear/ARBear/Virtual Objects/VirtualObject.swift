@@ -116,9 +116,9 @@ extension VirtualObject {
     static func availableCachesObjects() -> [VirtualObject] {
         // 从沙盒中获取模型
         // 沙盒中存放多个.scnassets文件
-        let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
-        let fileEnumerator = FileManager().enumerator(at: cachesDirectory, includingPropertiesForKeys: [])!
+        let fileEnumerator = FileManager().enumerator(at: documentDirectory, includingPropertiesForKeys: [])!
         
         return fileEnumerator.compactMap { element in
             let url = element as! URL
@@ -126,7 +126,7 @@ extension VirtualObject {
             guard url.pathExtension == "scnassets" else { return nil }
             let name = url.lastPathComponent.replacingOccurrences(of: ".scnassets", with: "")
             let component = "\(name).scnassets/\(name).scn"
-            let destinationURL = cachesDirectory.appendingPathComponent(component)
+            let destinationURL = documentDirectory.appendingPathComponent(component)
             
             return VirtualObject(url: destinationURL)
         }
