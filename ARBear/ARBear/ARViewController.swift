@@ -235,8 +235,9 @@ class ARViewController: UIViewController {
         cancelBtn.setImage(UIImage(named: "Images.bundle/btn_cancel"), for: UIControlState.normal)
         cancelBtn.addTarget(self, action: #selector(self.btnAfreshDidClick(_:)), for: .touchUpInside)
         
-        let insert:CGFloat = 50.0
-        let y = self.view.bounds.height - 44/2 - insert
+        let insert:CGFloat = 30.0
+        // let y = self.view.bounds.height - 44/2 - insert
+        let y = insert
         cancelBtn.frame = CGRect(x: insert - 44/2, y: y, width: 44, height: 44)
         self.player.view.addSubview(cancelBtn)
         
@@ -251,8 +252,9 @@ class ARViewController: UIViewController {
         
         // 分享按钮
         let shareButton = UIButton(type: .custom)
-        let shareX = self.view.bounds.width / 2 - 44/2
-        shareButton.frame = CGRect(x: shareX, y: y, width: 44, height: 44)
+        // let shareX = self.view.bounds.width / 2 - 44/2
+        let shareY = insert + 44 + 10
+        shareButton.frame = CGRect(x: x, y: shareY, width: 44, height: 44)
         shareButton.setImage(UIImage(named: "Images.bundle/btn_share"), for: UIControlState.normal)
         shareButton.addTarget(self, action: #selector(self.btnShareDidClick(_:)), for: .touchUpInside)
         self.player.view.addSubview(shareButton)
