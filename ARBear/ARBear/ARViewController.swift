@@ -267,13 +267,15 @@ class ARViewController: UIViewController {
         print("squishButtonTouchUpInside")
         // 拍照
         squishButton.type = ButtonType.camera
-        
         isVedio = false
-        
-        nowImage = self.recorder?.photo()
+        // 加水印后的图片
+        let wmImage = self.recorder?.photo().createImageWaterMark(waterImage: UIImage(named: "Images.bundle/logo")!)
+        nowImage = wmImage
+        // 特殊方法显示player
         self.player.url = Bundle.main.url(forResource: "playerneed", withExtension: "mp4")
         self.player.playFromBeginning()
         self.player.pause()
+        
         bgImageView.isHidden = false
         bgImageView.image = nowImage
         
@@ -316,10 +318,14 @@ class ARViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.bgImageView.isHidden = true
                     }
-                    
-                    self.nowVedioUrl = url
-                    self.player.url = url
-                    self.player.playFromBeginning()
+                    // 水印后的视频url
+                    url.createVideoWaterMark(waterImage: UIImage(named: "Images.bundle/logo")!, completion: { (wmUrl, error) in
+                        
+                        self.nowVedioUrl = wmUrl
+                        self.player.url = wmUrl
+                        self.player.playFromBeginning()
+                    })
+
                 })
             }
         }
