@@ -66,6 +66,7 @@
 		7E640759208DE1A300258854 /* playerneed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7E640756208DE1A300258854 /* playerneed.mp4 */; };
 		7E64075A208DE1A300258854 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E640758208DE1A300258854 /* Player.swift */; };
 		7E671C48209C4F1500F6749D /* datadic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E671C47209C4F1400F6749D /* datadic.plist */; };
+		7E79933020C1210900918093 /* Watermark+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E79932F20C1210900918093 /* Watermark+Extension.swift */; };
 		7EA5205E20A4252C0038E2D7 /* ARViewController+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5205D20A4252C0038E2D7 /* ARViewController+Share.swift */; };
 		7EA5206020A43D9D0038E2D7 /* AppDelegate+Weibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5205F20A43D9D0038E2D7 /* AppDelegate+Weibo.swift */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		7E640757208DE1A300258854 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7E640758208DE1A300258854 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		7E671C47209C4F1400F6749D /* datadic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = datadic.plist; sourceTree = "<group>"; };
+		7E79932F20C1210900918093 /* Watermark+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Watermark+Extension.swift"; sourceTree = "<group>"; };
 		7EA5205D20A4252C0038E2D7 /* ARViewController+Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Share.swift"; sourceTree = "<group>"; };
 		7EA5205F20A43D9D0038E2D7 /* AppDelegate+Weibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Weibo.swift"; sourceTree = "<group>"; };
 		7EA5206120A443340038E2D7 /* ARBear-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARBear-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				7E5D14D3208A048F001271B3 /* ThresholdPanGesture.swift */,
 				7E5D14E6208A04C0001271B3 /* VirtualObjectARView.swift */,
 				7E5D14E5208A04C0001271B3 /* VirtualObjectInteraction.swift */,
+				7E79932F20C1210900918093 /* Watermark+Extension.swift */,
 				7E5D14E0208A04AB001271B3 /* Virtual Objects */,
 				7E5D14D7208A0497001271B3 /* Utilities */,
 				7E5D14BD208A046D001271B3 /* Focus Square */,
@@ -590,6 +593,7 @@
 				7E5D14DF208A04A2001271B3 /* ARViewController+ObjectSelection.swift in Sources */,
 				7E5D1472208A00B7001271B3 /* ARViewController.swift in Sources */,
 				7E640754208D91D900258854 /* virtualObjectSelectionViewController.swift in Sources */,
+				7E79933020C1210900918093 /* Watermark+Extension.swift in Sources */,
 				7E640752208D915100258854 /* VirtualObjectCollectionViewCell.swift in Sources */,
 				7E2C531E208EC7CD00D3DB77 /* UIImage+VideoBuffer.swift in Sources */,
 				7E2C5322208EC7CD00D3DB77 /* ViewAR.swift in Sources */,
